@@ -26,6 +26,9 @@ gem 'therubyracer'
 
 gem 'simple_form'
 
+gem 'less'
+gem 'twitter-bootstrap-rails', git: 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
