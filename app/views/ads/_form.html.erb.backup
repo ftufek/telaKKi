@@ -1,0 +1,16 @@
+<%= simple_form_for @ad, defaults: { label: false, input_html: { class: "span8" } } do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :title, input_html: { class: "span6" } %>
+    <%= f.input :price, wrapper: :prepend do %>
+      <span class="add-on">$</span><%= f.input_field :price, placeholder: t("simple_form.placeholders.ad.price"), class: "span2" %>
+    <% end %>
+    <%= f.input :description  %>
+    <%= f.input :address %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

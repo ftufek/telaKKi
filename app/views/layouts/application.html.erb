@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title><%= content_for?(:title) ? yield(:title) : "telaKKi" %></title>
     <%= csrf_meta_tags %>
 
@@ -19,21 +19,9 @@
     <link href="images/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
   </head>
   <body>
-
     <%= render "shared/menu" %>
+    <%= yield %>
 
-    <div class="container-fluid">
-      <div class="row-fluid">
-        <div class="span12">
-          <%= yield %>
-        </div>
-      </div><!--/row-->
-
-      <footer>
-        <p>&copy; Company 2012</p>
-      </footer>
-
-    </div> <!-- /container -->
 
     <!-- Javascripts
     ================================================== -->

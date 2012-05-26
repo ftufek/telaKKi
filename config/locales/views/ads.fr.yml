@@ -1,0 +1,8 @@
+fr:
+  simple_form:
+    placeholders:
+      ad:
+        title: "Titre de l'annonce"
+        description: "Description"
+        price: "Prix ($)"
+        address: "Addresse"
