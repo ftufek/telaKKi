@@ -1,4 +1,6 @@
 TelaKKi::Application.routes.draw do
+  devise_for :users
+
   resources :ads
 
   # The priority is based upon order of creation:
