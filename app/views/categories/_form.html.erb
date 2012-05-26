@@ -1,0 +1,13 @@
+<%= simple_form_for(@category) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :icon_name %>
+    <%= f.select :parent_id, nested_set_options(Category, @category) { |i| "#{'-' * i.level} #{i.name}" }, include_blank: true %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
