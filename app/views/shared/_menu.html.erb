@@ -1,6 +1,6 @@
 <div class="navbar navbar-fixed-top">
   <div class="navbar-inner">
-    <div class="container-fluid">
+    <div class="container">
       <a data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -9,20 +9,28 @@
 
       <%= link_to "telaKKi", root_path, class: "brand" %>
       <div class="btn-group pull-right">
-        <a href="#" data-toggle="dropdown" class="btn dropdown-toggle">
-          <%= icon_for("user") %> My Account
-          <span class="caret"></span>
-        </a>
-        <ul class="dropdown-menu">
-          <li><a href="#">Profile</a></li>
-          <li class="divider"></li>
-          <li><a href="#">Sign Out</a></li>
-        </ul>
+
+        <% if user_signed_in? %>
+          <a href="#" data-toggle="dropdown" class="btn dropdown-toggle">
+            <%= icon_for("user") %> My Account
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li><%= link_to "Profile", users_profile_path %></li>
+            <li class="divider"></li>
+            <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+          </ul>
+        <% else %>
+          <%= link_to new_user_session_path, class: "btn" do %>
+            <%= icon_for("user") %>
+            <%= "Sign In" %>
+          <% end %>
+        <% end %>
       </div>
 
-      <div class="container-fluid nav-collapse">
+      <div class="container nav-collapse">
         <ul class="nav">
-          <li class=""><a href="#">(Be part of the solution!)</a></li>
+          <li class=""><%= link_to "(Be part of the solution!)", solution_path %></li>
           
           <li class="divider-vertical"></li>
 
@@ -34,7 +42,7 @@
               <% Category.where(parent_id: nil).each do |t| %>
                 <li>
                   <%= link_to t.name do %>
-                    <%= icon_for("user") %>
+                    <%= icon_for(t.icon_name) %>
                     <%= t.name %>
                   <% end %>
                 </li>
@@ -44,16 +52,16 @@
         </ul>
 
         <form class="navbar-search" action="">
-          <input class="search-query span2" placeholder="Search a classified ad..." type="text">
+          <input class="search-query span3" placeholder="Search a classified ad..." type="text">
         </form>
 
 
         <ul class="nav pull-right">
-          <li class=""><a href="#">FAQ</a></li>
+          <li class=""><%= link_to "FAQ", faq_path %></li>
 
-          <li class=""><a href="#">Help</a></li>
+          <li class=""><%= link_to "Help", help_path %></li>
 
-          <li class=""><a href="#">About Us</a></li>
+          <li class=""><%= link_to "About Us", about_us_path %></li>
         </ul>
       </div>
     </div>

@@ -1,5 +1,6 @@
 class Ad < ActiveRecord::Base
   attr_accessible :address, :description, :down_votes, :price, :title, :up_votes
+  attr_accessible :user_id
 
   validates :title, presence: true, uniqueness: true, length: { in: 5..50 }
   validates :description, presence: true, length: { minimum: 5 }
@@ -7,4 +8,6 @@ class Ad < ActiveRecord::Base
   validates :up_votes, allow_nil: true, numericality: { only_integer: true }
   validates :down_votes, allow_nil: true, numericality: { only_integer: true }
   validates :address, presence: true #FINISH THE VALIDATION FOR CONTAINS POSTAL_CODE
+
+  belongs_to :user
 end

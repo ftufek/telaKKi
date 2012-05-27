@@ -2,6 +2,7 @@ TelaKKi::Application.routes.draw do
   resources :categories
 
   devise_for :users
+  match 'users/profile' => 'users#profile'
 
   resources :ads
 
@@ -63,4 +64,9 @@ TelaKKi::Application.routes.draw do
   # match ':controller(/:action(/:id))(.:format)'
 
   resources :tests
+
+  match "/solution" => "pages#solution"
+  match "/faq" => "pages#faq"
+  match "/help" => "pages#help"
+  match "/about_us" => "pages#about_us"
 end

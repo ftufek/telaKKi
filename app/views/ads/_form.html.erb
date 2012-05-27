@@ -1,4 +1,4 @@
-<%= simple_form_for @ad, defaults: { label: false, input_html: { class: "span8" } } do |f| %>
+<%= simple_form_for @ad, defaults: { label: false } do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
@@ -6,6 +6,7 @@
     <%= f.input :price %>
     <%= f.input :description  %>
     <%= f.input :address %>
+    <%= f.hidden_field :user_id, value: current_user.id %>
   </div>
 
   <div class="form-actions">

@@ -1,11 +1,22 @@
-<div class="ad_index span3" id="<%= ad_counter %>">
-  <div class="image visible-desktop">
-    <img src="/assets/blackberry.jpg" height="200"></img>
+<div class="row">
+  <div class="ad_index span12" id="<%= ad_counter %>">
+    <div class="row-fluid">
+      <div class="image span3 visible-desktop">
+        <img src="/assets/blackberry.jpg" height="200"></img>
+      </div>
+
+      <div class="main_info span7">
+        <div class="title"><h3><%= ad.title %></h3></div>
+        <div class="description"><%= ad.description %></div>
+        <div class="address"><%= ad.address %></div>
+        <div class="seller"><%= ad.user.email %></div>
+      </div>
+
+      <div class="additional_info span2">
+        <div class="price"><%= ad.price %></div>
+        <div class="up_votes"><%= ad.up_votes == nil ? 0 : ad.up_votes %></div>
+        <div class="down_votes"><%= ad.down_votes == nil ? 0 : ad.down_votes %></div>
+      </div>
+    </div>
   </div>
-  <div class="title"><h3><%= ad.title %></h3></div>
-  <div class="price"><%= ad.price %></div>
-  <div class="description"><%= ad.description %></div>
-  <div class="address"><%= ad.address %></div>
-  <div class="up_votes"><%= ad.up_votes == nil ? 0 : ad.up_votes %></div>
-  <div class="down_votes"><%= ad.down_votes == nil ? 0 : ad.down_votes %></div>
 </div>
