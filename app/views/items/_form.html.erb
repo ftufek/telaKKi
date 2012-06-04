@@ -1,0 +1,18 @@
+<%= simple_form_for @item, html: { class: "form-vertical well", multipart: true } do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :title %>
+    <%= f.input :price %>
+    <%= f.input :description  %>
+    <%= f.input :address %>
+    <%= f.fields_for :images do |builder| %>
+      <%= builder.file_field :image %>
+    <% end %>
+    <%= f.hidden_field :user_id, value: current_user.id %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

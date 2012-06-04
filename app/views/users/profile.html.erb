@@ -1,6 +1,6 @@
 Profile
 
 <h3>Your ads</h3>
-<% Ad.where(user_id: current_user.id).each do |t| %>
+<% Item.where(user_id: current_user.id).each do |t| %>
   <%= t.title %>
 <% end %>
