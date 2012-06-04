@@ -1,0 +1,68 @@
+.detailed_list_container {
+  .item, .list_title {
+    @include box-sizing(border-box);
+    @include border-radius(0px 0px 0px 0px);
+    @include box-shadow(rgba(255,255,255,0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 1px 1px 9px 0px inset);
+    padding: 20px;
+    border: 1px solid #D4D4D4;
+    border-bottom: 0px;
+
+    &:hover {
+      background-color: #f6f6f6;
+    }
+
+    .img {
+      @extend .thumbnail;
+    }
+
+    .main_info {
+      .title, .description, .address {
+        display: block;
+      }
+
+      .seller {
+        display: none;
+      }
+    }
+
+    .extra_info {
+      .votes {
+        @extend .progress;
+        @extend .progress-success;
+
+        height: 8px;
+        @include background(linear-gradient(top, #f00, #d00));
+
+        .up_vs_down {
+          @extend .bar;
+        }
+      }
+
+      .up_votes, .down_votes {
+        display: none;
+      }
+
+      .price {
+        text-align: center;
+      }
+    }
+
+  }
+
+  .list_title {
+    @include background(linear-gradient(top, #61B0DF, #369BD7));
+    @include border-radius(5px 5px 0px 0px);
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    h3 {
+      color: white;
+    }
+  }
+
+  a:last-child .item {
+    @include border-radius(0px 0px 5px 5px);
+    border-bottom: 1px solid #D4D4D4;
+  }
+
+}

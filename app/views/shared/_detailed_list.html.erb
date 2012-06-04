@@ -1,0 +1,39 @@
+<div class="detailed_list_container">
+  <div class="list_title row-fluid">
+    <div class="span12">
+      <h3><%= title %></h3>
+    </div>
+  </div>
+
+  <div class="items">
+    <% items.each do |i| %>
+
+      <%= link_to i do %>
+
+      <div class="item row-fluid">
+        <div class="img span3 hidden-phone">
+          <%= render i.images.first %>
+        </div>
+
+        <div class="main_info span6">
+          <div class="title"><%= i.title %></div>
+          <hr>
+          <div class="description"><%= i.description %></div>
+          <hr>
+          <div class="address">Address: <%= i.address %></div>
+          <div class="seller"><%= i.user.email %></div>
+        </div>
+
+        <div class="extra_info span3">
+          <div class="votes">
+            <div class="up_vs_down" style="width: 60%"></div>
+          </div>
+          <div class="price"><h1><%= number_to_currency(i.price) %></h1></div>
+          <div class="up_votes"><%= i.up_votes == nil ? 0 : i.up_votes %></div>
+          <div class="down_votes"><%= i.down_votes == nil ? 0 : i.down_votes %></div>
+        </div>
+      </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>

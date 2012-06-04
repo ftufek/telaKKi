@@ -1,4 +1,9 @@
 TelaKKi::Application.routes.draw do
+
+  ActiveAdmin.routes(self)
+
+  devise_for :admin_users, ActiveAdmin::Devise.config
+
   resources :categories
 
   devise_for :users
@@ -62,8 +67,6 @@ TelaKKi::Application.routes.draw do
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
-
-  resources :tests
 
   match "/solution" => "pages#solution"
   match "/faq" => "pages#faq"

@@ -1,22 +1,31 @@
-<div class="row">
-  <div class="ad_index span12" id="<%= ad_counter %>">
-    <div class="row-fluid">
-      <div class="image span3 visible-desktop">
-        <img src="/assets/blackberry.jpg" height="200"></img>
-      </div>
+<%= link_to ad do %>
+  <div class="ad row-fluid">
+    <div class="img span3 hidden-phone">
+      <%= ad.images.first == nil ? image_tag("default_index_image.png") : render(ad.images.first) %>
+    </div>
 
-      <div class="main_info span7">
-        <div class="title"><h3><%= ad.title %></h3></div>
-        <div class="description"><%= ad.description %></div>
-        <div class="address"><%= ad.address %></div>
-        <div class="seller"><%= ad.user.email %></div>
-      </div>
+    <div class="main_info span6">
+      <div class="title"><%= ad.title %></div>
+      <hr>
+      <div class="description"><%= ad.description %></div>
+      <hr>
+      <div class="address">Address: <%= ad.address %></div>
+      <div class="seller"><%= ad.user.email %></div>
+    </div>
 
-      <div class="additional_info span2">
-        <div class="price"><%= ad.price %></div>
-        <div class="up_votes"><%= ad.up_votes == nil ? 0 : ad.up_votes %></div>
-        <div class="down_votes"><%= ad.down_votes == nil ? 0 : ad.down_votes %></div>
+    <div class="extra_info span3">
+      <div class="votes_container">
+        <div class="votes">
+          <div class="up_vs_down" style="width: 60%"></div>
+        </div>
+        <div class="vote_buttons">
+          <button class="btn"><i class="icon-thumbs-up"></i></button>
+          <button class="btn"><i class="icon-thumbs-down"></i></button>
+        </div>
       </div>
+      <div class="price"><h1><%= number_to_currency(ad.price) %></h1></div>
+      <div class="up_votes"><%= ad.up_votes == nil ? 0 : ad.up_votes %></div>
+      <div class="down_votes"><%= ad.down_votes == nil ? 0 : ad.down_votes %></div>
     </div>
   </div>
-</div>
+<% end %>

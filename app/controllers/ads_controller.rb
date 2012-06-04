@@ -15,6 +15,7 @@ class AdsController < ApplicationController
   # GET /ads/1.json
   def show
     @ad = Ad.find(params[:id])
+    @json = @ad.to_gmaps4rails
 
     respond_to do |format|
       format.html # show.html.erb
@@ -26,6 +27,7 @@ class AdsController < ApplicationController
   # GET /ads/new.json
   def new
     @ad = Ad.new
+    3.times { @ad.images.build }
 
     respond_to do |format|
       format.html # new.html.erb

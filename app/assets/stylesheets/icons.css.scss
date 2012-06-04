@@ -1,0 +1,8 @@
+@import "icon/*.png";
+@include all-icon-sprites;
+
+
+[class^="icon-"], [class*=" icon-"] {
+  width: 14px;
+  height: 14px;
+}

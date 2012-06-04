@@ -15,6 +15,7 @@ gem 'foreigner'
 # in production environments by default.
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
+  gem 'compass-rails'
   gem 'coffee-rails', '~> 3.2.1'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
@@ -31,6 +32,10 @@ gem 'simple_form'
 
 gem 'less'
 gem 'twitter-bootstrap-rails', git: 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
+
+gem 'paperclip', git: "git://github.com/thoughtbot/paperclip.git"
+gem 'gmaps4rails'
+gem 'activeadmin'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
