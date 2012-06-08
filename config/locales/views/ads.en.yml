@@ -1,8 +1,0 @@
-en:
-  simple_form:
-    placeholders:
-      ad:
-        title: "Title"
-        description: "Description"
-        price: "Price ($)"
-        address: "Address"

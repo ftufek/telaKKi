@@ -1,0 +1,16 @@
+.sign_in_form {
+  @include box-sizing(border-box);
+  @include border-radius(5px 5px 5px 5px);
+  @include box-shadow(rgba(255,255,255,0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 1px 1px 9px 0px inset);
+  padding: 20px;
+  border: 1px solid #D4D4D4;
+
+  h2 {
+    text-align: center; 
+    margin-bottom: 20px;
+  }
+
+  .form_input {
+    width: 100%;
+  }
+}

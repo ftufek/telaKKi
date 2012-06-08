@@ -1,0 +1,10 @@
+$ribbon-spacing: 5px;
+
+@import "ribbon/*.png";
+@include all-ribbon-sprites; 
+
+[class^="ribbon-"], [class*=" ribbon-"] {
+  position: absolute;
+  width: 112px;
+  height: 112px;
+}

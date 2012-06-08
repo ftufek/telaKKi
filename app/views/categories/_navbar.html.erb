@@ -1,0 +1,14 @@
+<li class="dropdown">
+  <a data-toggle="dropdown" class="dropdown-toggle" href="#"><%= icon_for("categories") %> Categories <b class="caret"></b></a>
+  <ul class="dropdown-menu">
+    <% Category.where(parent_id: nil).each do |t| %>
+      <li>
+        <%= link_to t.name do %>
+          <%= icon_for(t.icon_name) %>
+          <%= "#{I18n.t(t.name)} (#{pluralize(t.items.count, t('ad'))})" %>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+</li>
+

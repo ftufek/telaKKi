@@ -1,0 +1,34 @@
+.navbar-search {
+  position: relative;
+
+  i {
+    position: absolute;
+  }
+
+  @media (min-width: 980px) { 
+    i {
+      top: 6px;
+      left: 10px;
+    }
+  }
+
+  @media (max-width: 979px) {
+    i {
+      top: 15px;
+      left: 23px;
+    }
+  }
+  .search-query {
+    padding-left: 30px;
+  }
+
+  .search-query:focus, .search-query.focus {
+    padding-left: 30px;
+  }
+}
+
+.navbar {
+  .messages {
+    position: relative;
+  }
+}

@@ -10,6 +10,8 @@ class Item < ActiveRecord::Base
   validates :address, presence: true #FINISH THE VALIDATION FOR CONTAINS POSTAL_CODE
 
   belongs_to :user
+  has_one :category
+  attr_accessible :category
 
   has_many :images, as: :imageable
   attr_accessible :images

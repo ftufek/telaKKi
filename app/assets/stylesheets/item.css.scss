@@ -1,0 +1,136 @@
+.items_container {
+  .item_link {
+    position: relative;
+
+    i {
+      top: -3px;
+      left: -3px;
+      z-index: 1;
+    }
+  }
+
+  .item, .list_title {
+    @include box-sizing(border-box);
+    @include border-radius(0px 0px 0px 0px);
+    @include box-shadow(rgba(255,255,255,0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 1px 1px 9px 0px inset);
+    padding: 20px;
+    border: 1px solid #D4D4D4;
+    border-bottom: 0px;
+
+    &:hover {
+      background-color: #f6f6f6;
+    }
+
+    .img {
+      @extend .thumbnail;
+      background-color: white;
+    }
+
+    .main_info {
+      .title, .description, .address {
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .title, .address {
+        white-space: nowrap;
+      }
+
+      .seller {
+        display: none;
+      }
+
+      @media (min-width: 768px) {
+        position: relative;
+        .address {
+          position: absolute;
+          bottom: 0px;
+          width: 100%;
+        }
+      }
+    }
+
+    .extra_info {
+
+      .votes_container {
+        text-align: center;
+      }
+
+      @media (max-width: 767px) {
+        .votes_container {
+          margin-top: 10px;
+          margin-bottom: 10px;
+        }
+      }
+
+      @media (min-width: 768px) {
+        .votes_container {
+          margin-bottom: 40px;
+        }
+      }
+
+      .votes {
+        @extend .progress;
+        @extend .progress-success;
+
+        height: 8px;
+        @include background(linear-gradient(top, #f00, #d00));
+        margin-bottom: 10px;
+
+        .up_vs_down {
+          @extend .bar;
+        }
+      }
+
+      .vote_buttons {
+        @extend .btn-group;
+        display: inline-block;
+        margin-bottom: 10px;
+      }
+
+      .up_votes, .down_votes {
+        display: none;
+      }
+
+      .price {
+        text-align: center;
+      }
+
+      .social_buttons {
+        text-align: center;
+      }
+
+      @media (min-width: 768px) {
+        position: relative;
+        .social_buttons {
+          position: absolute;
+          bottom: 0px;
+          width: 100%;
+        }
+      }
+ 
+    }
+
+  }
+
+  a:first-child .item {
+    @include border-top-radius(5px);
+  }
+
+  a:last-child .item {
+    @include border-bottom-radius(5px 5px);
+    border-bottom: 1px solid #D4D4D4;
+  }
+}
+
+.carousel {
+  .carousel-inner {
+    background-color: white;
+    @extend .thumbnail;
+  }
+
+  img {
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,12 @@
+fr:
+  simple_form:
+    placeholders:
+      ad:
+        title: "Titre de l'annonce"
+        description: "Description"
+        price: "Prix ($)"
+        address: "Addresse"
+  like: "aime"
+  dislike: "n'aime pas"
+  share_twitter: "Partagez sur Twitter"
+  share_facebook: "Partagez sur Facebook"  

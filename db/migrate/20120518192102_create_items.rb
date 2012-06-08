@@ -4,10 +4,11 @@ class CreateItems < ActiveRecord::Migration
       t.string :title
       t.text :description
       t.integer :price, precision: 9, scale:2
-      t.integer :up_votes
-      t.integer :down_votes
+      t.integer :up_votes, default: 0
+      t.integer :down_votes, default: 0
       t.string :address
       t.integer :user_id
+      t.integer :category_id
 
       t.timestamps
     end

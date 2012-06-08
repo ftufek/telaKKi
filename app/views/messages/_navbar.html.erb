@@ -1,0 +1,9 @@
+<% if user_signed_in? %>
+  <% unread_messages = current_user.messages.where(read: false).count %>
+  <% if unread_messages >= 1 %>
+    <a href="#" rel="tooltip-bottom" title="<%= pluralize(unread_messages, t('new_message') ) %>"><%= icon_for("24-new-message") %></a>
+    <span class="message_number label label-important"><%= unread_messages >= 10 ? "9+" : unread_messages %></span>
+  <% else %>
+    <a href="#" rel="tooltip-bottom" title="<%= "#{t('no')} #{t('new_message')}" %>"><%= icon_for("24-message") %></a>
+  <% end %>
+<% end %>
