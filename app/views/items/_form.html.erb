@@ -6,7 +6,7 @@
     <%= f.input :price %>
     <%= f.input :description  %>
     <%= f.input :address %>
-    <%= f.select :category, Category.all.map { |c| [c.name, c.id, class: f.id ] } %>
+    <%= f.input :category_id, collection: Category.all %>
     <%= f.fields_for :images do |builder| %>
       <%= builder.file_field :image %>
     <% end %>

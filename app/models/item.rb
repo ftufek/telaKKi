@@ -11,7 +11,7 @@ class Item < ActiveRecord::Base
 
   belongs_to :user
   has_one :category
-  attr_accessible :category
+  attr_accessible :category_id
 
   has_many :images, as: :imageable
   attr_accessible :images

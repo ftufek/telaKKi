@@ -9,6 +9,15 @@
         <% end %>
       </li>
     <% end %>
+
+    <li class="divider"></li>
+
+    <li>
+      <%= link_to "#" do %>
+        <%= icon_for("all-categories") %>
+        <%=  "#{t('show_all_categories')} (#{pluralize(Item.all.count, t('ad'))})" %>
+      <% end %>
+    </li>
   </ul>
 </li>
 
