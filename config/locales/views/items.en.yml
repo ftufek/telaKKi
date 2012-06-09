@@ -1,7 +1,7 @@
 en:
   simple_form:
     placeholders:
-      ad:
+      item:
         title: "Title"
         description: "Description"
         price: "Price ($)"

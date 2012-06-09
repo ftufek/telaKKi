@@ -1,0 +1,31 @@
+.kk_display {
+  @include box-shadow($kk-box-shadow);
+
+  .element {
+    @include border-radius($kk-border-radius);
+    border: $kk-border;
+    border-bottom: 0px;
+  }
+
+  .title {
+    @include background($kk-title-background);
+    text-align: center;
+
+    h1, h2, h3, h4, h5, h6 {
+      color: white;
+    }
+  }
+
+  .form {
+    padding: $kk-form-padding;
+  }
+
+  .element:first-child {
+    @include border-radius($kk-border-radius-first-element);
+  }
+
+  .element:last-child {
+    @include border-radius($kk-border-radius-last-element);
+    border: $kk-border;
+  }
+}

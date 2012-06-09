@@ -1,12 +1,12 @@
-<%= simple_form_for @item, html: { class: "form-vertical well", multipart: true } do |f| %>
+<%= simple_form_for @item, :validate => true, html: { class: "form-vertical", multipart: true }, defaults: { label: false } do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
     <%= f.input :title %>
+    <%= f.input :category_id, collection: Category.all, prompt: "Select a category" %>
     <%= f.input :price %>
     <%= f.input :description  %>
     <%= f.input :address %>
-    <%= f.input :category_id, collection: Category.all %>
     <%= f.fields_for :images do |builder| %>
       <%= builder.file_field :image %>
     <% end %>

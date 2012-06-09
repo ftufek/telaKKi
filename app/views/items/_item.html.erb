@@ -1,5 +1,5 @@
 <%= link_to item, class: "item_link" do %>
-  <%= ribbon_for("new") %>
+  <%= ribbon_for("new") if item.created_at > 1.hour.ago %>
   <div class="item row-fluid">
     <div class="img span3">
       <%= item.images.first == nil ? image_tag("default_index_image.png") : render(item.images.first) %>

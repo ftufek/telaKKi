@@ -6,6 +6,7 @@ class CreateMessages < ActiveRecord::Migration
       t.text :text
 
       t.boolean :read, default: false
+      t.integer :ad_id, default: nil
 
       t.timestamps
     end

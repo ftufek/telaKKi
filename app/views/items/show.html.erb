@@ -4,20 +4,21 @@
   <div class="row">
 
   </div>
-
   <div class="row">
-    <div id="images" class="carousel slide span6 offset3">
-      <div class="carousel-inner">
-        <% @item.images.each do |i| %>
-          <div class="item">
-            <%= image_tag i.image.url(:medium) %>
-          </div>
-        <% end %>
-      </div>
+    <% if @item.images.count >= 1 %>
+      <div id="images" class="carousel slide span6 offset3">
+        <div class="carousel-inner">
+          <% @item.images.each do |i| %>
+            <div class="item">
+              <%= image_tag i.image.url(:medium) %>
+            </div>
+          <% end %>
+        </div>
 
-      <a class="carousel-control left" href="#images" data-slide="prev">&lsaquo;</a>
-      <a class="carousel-control right" href="#images" data-slide="next">&rsaquo;</a>
-    </div>
+        <a class="carousel-control left" href="#images" data-slide="prev">&lsaquo;</a>
+        <a class="carousel-control right" href="#images" data-slide="next">&rsaquo;</a>
+      </div>
+    <% end %>
   </div>
 
   <div class="row">
@@ -41,11 +42,11 @@
   <hr>
 
   <div class="row">
-    <div class="span4">
-      <h3>Contact the seller: </h3>
-    </div>
-    <div class="span8">
+    <div class="span7">
       <%= gmaps(map_options: { container_class: "map_container", id: "map", class: "gmaps4rails_map", detect_location: true, auto_zoom: false, zoom: 14}, markers: { data: @json } ) %>
+    </div>
+    <div class="span5">
+      <h3>Contact the seller: </h3>
     </div>
   </div>
 

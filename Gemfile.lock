@@ -1,8 +1,8 @@
 GIT
   remote: git://github.com/seyhunak/twitter-bootstrap-rails.git
-  revision: 081523431b4ef14df1c80b274fe37a1d04df038d
+  revision: eafd20876b5787da3a21adba73e148dc73d381d6
   specs:
-    twitter-bootstrap-rails (2.0.8.1)
+    twitter-bootstrap-rails (2.0.9)
       actionpack (>= 3.1)
       less-rails (~> 2.2.2)
       railties (>= 3.1)
@@ -10,7 +10,7 @@ GIT
 
 GIT
   remote: git://github.com/thoughtbot/paperclip.git
-  revision: 24d143978e0df6f8424e8a333605a89a87e33e23
+  revision: 6728166896d58412e4d10276f010eca8c299890f
   specs:
     paperclip (3.0.4)
       activemodel (>= 3.0.0)
