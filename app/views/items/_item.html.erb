@@ -1,17 +1,20 @@
-<%= link_to item, class: "item_link" do %>
+<%= content_tag :div, class: "item_link" do %>
   <%= ribbon_for("new") if item.created_at > 1.hour.ago %>
-  <div class="item row-fluid">
-    <div class="img span3">
-      <%= item.images.first == nil ? image_tag("default_index_image.png") : render(item.images.first) %>
-    </div>
 
-    <div class="main_info span7">
-      <div class="title"><%= item.title %></div>
-      <hr>
-      <div class="description"><%= truncate item.description, length: 300, omission: '...' %></div>
-      <div class="address"><hr> Address: <%= item.address %></div>
-      <div class="seller"><%= item.user.email %></div>
-    </div>
+  <%= link_to item do %>
+    <div class="item row-fluid">
+      <div class="img span3">
+        <%= item.images.first == nil ? image_tag("default_index_image.png") : render(item.images.first) %>
+      </div>
+
+      <div class="main_info span7">
+        <div class="title"><%= item.title %></div>
+        <hr>
+        <div class="description"><%= truncate item.description, length: 300, omission: '...' %></div>
+        <div class="address"><hr> Address: <%= item.address %></div>
+        <div class="seller"><%= item.user.email %></div>
+      </div>
+  <% end %>
 
     <div class="extra_info span2">
       <div class="votes_container">
@@ -20,7 +23,9 @@
         </div>
       </div>
 
+  <%= link_to item do %>
       <div class="price"><h1><%= number_to_currency item.price, { precision: 0 } %></h1></div>
+  <% end %>
 
       <div class="social_buttons">
         <span href="#" class="twitter" rel="tooltip" title="<%= t 'share_twitter' %>"><%= icon_for("24-twitter") %></span>

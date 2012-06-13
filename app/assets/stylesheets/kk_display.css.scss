@@ -1,10 +1,12 @@
 .kk_display {
-  @include box-shadow($kk-box-shadow);
-
   .element {
     @include border-radius($kk-border-radius);
     border: $kk-border;
     border-bottom: 0px;
+  }
+
+  .element_inner {
+    @include box-shadow($kk-element-inner-shadow);
   }
 
   .title {
@@ -12,12 +14,15 @@
     text-align: center;
 
     h1, h2, h3, h4, h5, h6 {
+      padding: $kk-element-padding;
       color: white;
     }
   }
 
-  .form {
-    padding: $kk-form-padding;
+  .title_black {
+    h1, h2, h3, h4, h5, h6 {
+      color: black;
+    }
   }
 
   .element:first-child {
@@ -27,5 +32,9 @@
   .element:last-child {
     @include border-radius($kk-border-radius-last-element);
     border: $kk-border;
+  }
+
+  .element_padded {
+    padding: $kk-element-padding;
   }
 }

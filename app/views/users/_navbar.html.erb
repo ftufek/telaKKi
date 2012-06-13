@@ -5,14 +5,14 @@
   </a>
   <ul class="dropdown-menu">
     <li>
-      <%= link_to users_profile_path do %>
+      <%= link_to user_profile_path do %>
         <%= icon_for("profile") %>
         <%= t('profile') %>
       <% end %>
     </li>
 
     <li>
-      <%= link_to "#" do %>
+      <%= link_to my_items_path do %>
         <%= icon_for("items") %>
         <%= t('my_items') %>
       <% end %>

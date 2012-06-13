@@ -1,0 +1,28 @@
+fr:
+  simple_form:
+    placeholders:
+      ad:
+        title: "Titre de l'annonce"
+        description: "Description"
+        price: "Prix ($)"
+        address: "Addresse"
+  like: "aime"
+  dislike: "n'aime pas"
+  share_twitter: "Partagez sur Twitter"
+  share_facebook: "Partagez sur Facebook"  
+  share_email: "Partagez a travers le courriel"
+  watch_item: "Surveillez cette item"
+  sell_something: "Vendez quelque chose"
+  you_are_selling_nothing: "Presentement, vous avez aucune item a vendre!"
+  item: "Item"
+  show_item: "Montrez l'item"
+  edit_item: "Modifier les details de l'item"
+  already_sold_item: "Deja vendu!"
+  saw_your_ad: "%{number_of_persons} personnes ont vu votre annonce."
+  saw_your_ad_on_main_page: "%{number_of_persons} personnes ont vu votre annonce sur la page principale."
+  looked_at_it_in_detail: "%{number_of_persons} personnes ont cliques dessus pour voir les details."
+  liked_vs_disliked: "%{number_of_likes} l'ont aimes et %{number_of_dislikes} ne l'ont pas aimes."
+  liked_your_ad: "%{number_of_persons} personnes ont aimes votre annonce."
+  disliked_your_ad: "%{number_of_persons} personnes n'ont pas aimes votre annonce."
+  send_message_your_ad: "%{number_of_persons} ont envoye une message pour votre annonce."
+  got_n_messages: "Vous avez %{n} messages pour cette annonce"

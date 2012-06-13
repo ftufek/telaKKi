@@ -1,4 +1,4 @@
-<%= simple_form_for @item, :validate => true, html: { class: "form-vertical", multipart: true }, defaults: { label: false } do |f| %>
+<%= simple_form_for @item, :validate => true, html: { class: "form-vertical item-form", multipart: true }, defaults: { label: false } do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
@@ -14,6 +14,9 @@
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit %>
+    <div class="btn-group">
+      <%= f.button :submit, class: "btn-primary" %>
+      <%= f.button :submit, class: "btn-warning", name: "preview", value: "Preview" %>
+    </div>
   </div>
 <% end %>

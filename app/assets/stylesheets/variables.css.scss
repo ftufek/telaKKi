@@ -78,10 +78,15 @@ $dropdownLinkBackgroundHover:   $linkColor;
 
 // KK_Display
 // -------------------------
-$kk-border-radius: 0px 0px 0px 0px;
+$kk-border-radius: 0px;
+$kk-rounded-border-radius: 5px;
 $kk-box-shadow: rgba(255,255,255,0.1) 0 1px 0, rgba(0, 0, 255, 0.1) 1px 1px 9px 0px inset;
 $kk-border: 1px solid #D4D4D4;
 $kk-border-radius-first-element: 5px 5px 0px 0px; 
 $kk-border-radius-last-element: 0px 0px 5px 5px;
 $kk-title-background: linear-gradient(top, #61B0DF, #349BD7);
-$kk-form-padding: 10px;
+$kk-element-padding: 10px;
+$kk-element-inner-shadow: inset 0px 5px 15px 2px rgba(0,0,0,0.2);
+
+
+$nice-border: 1px solid #dbdbdb;

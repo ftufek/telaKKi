@@ -18,6 +18,8 @@ class Item < ActiveRecord::Base
   attr_accessible :images_attributes
   accepts_nested_attributes_for :images, reject_if: lambda { |t| t['image'].nil? }
 
+  has_many :messages
+
   acts_as_gmappable address: "address", normalized_address: "address",
                     msg: "Sorry, not even Google could figure out where that is!"
 

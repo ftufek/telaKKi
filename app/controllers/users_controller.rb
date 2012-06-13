@@ -1,7 +1,8 @@
 class UsersController < ApplicationController
-  before_filter :authenticate_user!, only: [ :profile ]
+  before_filter :authenticate_user!, only: [ :my_items ]
 
-  def profile
+  def my_items
+    @items = Item.where(user_id: current_user.id).all   
   end
 
 end

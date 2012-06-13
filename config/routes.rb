@@ -6,8 +6,12 @@ TelaKKi::Application.routes.draw do
 
   devise_for :admin_users, ActiveAdmin::Devise.config
 
-  devise_for :users
-  match 'users/profile' => 'users#profile'
+
+  devise_for :users do
+  #  get '/profile' => 'users/registrations#edit', as: :edit_user_registration
+    get "/profile", :to => "devise/registrations#edit", :as => :user_profile
+    get "/my_items" => "users#my_items"
+  end
 
   resources :items
 

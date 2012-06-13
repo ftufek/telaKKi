@@ -1,5 +1,7 @@
 class ItemsController < ApplicationController
   before_filter :authenticate_user!, except: [ :index, :show ] 
+  before_filter :is_current_user_owner, only: [ :edit, :update, :destroy ]
+
   # GET /items
   # GET /items.json
   def index
@@ -81,6 +83,14 @@ class ItemsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to items_url }
       format.json { head :no_content }
+    end
+  end
+
+private
+  def is_current_user_owner
+    unless current_user.id == Item.find(params[:id]).user.id
+      flash[:error] = "You're not the owner of this item!"
+      redirect_to items_path
     end
   end
 end

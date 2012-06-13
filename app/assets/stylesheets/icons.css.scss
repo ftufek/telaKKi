@@ -24,7 +24,29 @@ $icon-24-spacing: 5px;
   height: 16px;
 }
 
+a[href^="/items/new"] {
+  padding: 9px 10px 7px !important;
+  .icon-sale {
+    width: 24px;
+    height: 24px;
+  }
+}
 
 .icon-24-new-message {
   opacity: 1 !important;
+}
+
+.icon-stats-view {
+  width: 32px;
+  height: 17px;
+}
+
+.icon-stats-message {
+  width: 24px;
+  height: 20px;
+}
+
+.icon-stats-like, .icon-stats-dislike {
+  width: 19px;
+  height: 24px;
 }

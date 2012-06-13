@@ -4,3 +4,8 @@
 en:
   hello: "Hello world"
   ad: "ad"
+
+  activerecord:
+    attributes:
+      user:
+        login: "Username or email"

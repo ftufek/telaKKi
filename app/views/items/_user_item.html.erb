@@ -1,0 +1,104 @@
+<div class="element item">
+  <a class="title" data-toggle="collapse" data-target="#<%= user_item.id%>"><h4 class="element_padded"><%= "#{t('item')} ##{user_item.id}: #{user_item.title}" %></h4></a>
+
+  <div class="collapse" id="<%= user_item.id %>">
+    <div class="item_details element_inner">
+      <div class="item_controls element_padded">
+        <%= link_to t('show_item'), user_item, class: "btn btn-primary" %>
+        <%= link_to t('edit_item'), edit_item_path(user_item.id), class: "btn btn-primary" %>
+        <%= link_to t('already_sold_item'), user_item, method: :delete, class: "btn btn-danger delete_item", "data-type" => :json, confirm: "Are you sure?", remote: true %>
+      </div>
+
+      <div class="item_statistics element_padded">
+        <span class="views">
+          <%= content_tag :span, rel: "tooltip-bottom", title: "#{t('saw_your_ad', number_of_persons: 10)}" do %>
+            <%= icon_for("stats-view") %>
+            <h4><%= 10 %></h4>
+          <% end %>
+        </span>
+
+        <span class="likes">
+          <%= content_tag :span, rel: "tooltip-bottom", title: "#{t('liked_your_ad', number_of_persons: 10)}" do %>
+            <%= icon_for("stats-like") %>
+            <h4><%= 10 %></h4>
+          <% end %>
+        </span>
+
+        <span class="dislikes">
+          <%= content_tag :span, rel: "tooltip-bottom", title: "#{t('disliked_your_ad', number_of_persons: 10)}" do %>
+            <%= icon_for("stats-like") %>
+            <h4><%= 10 %></h4>
+          <% end %>
+        </span>
+
+        <span class="messages">
+          <%= content_tag :span, rel: "tooltip-bottom", title: "#{t('send_message_your_ad', number_of_persons: 10)}" do %>
+            <%= icon_for("stats-message") %>
+            <h4><%= 10 %></h4>
+          <% end %>
+        </span>
+      </div>
+
+      <div class="messages element_padded">
+
+
+
+
+      
+
+
+
+      <div class="accordion" id="accordion2">
+            <div class="accordion-group">
+              <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+                  Collapsible Group Item #1
+                </a>
+              </div>
+              <div id="collapseOne" class="accordion-body in collapse" style="height: auto; ">
+                <div class="accordion-inner">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-group">
+              <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+                  Collapsible Group Item #2
+                </a>
+              </div>
+              <div id="collapseTwo" class="accordion-body collapse" style="height: 0px; ">
+                <div class="accordion-inner">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-group">
+              <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
+                  Collapsible Group Item #3
+                </a>
+              </div>
+              <div id="collapseThree" class="accordion-body collapse" style="height: 0px; ">
+                <div class="accordion-inner">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+</div>

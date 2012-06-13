@@ -87,6 +87,7 @@ ActiveRecord::Schema.define(:version => 20120609170701) do
   create_table "messages", :force => true do |t|
     t.integer  "from_id"
     t.integer  "to_id"
+    t.integer  "item_id"
     t.text     "text"
     t.boolean  "read",       :default => false
     t.integer  "ad_id"

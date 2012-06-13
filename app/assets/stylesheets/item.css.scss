@@ -27,6 +27,10 @@
     }
 
     .main_info {
+      @media (min-width: 768px) {
+        min-height: 100px;
+      }
+
       .title, .description, .address {
         display: block;
         overflow: hidden;
@@ -52,6 +56,9 @@
     }
 
     .extra_info {
+      @media (min-width: 768px) {
+        min-height: 100px;
+      }
 
       .votes_container {
         text-align: center;
@@ -114,11 +121,11 @@
 
   }
 
-  a:first-child .item {
+  .item_link:first-child .item {
     @include border-top-radius(5px);
   }
 
-  a:last-child .item {
+  .item_link:last-child .item {
     @include border-bottom-radius(5px 5px);
     border-bottom: 1px solid #D4D4D4;
   }
@@ -132,5 +139,43 @@
 
   img {
     margin: 0 auto;
+  }
+}
+
+.user_item_list {
+  #no_sale {
+    display: none;
+  }
+
+  .item {
+
+    .title {
+      h1, h2, h3, h4, h5, h6 {
+        background-color: #3498D7;
+      }
+    }
+
+    .item_controls, .item_statistics {
+      border-bottom: $nice-border;
+      text-align: center;
+
+      .btn {
+        margin: 10px;
+      }
+    }
+
+    .item_statistics {
+        text-align: center;
+
+        h1, h2, h3, h4, h5, h6 {
+          display: inline;
+        }
+
+        span {
+          margin: 0px 20px;
+          display: inline-block;
+        }
+    }
+
   }
 }
