@@ -4,7 +4,7 @@ $(function() {
   $('.carousel').carousel('cycle');
 
   if($('.carousel-inner img').size() <= 1){
-    $('.carousel-control').css("display","none");
+    $('#images').css("display","none");
   }
 
   arrange_item_form();
@@ -55,8 +55,10 @@ function update_user_items_list() {
 
   if(n >= 1){
     $('#no_sale').slideUp();
+    $('#no_message').slideUp();
   }else{
     $('#no_sale').slideDown();
+    $('#no_message').slideDown();
   }
 }
 

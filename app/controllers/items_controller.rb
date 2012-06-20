@@ -18,6 +18,10 @@ class ItemsController < ApplicationController
   def show
     @item = Item.find(params[:id])
     @json = @item.to_gmaps4rails
+    @message = Message.new
+    @message.item = @item
+    @message.to = @item.user
+    @message.from = current_user
 
     respond_to do |format|
       format.html # show.html.erb

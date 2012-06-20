@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+<div class="item">
+  <div class="row">
+
+  </div>
+  <div class="row">
+    <% if @item.images.count >= 1 %>
+      <div id="images" class="carousel slide span6 offset3">
+        <div class="carousel-inner">
+          <% @item.images.each do |i| %>
+            <div class="item">
+              <%= image_tag i.image.url(:medium) %>
+            </div>
+          <% end %>
+        </div>
+
+        <a class="carousel-control left" href="#images" data-slide="prev">&lsaquo;</a>
+        <a class="carousel-control right" href="#images" data-slide="next">&rsaquo;</a>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="row">
+    <div class="span12">
+      <div class="title"><h3><%= @item.title %></h3></div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="row">
+    <div class="span8">
+      <div class="description"><h4>Description: </h4><%= @item.description %></div>
+    </div>
+
+    <div class="statistics_and_ratings">
+      <h4>Statistics and ratings: </h4>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="row">
+    <div class="span7">
+      <%= gmaps(map_options: { container_class: "map_container", id: "map", class: "gmaps4rails_map", detect_location: true, auto_zoom: false, zoom: 14}, markers: { data: @json } ) %>
+    </div>
+    <div class="span5">
+      <h3>Contact the seller: </h3>
+    </div>
+  </div>
+
+</div>
+<br><br><br><br>
+<%= link_to 'Edit', edit_item_path(@item) %> |
+<%= link_to 'Back', items_path %>

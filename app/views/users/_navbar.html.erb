@@ -17,6 +17,21 @@
         <%= t('my_items') %>
       <% end %>
     </li>
+
+    <li>
+      <%= link_to my_messages_path do %>
+        <%= icon_for("messages") %>
+        <%= t('my_messages') %>
+      <% end %>
+    </li>
+
+    <li>
+      <%= link_to settings_path do %>
+        <%= icon_for("settings") %>
+        <%= t('settings') %>
+      <% end %>
+    </li>
+
     <li class="divider"></li>
     <li>
       <%= link_to destroy_user_session_path, method: :delete do %>

@@ -8,3 +8,11 @@ function isMobile() {
     return false;
   }
 }
+
+function isTablet() {
+  if($(window).width() > 767 && $(window).width() < 980){
+    return true;
+  }else{
+    return false;
+  }
+}

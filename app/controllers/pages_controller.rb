@@ -1,6 +1,7 @@
 class PagesController < ApplicationController
 
   def solution 
+    render layout: false
   end
 
   def faq

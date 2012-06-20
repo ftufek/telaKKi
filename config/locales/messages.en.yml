@@ -1,0 +1,8 @@
+en:
+  simple_form:
+    placeholders:
+      message:
+        text: "Write a message to the seller..."
+
+  send_message: "Send message"
+  sign_in_to_send_message: "Sign in to send a message"

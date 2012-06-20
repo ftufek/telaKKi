@@ -11,6 +11,8 @@ TelaKKi::Application.routes.draw do
   #  get '/profile' => 'users/registrations#edit', as: :edit_user_registration
     get "/profile", :to => "devise/registrations#edit", :as => :user_profile
     get "/my_items" => "users#my_items"
+    get "/my_messages" => "users#my_messages"
+    get "/settings" => "users#settings"
   end
 
   resources :items

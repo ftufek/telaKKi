@@ -4,3 +4,6 @@ fr:
   sign_out: "Deconnectez"
   sign_in: "Connectez-vous"
   my_items: "Mes Articles"
+  my_messages: "Mes Messages"
+  settings: "Parametres"
+  you_have_no_messages: "Presentement, vous n'avez aucune message."

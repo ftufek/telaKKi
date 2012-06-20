@@ -6,6 +6,7 @@ fr:
         description: "Description"
         price: "Prix ($)"
         address: "Addresse"
+
   like: "aime"
   dislike: "n'aime pas"
   share_twitter: "Partagez sur Twitter"
@@ -26,3 +27,4 @@ fr:
   disliked_your_ad: "%{number_of_persons} personnes n'ont pas aimes votre annonce."
   send_message_your_ad: "%{number_of_persons} ont envoye une message pour votre annonce."
   got_n_messages: "Vous avez %{n} messages pour cette annonce"
+  item_description: "Description"

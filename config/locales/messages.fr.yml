@@ -1,0 +1,7 @@
+fr:
+  simple_form:
+    message:
+      text: "Ecrivez un message au vendeur..."
+
+  send_message: "Envoyez un message"
+  sign_in_to_send_message: "Connectez-vous pour envoyer une message"

@@ -1,11 +1,13 @@
 <p id="notice"><%= notice %></p>
-<div class="item">
-  <div class="row">
 
-  </div>
-  <div class="row">
-    <% if @item.images.count >= 1 %>
-      <div id="images" class="carousel slide span6 offset3">
+<div class="row item_show">
+  <div class="kk_display span12">
+
+    <div class="element title">
+      <h3><%= @item.title %></h3>
+    </div>
+
+    <div id="images" class="element element_padded carousel slide">
         <div class="carousel-inner">
           <% @item.images.each do |i| %>
             <div class="item">
@@ -16,40 +18,36 @@
 
         <a class="carousel-control left" href="#images" data-slide="prev">&lsaquo;</a>
         <a class="carousel-control right" href="#images" data-slide="next">&rsaquo;</a>
-      </div>
-    <% end %>
+    </div>
+
+    <div class="element element_padded description">
+      <h3><%= t 'item_description' %></h3>
+      <%= @item.description %>
+    </div>
+
+    <div class="element">
+      <%= render "stats" %>
+    </div>
+
+    <div class="element element_padded message">
+      <% if user_signed_in? %>
+        <%= simple_form_for @message, remote: true, html: { class: "form-vertical" } do |f| %>
+          <%= f.hidden_field :from_id, value: @message.from.id %>
+          <%= f.hidden_field :to_id, value: @message.to.id %>
+          <%= f.hidden_field :item_id, value: @message.item.id %>
+          <%= f.input :text, label: false, input_html: { rows: 10 } %>
+          <%= f.button :submit, class: "btn-primary btn-bottom-right", value: "#{t('send_message')}" %>
+        <% end %>
+      <% else %>
+        <h4><%= render "users/navbar" %><%= t 'sign_in_to_send_message' %>!</h4>
+      <% end %>
   </div>
 
-  <div class="row">
-    <div class="span12">
-      <div class="title"><h3><%= @item.title %></h3></div>
-    </div>
+  <div class="element element_padded">
+    <%= gmaps(map_options: { container_class: "map_container", id: "map", class: "gmaps4rails_map", detect_location: true, auto_zoom: false, zoom: 14}, markers: { data: @json } ) %>
   </div>
 
-  <hr>
-
-  <div class="row">
-    <div class="span8">
-      <div class="description"><h4>Description: </h4><%= @item.description %></div>
-    </div>
-
-    <div class="statistics_and_ratings">
-      <h4>Statistics and ratings: </h4>
-    </div>
   </div>
-
-  <hr>
-
-  <div class="row">
-    <div class="span7">
-      <%= gmaps(map_options: { container_class: "map_container", id: "map", class: "gmaps4rails_map", detect_location: true, auto_zoom: false, zoom: 14}, markers: { data: @json } ) %>
-    </div>
-    <div class="span5">
-      <h3>Contact the seller: </h3>
-    </div>
-  </div>
-
 </div>
-<br><br><br><br>
-<%= link_to 'Edit', edit_item_path(@item) %> |
+
 <%= link_to 'Back', items_path %>

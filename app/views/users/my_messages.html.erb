@@ -1,11 +1,11 @@
 <div class="row">
   <div class="user_item_list kk_display span12">
     <div class="element title">
-      <h3><%= t 'my_items' %></h3>
+      <h3><%= t 'my_messages' %></h3>
     </div>
 
-    <div class="element element_padded" id="no_sale">
-      <h4><%= t 'you_are_selling_nothing' %></h4>
+    <div class="element element_padded" id="no_message">
+      <h4><%= t 'you_have_no_messages' %></h4>
     </div>
 
     <%= render partial: "items/user_item", collection: @items %>

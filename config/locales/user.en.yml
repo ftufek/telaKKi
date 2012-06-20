@@ -4,3 +4,6 @@ en:
   sign_out: "Sign Out"
   sign_in: "Sign In"
   my_items: "My Items"
+  my_messages: "My Messages"
+  settings: "Settings"
+  you_have_no_messages: "Currently, you have no messages."
