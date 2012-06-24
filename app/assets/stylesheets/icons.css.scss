@@ -1,7 +1,9 @@
+$icon-sprite-dimensions: true;
 $icon-spacing: 5px;
 @import "icon/*.png";
 @include all-icon-sprites;
 
+$icon-24-sprite-dimensions: true;
 $icon-24-spacing: 5px;
 @import "icon-24/*.png";
 @include all-icon-24-sprites;
