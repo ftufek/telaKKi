@@ -1,5 +1,7 @@
 TelaKKi::Application.routes.draw do
 
+  if Rails.env.development?
+
   resources :messages
 
   ActiveAdmin.routes(self)
@@ -16,6 +18,15 @@ TelaKKi::Application.routes.draw do
   end
 
   resources :items
+
+
+  match "/solution" => "pages#solution"
+  match "/faq" => "pages#faq"
+  match "/help" => "pages#help"
+  match "/about_us" => "pages#about_us"
+
+
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -66,16 +77,11 @@ TelaKKi::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'items#index'
+  root :to => 'pages#solution'
 
   # See how all your routes lay out with "rake routes"
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
-
-  match "/solution" => "pages#solution"
-  match "/faq" => "pages#faq"
-  match "/help" => "pages#help"
-  match "/about_us" => "pages#about_us"
 end
