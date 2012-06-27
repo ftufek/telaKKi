@@ -39,5 +39,5 @@ TelaKKi::Application.configure do
 
   Paperclip.options[:command_path] = "/usr/bin/"
 
-  config.logger = Logger.new('/dev/null')
+  # config.logger = Logger.new('/dev/null')
 end

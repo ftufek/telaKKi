@@ -1,5 +1,6 @@
 @import "compass";
 
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -80,7 +81,7 @@ a:focus {
 /* Icon Sprites */
 $icon-sprite-dimensions: true;
 $icon-spacing: 1px;
-@import "the_intro/icon/*.png";
+@import "the_intro/icon/*.png"; /* */
 @include all-icon-sprites;
 
 [class^="icon-"],
@@ -219,6 +220,16 @@ $icon-spacing: 1px;
 /* The Marketplace Slide */
 
 #themarketplace {
+  a {
+    font-size: 20px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    cursor: pointer;
+    text-shadow: none;
+    color: #0000cc;
+  }
+
   img {
     position: absolute;
     top: 1.9em;
@@ -267,7 +278,7 @@ $icon-spacing: 1px;
 
   h3 {
     font-size: 40px;
-    margin-bottom: 1.8em;
+    margin-bottom: 1.4em;
   }
 
   h4 {
@@ -295,11 +306,24 @@ $icon-spacing: 1px;
     font-size: 30px;
   }
 
+  h5 {
+    font-size: 30px;
+    position: relative;
+    text-align: center;
+    top: 270px;
+  }
+
   form {
     position: relative;
-    top: 40px;
 
-    #early_registration_email {
+    img {
+      position: absolute;
+      top: 6px;
+      left: 370px;
+      display: none;
+    }
+
+    #prelauncher_email {
       @include border-radius(3px 0px 0px 3px);
       position: absolute;
       top: 0px;
@@ -321,6 +345,29 @@ $icon-spacing: 1px;
     top: 450px;
     left: 365px;
   }
+
+  #prelauncher {
+    margin-top: 40px;
+    font-size: 20px;
+
+    .message {
+      text-align: center;
+      display: none;
+      font-weight: bold;
+    }
+
+    #success {
+      color: #00b323;
+    }
+
+    #failed {
+      color: #f00;
+    }
+
+    #already_registered {
+
+    }
+  }
 }
 
 /* More information Slide */
@@ -328,6 +375,17 @@ $icon-spacing: 1px;
 #moreinfo {
   h1 {
     font-size: 60px;
+  }
+
+  h3 {
+    font-size: 30px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  h4 {
+    margin-left: 160px;
+    margin-bottom: 20px;
   }
 }
 

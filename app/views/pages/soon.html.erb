@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=1024, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title><%= content_for?(:title) ? yield(:title) : "citysell.it" %></title>
+    <meta name="description" content="The Social Marketplace, a place where you can easily exchange goods with other people.">
+    <meta name="author" content="F T" />
+    <%= csrf_meta_tags %>
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+    <![endif]-->
+
+    <%= stylesheet_link_tag "the_intro", :media => "all" %>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+
+    <link href="images/favicon.ico" rel="shortcut icon">
+    <link href="images/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="images/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+    <link href="images/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+  </head>
+
+  <body class="impress-not-supported">
+    <div class="fallback-message">
+      <p><%= t 'your_browser_isnt_supported' %></p>
+    </div>
+
+    <div id="impress">
+
+      <div id="themarketplace" class="step slide" data-x="0" data-y="0" data-scale="4">
+        <% if I18n.locale == :fr %>
+          <%= link_to "English", root_path %>
+        <% else %>
+          <%= link_to "Francais", { controller: "pages", action: "soon", locale: "fr" } %>
+        <% end %>
+        <%= image_tag "city-logo.png" %>
+        <h1>sell.it</h1>
+
+        <h3><b><%= t 'the_social_marketplace' %></b></h3>
+        <h4>(<%= t 'aka_online_classifieds' %>)</h4>
+      </div>
+
+      <div id="whatisit" class="step slide" data-x="-2000" data-y="2600" data-scale="3" data-rotate="30">
+        <h1><b><%= t 'the_marketplace' %></b></h1>
+
+        <h3><%= t 'community_for_exchange' %></h3>
+      </div>
+
+      <div id="ourgoal" class="step slide" data-x="300" data-y="3000" data-scale="2">
+        <h1><b><%= t 'our_goal' %></b></h1>
+
+        <h3><%= t 'we_want_to_simplify_product_transfer' %></h3>
+        <div class="quote">
+          <h4><%= t 'because_ultimate_sophistication' %></h4>
+          <h5>Leonardo DaVinci</h5>
+        </div>
+      </div>
+
+      <div id="when" class="step slide" data-x="2500" data-y="2500" data-scale="3" data-rotate="-30">
+        <h1><b><%= t 'when' %></b></h1>
+
+        <h3><%= t 'we_hope_soon' %>!</h3>
+
+        <div id="prelauncher">
+          <%= form_for "prelauncher", url: prelauncher_path, remote: true, html: { id: "prelauncher_add" } do |f| %>
+            <%= f.email_field :email, label: false, placeholder: "@email.com" %>
+            <%= image_tag "loader.gif" %>
+            <%= f.submit "#{t 'keep_me_updated'}", class: "btn btn-primary" %>
+          <% end %>
+
+          <div id="success" class="message">
+            <%= t 'registration_successfull' %>!
+          </div>
+
+          <div id="failed" class="message">
+            <%= t 'registration_failed' %>!
+            <br>
+            <%= t 'thank_you_for_your_understanding' %>.
+          </div>
+
+          <div id="already_registered" class="message">
+            <%= t 'registration_already_done' %>!
+          </div>
+
+          <div id="general" class="message">
+            <%= t 'thank_you_for_your_interest' %>!
+          </div>
+        </div>
+
+        <div class="addthis_toolbox addthis_default_style ">
+          <a class="addthis_button_facebook_like" fb:like:layout="box_count" fb:like:href="http://www.facebook.com/pages/citysellit/255532487889541"></a>
+          <a class="addthis_button_tweet" tw:count="vertical" tw:url="http://www.citysell.it" tw:via="citysellit"></a>
+        </div>
+
+        <h5><%= t 'be_the_first_ones_to_share_it' %>!</h5>
+      </div>
+
+      <div id="moreinfo" class="step slide" data-x="1500" data-y="4500" data-z="-3000" data-scale="1" data-rotate="270">
+        <h1><b><%= t 'more_information' %></b></h1>
+
+        <h3><%= t 'if_you_want_to_have_more_info' %>:</h3>
+        <h4><%= icon_for "twitter-contact" %> @furkan_tk</h4>
+        <h4><%= icon_for "email-contact" %> f_t@hotmail.ca</h4>
+      </div>
+
+      <div id="overview" class="step" data-x="0" data-y="500" data-scale="6">
+      </div>
+
+    </div>
+
+    <div class="hint">
+        <p><%= t 'use_space_to_navigate' %></p>
+    </div>
+
+    <script>
+    if ("ontouchstart" in document.documentElement) { 
+        document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+    }
+    </script>
+
+    <%= javascript_include_tag "impress" %>
+    <%= javascript_include_tag "https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" %>
+    <%= javascript_include_tag "the_intro" %>
+    <script>impress().init();</script>
+
+    <script type="text/javascript">
+      var addthis_config = addthis_config||{};
+      addthis_config.data_track_addressbar = false;
+      addthis_config.data_track_clickback = false;
+    </script>
+    <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4fe6238436b98292"></script>
+  </body>
+</html>

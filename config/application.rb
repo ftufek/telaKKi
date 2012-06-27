@@ -55,5 +55,7 @@ module TelaKKi
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    config.logger = Logger.new(config.paths['log'].first, 1, 20.megabytes)
   end
 end
