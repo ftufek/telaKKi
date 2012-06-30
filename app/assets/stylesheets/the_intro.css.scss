@@ -90,6 +90,10 @@ $icon-spacing: 1px;
   vertical-align: text-top;
 }
 
+.icon-city-buildings {
+  vertical-align: initial;
+}
+
 .fallback-message {
     font-family: sans-serif;
     line-height: 1.3;
@@ -238,7 +242,6 @@ $icon-spacing: 1px;
 
   h1 {
     font-size: 160px;
-    margin-left: 0.8em;
   }
 
   h1, h3, h4 {
@@ -308,9 +311,11 @@ $icon-spacing: 1px;
 
   h5 {
     font-size: 30px;
-    position: relative;
+    position: absolute;
+    top: 550px;
+    left: 0px;
+    right: 0px;
     text-align: center;
-    top: 270px;
   }
 
   form {
