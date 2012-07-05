@@ -5,9 +5,6 @@ class UsersController < ApplicationController
     @items = Item.where(user_id: current_user.id).all   
   end
 
-  def my_messages
-  end
-
   def settings
   end
 

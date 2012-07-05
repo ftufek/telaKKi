@@ -11,7 +11,7 @@ TelaKKi::Application.routes.draw do
     #  get '/profile' => 'users/registrations#edit', as: :edit_user_registration
       get "/profile", :to => "devise/registrations#edit", :as => :user_profile
       get "/my_items" => "users#my_items"
-      get "/my_messages" => "users#my_messages"
+      get "/messages" => "messages#index"
       get "/settings" => "users#settings"
     end
 
@@ -73,9 +73,15 @@ TelaKKi::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'pages#soon'
   match "/prelauncher", to: "pages#prelauncher", via: "post"
   match "/soon", to: "pages#soon"
+
+  if Rails.env.development?
+    root :to => 'items#index'
+  else
+    root :to => 'pages#soon'
+  end
+
   # See how all your routes lay out with "rake routes"
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.

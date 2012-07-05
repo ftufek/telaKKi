@@ -1,8 +1,10 @@
 class MessagesController < InheritedResources::Base
+  before_filter :authenticate_user!
   # GET /messages
   # GET /messages.json
   def index
-    @messages = Message.all
+    id = current_user.id
+    @messages = Message.where("to_id = ? OR from_id = ?", id, id).group("item_id")
 
     respond_to do |format|
       format.html # index.html.erb
