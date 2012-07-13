@@ -1,69 +1,21 @@
 $icon-sprite-dimensions: true;
-$icon-spacing: 5px;
+$icon-spacing: 2px;
 @import "icon/*.png";
 @include all-icon-sprites;
-
-$icon-24-sprite-dimensions: true;
-$icon-24-spacing: 5px;
-@import "icon-24/*.png";
-@include all-icon-24-sprites;
 
 [class^="icon-"],
 [class*=" icon-"] {
   display: inline-block;
-  width: 16px;
-  height: 16px;
   vertical-align: text-top;
 }
 
-
-[class^="icon-24-"], [class*=" icon-24-"] {
-  width: 24px;
-  height: 24px;
-}
-
-.icon-24-message, .icon-24-new-message {
-  height: 16px;
-}
-
-a[href^="/items/new"] {
-  padding: 9px 10px 7px !important;
-  .icon-sale {
-    width: 24px;
-    height: 24px;
-  }
-}
-
-.icon-24-new-message {
+.icon-new-message {
   opacity: 1 !important;
 }
 
-.icon-stats-view {
-  width: 32px;
-  height: 17px;
-}
-
-.icon-stats-message {
-  width: 24px;
-  height: 20px;
-}
-
-.icon-stats-like, .icon-stats-dislike {
-  width: 19px;
-  height: 24px;
-}
-
-.icon-user-intro {
-  width: 256px;
-  height: 153px;
-}
-
-.icon-arrow-bottom {
-  width: 48px;
-  height: 48px;
-}
-
-.icon-city-logo {
-  width: 70px;
-  height: 80px;
+[class^="icon-ribbon-"], [class*=" icon-ribbon-"] {
+  position: absolute;
+  width: 112px;
+  height: 112px;
+  pointer-events: none;
 }

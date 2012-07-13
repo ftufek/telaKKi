@@ -4,3 +4,23 @@
   left: 25px;
   pointer-events: none;
 }
+
+.incoming_message, .outgoing_message {
+  position: relative;
+  padding: 5px;
+  margin: 0.1em 0 0.5em;
+  color: white;
+  background: #349BD7;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+
+.incoming_message {
+  margin-right: 50px;
+}
+
+.outgoing_message {
+  margin-left: 50px;
+  background: #D76234;
+}

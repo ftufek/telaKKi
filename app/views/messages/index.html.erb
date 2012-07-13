@@ -1,22 +1,32 @@
-<h1>Listing messages</h1>
+<div class="element item">
+      <div class="messages element_padded">
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+        <div class="accordion" id="from_" >
+          <% @messages.group_by{|m| [m.from, m.to]}.each do |f, m| %>
+            <div class="accordion-group">
+              <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#from_" href="#message_<%= m.first.id %>">
+                  <b><%= "Message from #{f.first.username}" %></b>
+                </a>
+              </div>
 
-<% @messages.each do |message| %>
-  <tr>
-    <td><%= message.text %></td>
-    <td><%= link_to 'Show', message %></td>
-    <td><%= link_to 'Edit', edit_message_path(message) %></td>
-    <td><%= link_to 'Destroy', message, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
-</table>
+              <div id="message_<%= m.first.id %>" class="accordion-body collapse">
+                <div class="accordion-inner">
+                  <% m.each do |n| %>
+                    <% if n.from_id == current_user.id %>
+                      <div class="outgoing_message"><b>You: </b>
+                    <% else %>
+                      <div class="incoming_message"><b><%= n.from.username %>:</b>
+                    <% end %>
+                      <%= n.text %></div>
+                  <% end %>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
 
-<br />
-
-<%= link_to 'New Message', new_message_path %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -5,7 +5,7 @@ module ApplicationHelper
   end
 
   def ribbon_for(name)
-    "<i class='ribbon-#{name}'></i>".html_safe
+    "<i class='icon-ribbon-#{name}'></i>".html_safe
   end
 
   def resource_name

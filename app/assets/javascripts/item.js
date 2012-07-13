@@ -3,8 +3,8 @@ $(function() {
   $('.carousel .item:first-child').addClass("active");
   $('.carousel').carousel('cycle');
 
-  if($('.carousel-inner img').size() <= 1){
-    $('#images').css("display","none");
+  if($('.carousel-inner img').size() >= 1){
+    $('#images').css("display","block");
   }
 
   arrange_item_form();

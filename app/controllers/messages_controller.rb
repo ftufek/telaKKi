@@ -4,7 +4,7 @@ class MessagesController < InheritedResources::Base
   # GET /messages.json
   def index
     id = current_user.id
-    @messages = Message.where("to_id = ? OR from_id = ?", id, id).group("item_id")
+    @messages = Message.where("to_id = ? OR from_id = ?", id, id)#.group("item_id")
 
     respond_to do |format|
       format.html # index.html.erb

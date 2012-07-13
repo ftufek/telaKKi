@@ -7,7 +7,9 @@
         <span class="icon-bar"></span>
       </a>
 
-      <%= link_to "telaKKi", root_path, class: "brand" %>
+      <%= link_to root_path, class: "brand" do %>
+        <%= icon_for("city-logo") %><%= "citysell.it" %>
+      <% end %>
       <div class="btn-group pull-right">
         <%= render "users/navbar" %>
       </div>

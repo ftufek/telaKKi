@@ -1,9 +1,9 @@
 en:
-  my_account: "My Account"
+  my_account: "Account"
   profile: "Profile"
   sign_out: "Sign Out"
   sign_in: "Sign In"
-  my_items: "My Items"
-  my_messages: "My Messages"
+  my_items: "Items"
+  my_messages: "Messages"
   settings: "Settings"
   you_have_no_messages: "Currently, you have no messages."
