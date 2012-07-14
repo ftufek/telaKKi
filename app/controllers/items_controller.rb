@@ -1,9 +1,9 @@
 class ItemsController < ApplicationController
   before_filter :authenticate_user!, except: [ :index, :show ] 
   before_filter :is_current_user_owner, only: [ :edit, :update, :destroy ]
+  # TODO: replace the is_current_user_owner before filter with
+  #   @item = current_user.items.find(...)
 
-  # GET /items
-  # GET /items.json
   def index
     @items = Item.order("created_at DESC").all
 
@@ -13,8 +13,6 @@ class ItemsController < ApplicationController
     end
   end
 
-  # GET /items/1
-  # GET /items/1.json
   def show
     @item = Item.find(params[:id])
     @json = @item.to_gmaps4rails
@@ -29,8 +27,6 @@ class ItemsController < ApplicationController
     end
   end
 
-  # GET /items/new
-  # GET /items/new.json
   def new
     @item = Item.new
     3.times { @item.images.build }
@@ -41,13 +37,10 @@ class ItemsController < ApplicationController
     end
   end
 
-  # GET /items/1/edit
   def edit
     @item = Item.find(params[:id])
   end
 
-  # POST /items
-  # POST /items.json
   def create
     @item = Item.new(params[:item])
 
@@ -62,8 +55,6 @@ class ItemsController < ApplicationController
     end
   end
 
-  # PUT /items/1
-  # PUT /items/1.json
   def update
     @item = Item.find(params[:id])
 
@@ -78,8 +69,6 @@ class ItemsController < ApplicationController
     end
   end
 
-  # DELETE /items/1
-  # DELETE /items/1.json
   def destroy
     @item = Item.find(params[:id])
     @item.destroy

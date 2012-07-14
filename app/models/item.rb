@@ -1,6 +1,18 @@
 class Item < ActiveRecord::Base
+  belongs_to :user
+  has_one :category
+  has_many :images, as: :imageable
+  has_many :messages, dependent: :destroy
+  accepts_nested_attributes_for :images, reject_if: lambda { |t| t['image'].nil? }
+  acts_as_gmappable address: "address", normalized_address: "address",
+                    msg: "Sorry, not even Google could figure out where that is!"
+
   attr_accessible :address, :description, :down_votes, :price, :title, :up_votes
   attr_accessible :user_id
+  attr_accessible :category_id
+  attr_accessible :images
+  attr_accessible :images_attributes
+
 
   validates :title, presence: true, uniqueness: true, length: { in: 5..50 }
   validates :description, presence: true, length: { minimum: 5 }
@@ -8,22 +20,8 @@ class Item < ActiveRecord::Base
   validates :up_votes, allow_nil: true, numericality: { only_integer: true }
   validates :down_votes, allow_nil: true, numericality: { only_integer: true }
   validates :address, presence: true #FINISH THE VALIDATION FOR CONTAINS POSTAL_CODE
-
-  belongs_to :user
-  has_one :category
-  attr_accessible :category_id
-
-  has_many :images, as: :imageable
-  attr_accessible :images
-  attr_accessible :images_attributes
-  accepts_nested_attributes_for :images, reject_if: lambda { |t| t['image'].nil? }
-
-  has_many :messages, dependent: :destroy
-
-  acts_as_gmappable address: "address", normalized_address: "address",
-                    msg: "Sorry, not even Google could figure out where that is!"
-
-private
+  
+  private
   def geocode?
 #    !(address.blank? || (!latitude.blank? && !longitude.blank?))
     true

@@ -1,5 +1,4 @@
 class Message < ActiveRecord::Base
-  # attr_accessible :title, :body
   belongs_to :from, class_name: "User"
   belongs_to :to, class_name: "User"
   belongs_to :item
