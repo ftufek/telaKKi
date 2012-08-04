@@ -13,4 +13,17 @@ class Image < ActiveRecord::Base
       content_type: /^image\/(jpg|jpeg|pjpeg|png|x-png|gif)$/,
       message: 'file type is not allowed (only jpeg/png/gif images)' },
     size: { in: 0..5.megabytes }
+
+  def thumbnail_url
+    return self.image.url(:thumb)
+  end
+
+  def url
+    return self.image.url(:medium)
+  end
+
+  def as_json(options)
+    options = { methods: [:thumbnail_url, :url] }.merge(options)
+    super(options) 
+  end
 end

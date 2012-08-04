@@ -17,4 +17,5 @@
 //= require override_confirm
 //= require jquery-plugins/all
 //= require gmaps4rails/all
+//= require jquery-fileupload
 //= require_tree .

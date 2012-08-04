@@ -1,5 +1,8 @@
 TelaKKi::Application.routes.draw do
+  resources :settings
 
+  resources :cities
+  resources :images
   ActiveAdmin.routes(self)
 
   devise_for :admin_users, ActiveAdmin::Devise.config
@@ -10,9 +13,8 @@ TelaKKi::Application.routes.draw do
     devise_for :users do
     #  get '/profile' => 'users/registrations#edit', as: :edit_user_registration
       get "/profile", :to => "devise/registrations#edit", :as => :user_profile
-      get "/my_items" => "users#my_items"
+      get "/my_items" => "items#for_user"
       get "/messages" => "messages#index"
-      get "/settings" => "users#settings"
     end
 
     resources :items

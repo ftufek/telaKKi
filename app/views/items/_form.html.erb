@@ -1,16 +1,36 @@
-<%= simple_form_for @item, :validate => true, html: { class: "form-vertical item-form", multipart: true }, defaults: { label: false } do |f| %>
+<%= simple_form_for @item, :validate => true, html: { class: "form-vertical item-form", multipart: true }, defaults: { label: false, wrapper_html: { class: "row-fluid" }, input_html: { class: "span12" }  } do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
     <%= f.input :title %>
-    <%= f.input :category_id, collection: Category.all, prompt: "Select a category" %>
-    <%= f.input :price %>
-    <%= f.input :description  %>
-    <%= f.input :address %>
-    <%= f.fields_for :images do |builder| %>
-      <%= builder.file_field :image %>
+    <%= f.input :category_id, collection: Category.all, prompt: "Select a category", wrapper_html: { id: "category" }  %>
+    <%= f.input :price, wrapper_html: { id: "price" } %>
+    <%= f.input :description, input_html: { rows: 10 }, wrapper_html: { id: "description" }  %>
+    <% f.simple_fields_for :images do |builder| %>
+      <% builder.file_field :image %>
     <% end %>
-    <%= f.hidden_field :user_id, value: current_user.id %>
+    <!--<span class="thumbnail fileinput-button">
+      <span>Add photo</span>
+      <input type="file" name="image" id="fileuploaddd" data-url="<%= images_path %>" multiple>
+    </span>-->
+    <div id="fileupload" action="<%= images_path %>" method="POST" enctype="multipart/form-data">
+      <div class="fileupload-loading"></div>
+      <table role="presentation" class="table table-striped"><tbody class="files" data-toggle="modal-gallery" data-target="#modal-gallery"></tbody></table>
+
+      <span class="btn thumbnail fileinput-button">
+          <i class="icon-plus icon-white"></i>
+          <span>Add files...</span>
+          <input type="file" name="files[]" multiple>
+      </span>
+    </div>
+
+
+    <%= f.input :address %>
+    <% if user_signed_in? %>
+      <%= f.hidden_field :user_id, value: current_user.id %>
+    <% else %>
+      <%= f.input :email %>
+    <% end %>
   </div>
 
   <div class="form-actions">
@@ -19,3 +39,62 @@
     </div>
   </div>
 <% end %>
+
+<script id="template-upload" type="text/x-tmpl">
+{% for (var i=0, file; file=o.files[i]; i++) { %}
+    <tr class="template-upload fade">
+        <td class="preview"><span class="fade"></span></td>
+        <td class="name"><span>{%=file.name%}</span></td>
+        <td class="size"><span>{%=o.formatFileSize(file.size)%}</span></td>
+        {% if (file.error) { %}
+            <td class="error" colspan="2"><span class="label label-important">{%=locale.fileupload.error%}</span> {%=locale.fileupload.errors[file.error] || file.error%}</td>
+        {% } else if (o.files.valid && !i) { %}
+            <td>
+                <div class="progress progress-success progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="bar" style="width:0%;"></div></div>
+            </td>
+            <td class="start">{% if (!o.options.autoUpload) { %}
+                <button class="btn btn-primary">
+                    <i class="icon-upload icon-white"></i>
+                    <span>{%=locale.fileupload.start%}</span>
+                </button>
+            {% } %}</td>
+        {% } else { %}
+            <td colspan="2"></td>
+        {% } %}
+        <td class="cancel">{% if (!i) { %}
+            <button class="btn btn-warning">
+                <i class="icon-ban-circle icon-white"></i>
+                <span>{%=locale.fileupload.cancel%}</span>
+            </button>
+        {% } %}</td>
+    </tr>
+{% } %}
+</script>
+<script id="template-download" type="text/x-tmpl">
+{% for (var i=0, file; file=o.files[i]; i++) { %}
+    <tr class="template-download fade">
+        {% if (file.error) { %}
+            <td></td>
+            <td class="name"><span>{%=file.name%}</span></td>
+            <td class="size"><span>{%=o.formatFileSize(file.size)%}</span></td>
+            <td class="error" colspan="2"><span class="label label-important">{%=locale.fileupload.error%}</span> {%=locale.fileupload.errors[file.error] || file.error%}</td>
+        {% } else { %}
+            <td class="preview">{% if (file.thumbnail_url) { %}
+                <a href="{%=file.url%}" title="{%=file.name%}" rel="gallery" download="{%=file.name%}"><img src="{%=file.thumbnail_url%}"></a>
+            {% } %}</td>
+            <td class="name">
+                <a href="{%=file.url%}" title="{%=file.name%}" rel="{%=file.thumbnail_url&&'gallery'%}" download="{%=file.name%}">{%=file.name%}</a>
+            </td>
+            <td class="size"><span>{%=o.formatFileSize(file.size)%}</span></td>
+            <td colspan="2"></td>
+        {% } %}
+        <td class="delete">
+            <button class="btn btn-danger" data-type="{%=file.delete_type%}" data-url="{%=file.delete_url%}">
+                <i class="icon-trash icon-white"></i>
+                <span>{%=locale.fileupload.destroy%}</span>
+            </button>
+            <input type="checkbox" name="delete" value="1">
+        </td>
+    </tr>
+{% } %}
+</script>

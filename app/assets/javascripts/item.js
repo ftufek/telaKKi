@@ -1,13 +1,6 @@
 $(function() {
-  $(window).resize();
-  $('.carousel .item:first-child').addClass("active");
-  $('.carousel').carousel('cycle');
+//  $(window).resize();
 
-  if($('.carousel-inner img').size() >= 1){
-    $('#images').css("display","block");
-  }
-
-  arrange_item_form();
   update_user_items_list();
 
   $('.delete_item').bind('ajax:success', function() {
@@ -16,22 +9,21 @@ $(function() {
     el.slideUp(200);
     setTimeout("remove_unnecessary_html()",200);
   });
-
 });
 
-$(window).resize(function() {
-  if(!isMobile()){
+$('inexistent').resize(function() {
+ // if(!isMobile()){
     var h = $('.item .img').outerHeight();
     $('.item .main_info').height(h);
     $('.item .extra_info').height(h);
 
     arrange_item_form();
-  }else{
+  //}else{
     $('.item .main_info').css('height','');
     $('.item .extra_info').css('height','');
 
     dearrange_item_form();
-  }
+  //}
 });
 
 function arrange_item_form() {

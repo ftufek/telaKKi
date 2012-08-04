@@ -1,20 +1,27 @@
 <%= content_tag :div, class: "item_link" do %>
   <%= ribbon_for("new") if item.created_at > 1.hour.ago %>
 
-  <%= link_to item do %>
     <div class="item row-fluid">
-      <div class="img span3">
-        <%= item.images.first == nil ? image_tag("default_index_image.png") : render(item.images.first) %>
-      </div>
+      <%= link_to item do %>
+        <div class="img span3">
+          <%= item.images.first == nil ? image_tag("default_index_image.png") : render(item.images.first) %>
+        </div>
+
+        <div class="title_below_image">
+          <h4><%= item.title %></h4>
+          <h4><%= number_to_currency item.price, { precision: 0 } %></h4>
+        </div>
+      <% end %>
 
       <div class="main_info span7">
+        <%= link_to item do %>
         <div class="title"><%= item.title %></div>
         <hr>
         <div class="description"><%= truncate item.description, length: 300, omission: '...' %></div>
         <div class="address"><hr> Address: <%= item.address %></div>
         <div class="seller"><%= item.user.email %></div>
+        <% end %>
       </div>
-  <% end %>
 
     <div class="extra_info span2">
       <div class="votes_container">
@@ -28,9 +35,7 @@
   <% end %>
 
       <div class="social_buttons">
-        <span href="#" class="twitter" rel="tooltip" title="<%= t 'share_twitter' %>"><%= icon_for("twitter") %></span>
-        <span href="#" class="fb" rel="tooltip" title="<%= t 'share_facebook' %>"><%= icon_for("facebook") %></span>
-        <span href="#" class="email" rel="tooltip" title="<%= t 'share_email' %>"><%= icon_for("email") %></span>
+        <span href="#" class="twitter" rel="tooltip" title="<%= t 'share_with_friend' %>"><%= icon_for("twitter") %></span>
         <span href="#" class="watch" rel="tooltip" title="<%= t 'watch_item' %>"><%= icon_for("watch") %></span>
       </div>
     </div>

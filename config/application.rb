@@ -57,5 +57,12 @@ module TelaKKi
     config.assets.version = '1.0'
 
     config.logger = Logger.new(config.paths['log'].first, 1, 20.megabytes)
+
+    config.generators do |g|
+      g.orm :active_record
+      g.javascripts false
+      g.scaffold_controller :scaffold_controller
+      g.stylesheets false
+    end
   end
 end

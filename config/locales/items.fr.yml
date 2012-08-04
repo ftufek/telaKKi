@@ -6,6 +6,7 @@ fr:
         description: "Description"
         price: "Prix ($)"
         address: "Addresse"
+        email: "Addresse courriel"
 
   like: "aime"
   dislike: "n'aime pas"
@@ -28,3 +29,8 @@ fr:
   send_message_your_ad: "%{number_of_persons} ont envoye une message pour votre annonce."
   got_n_messages: "Vous avez %{n} messages pour cette annonce"
   item_description: "Description"
+  saw_this_ad: "%{number_of_persons} personnes ont vu cette annonce."
+  liked_this_ad: "%{number_of_persons} personnes ont aimes cette annonce."
+  disliked_this_ad: "%{number_of_persons} personnes n'ont pas aimes cette annonce."
+  send_message_this_ad: "%{number_of_persons} ont envoye une message pour cette annonce."
+  share_with_friend: "Partagez avec votre ami"

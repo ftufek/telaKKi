@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
-  has_many :ads
+  has_many :items
   has_many :messages, foreign_key: :to_id
+  has_one :setting
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
          :authentication_keys => [ :login ]

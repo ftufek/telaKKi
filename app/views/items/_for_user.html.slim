@@ -1,0 +1,6 @@
+div.element.item
+  h4 = for_user.title
+
+  div.controls
+    = link_to t('edit_item'), edit_item_path(for_user.id), class: "btn btn-primary"
+    = link_to t('already_sold_item'), for_user, method: :delete, class: "btn btn-danger delete_item", "data-type" => :json, confirm: "Are you sure?", remote: true

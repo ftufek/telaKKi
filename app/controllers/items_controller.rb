@@ -1,14 +1,20 @@
 class ItemsController < ApplicationController
-  before_filter :authenticate_user!, except: [ :index, :show ] 
-  before_filter :is_current_user_owner, only: [ :edit, :update, :destroy ]
-  # TODO: replace the is_current_user_owner before filter with
-  #   @item = current_user.items.find(...)
+  before_filter :authenticate_user!, except: [ :index, :show, :new ] 
 
   def index
-    @items = Item.order("created_at DESC").all
+    @items = Item.order_by_latest_items.all
 
     respond_to do |format|
       format.html # index.html.erb
+      format.json { render json: @items }
+    end
+  end
+
+  def for_user
+    @items = current_user.items
+
+    respond_to do |format|
+      format.html # for_user.html.erb
       format.json { render json: @items }
     end
   end
@@ -29,7 +35,7 @@ class ItemsController < ApplicationController
 
   def new
     @item = Item.new
-    3.times { @item.images.build }
+    5.times { @item.images.build }
 
     respond_to do |format|
       format.html # new.html.erb
@@ -38,11 +44,11 @@ class ItemsController < ApplicationController
   end
 
   def edit
-    @item = Item.find(params[:id])
+    @item = current_user.items.find(params[:id]) 
   end
 
   def create
-    @item = Item.new(params[:item])
+    @item = Item.new_from(params[:item])
 
     respond_to do |format|
       if @item.save
@@ -56,7 +62,7 @@ class ItemsController < ApplicationController
   end
 
   def update
-    @item = Item.find(params[:id])
+    @item = current_user.items.find(params[:id])
 
     respond_to do |format|
       if @item.update_attributes(params[:item])
@@ -70,20 +76,12 @@ class ItemsController < ApplicationController
   end
 
   def destroy
-    @item = Item.find(params[:id])
+    @item = current_user.items.find(params[:id])
     @item.destroy
 
     respond_to do |format|
       format.html { redirect_to items_url }
       format.json { head :no_content }
-    end
-  end
-
-private
-  def is_current_user_owner
-    unless current_user.id == Item.find(params[:id]).user.id
-      flash[:error] = "You're not the owner of this item!"
-      redirect_to items_path
     end
   end
 end

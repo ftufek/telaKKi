@@ -1,0 +1,9 @@
+div.row
+  div.user_item_list.kk_display.span12
+    div.element.title
+      h3 = t 'my_items'
+
+    div.element.element_padded#no_sale
+      h4 = t 'you_are_selling_nothing'
+
+    = render partial: "items/for_user", collection: @items

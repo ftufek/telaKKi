@@ -1,0 +1,15 @@
+p#notice = notice
+
+p
+  strong City:
+  = @setting.city
+p
+  strong Locale:
+  = @setting.locale
+p
+  strong Item view:
+  = @setting.item_view
+
+= link_to 'Edit', edit_setting_path(@setting)
+'|
+= link_to 'Back', settings_path

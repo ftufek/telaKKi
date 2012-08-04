@@ -1,0 +1,23 @@
+h1 Listing settings
+
+table
+  tr
+    th City
+    th Locale
+    th Item view
+    th
+    th
+    th
+
+  - @settings.each do |setting|
+    tr
+      td = setting.city
+      td = setting.locale
+      td = setting.item_view
+      td = link_to 'Show', setting
+      td = link_to 'Edit', edit_setting_path(setting)
+      td = link_to 'Destroy', setting, :confirm => 'Are you sure?', :method => :delete
+
+br
+
+= link_to 'New Setting', new_setting_path

@@ -1,29 +1,29 @@
 <div class="item_statistics element_padded">
   <span class="views">
-    <%= content_tag :span, rel: "tooltip-bottom", title: "#{t('saw_your_ad', number_of_persons: 10)}" do %>
+    <%= content_tag :span, rel: "tooltip-bottom", title: "#{t('saw_this_ad', number_of_persons: item.views)}" do %>
       <%= icon_for("stats-view") %>
-      <h4><%= 10 %></h4>
-    <% end %>
-  </span>
-
-  <span class="likes">
-    <%= content_tag :span, rel: "tooltip-bottom", title: "#{t('liked_your_ad', number_of_persons: 10)}" do %>
-      <%= icon_for("stats-like") %>
-      <h4><%= 10 %></h4>
-    <% end %>
-  </span>
-
-  <span class="dislikes">
-    <%= content_tag :span, rel: "tooltip-bottom", title: "#{t('disliked_your_ad', number_of_persons: 10)}" do %>
-      <%= icon_for("stats-dislike") %>
-      <h4><%= 10 %></h4>
+      <h4><%= item.views %></h4>
     <% end %>
   </span>
 
   <span class="messages">
-    <%= content_tag :span, rel: "tooltip-bottom", title: "#{t('send_message_your_ad', number_of_persons: 10)}" do %>
+    <%= content_tag :span, rel: "tooltip-bottom", title: "#{t('send_message_this_ad', number_of_persons: item.messages.count)}" do %>
       <%= icon_for("stats-message") %>
-      <h4><%= 10 %></h4>
+      <h4><%= item.messages.count %></h4>
+    <% end %>
+  </span>
+
+  <span class="likes">
+    <%= content_tag :span, rel: "tooltip-bottom", title: "#{t('liked_this_ad', number_of_persons: item.up_votes)}" do %>
+      <%= icon_for("stats-like") %>
+      <h4><%= item.up_votes %></h4>
+    <% end %>
+  </span>
+
+  <span class="dislikes">
+    <%= content_tag :span, rel: "tooltip-bottom", title: "#{t('disliked_this_ad', number_of_persons: item.down_votes)}" do %>
+      <%= icon_for("stats-dislike") %>
+      <h4><%= item.down_votes %></h4>
     <% end %>
   </span>
 </div>
