@@ -9,6 +9,7 @@ $icon-spacing: 2px;
   vertical-align: text-top;
 }
 
+
 .icon-new-message {
   opacity: 1 !important;
 }
@@ -18,4 +19,25 @@ $icon-spacing: 2px;
   width: 112px;
   height: 112px;
   pointer-events: none;
+}
+
+$svg-list: sliders categories search sale stats-view caution;
+
+@each $svg in $svg-list {
+  .svg {
+    .icon-#{$svg} {
+      background: inline-image('icon/#{$svg}.svg') no-repeat;
+      background-size: 100%;
+    }
+  }
+}
+
+.icon-stats-view {
+  width: 34px;
+  height: 24px;
+}
+
+.icon-caution {
+  width: 16px;
+  height: 16px;
 }

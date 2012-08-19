@@ -5,6 +5,7 @@ class Item < ActiveRecord::Base
   has_one :category
   has_many :images, as: :imageable
   has_many :messages, dependent: :destroy
+  has_many :statistics
   accepts_nested_attributes_for :images, reject_if: lambda { |t| t['image'].nil? }
   acts_as_gmappable address: "address", normalized_address: "address",
                     msg: "Sorry, not even Google could figure out where that is!"
@@ -28,10 +29,25 @@ class Item < ActiveRecord::Base
 
   def self.new_from(details)
     if details[:email].to_s.strip.length == 0
+      details[:id] = current_user.id
       return Item.new(details)
     else
       # implement
     end
+  end
+
+  def self.new_with_images(details, images)
+    item = Item.new(details)
+    #Image.update_images_for_item(item.id, images) unless images.nil?
+    return item
+  end
+
+  def likes
+    return statistics.where(type:"like").count
+  end
+
+  def dislikes
+    return statistics.where(type:"dislike").count
   end
 
   private

@@ -1,6 +1,4 @@
 TelaKKi::Application.routes.draw do
-  resources :settings
-
   resources :cities
   resources :images
   ActiveAdmin.routes(self)
@@ -76,12 +74,14 @@ TelaKKi::Application.routes.draw do
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
   match "/prelauncher", to: "pages#prelauncher", via: "post"
-  match "/soon", to: "pages#soon"
+  match "/intro", to: "pages#intro"
+  match "/like", to: "items#like"
+  match "/dislike", to: "items#dislike"
 
   if Rails.env.development?
     root :to => 'items#index'
   else
-    root :to => 'pages#soon'
+    root :to => 'pages#intro'
   end
 
   # See how all your routes lay out with "rake routes"

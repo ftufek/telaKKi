@@ -56,13 +56,14 @@ module TelaKKi
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
 
-    config.logger = Logger.new(config.paths['log'].first, 1, 20.megabytes)
+    config.logger = Logger.new(config.paths['log'].first, 1, 1.megabytes)
 
     config.generators do |g|
       g.orm :active_record
       g.javascripts false
       g.scaffold_controller :scaffold_controller
       g.stylesheets false
+      g.template_engine :slim
     end
   end
 end

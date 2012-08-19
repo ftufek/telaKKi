@@ -1,0 +1,82 @@
+@import "compass";
+
+$intro-sprite-dimensions: true;
+$intro-spacing: 1px;
+@import "intro/*.png"; /* */
+@include all-intro-sprites;
+
+[class^="intro-"],
+[class*=" intro-"] {
+  display: inline-block;
+}
+
+body {
+  padding: 0px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'PT Serif', georgia, serif;
+  color: black;
+  cursor: default;
+  visibility: hidden;
+}
+
+h3 {
+  font-size: 60px;
+  line-height: 60px;
+  margin: 10px 0;
+}
+
+h4 {
+  font-size: 40px;
+  line-height: 30px;
+  margin: 10px 0;
+}
+
+[class^="char"] {
+  -moz-transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.logo {
+  text-align: center;
+}
+
+.title {
+  margin-top: 30px;
+  text-align: center;
+}
+
+#circularcity {
+  -moz-transition: all 1s ease infinite;
+  -webkit-transition: all 1s ease infinite;
+  -o-transition: all 1s ease infinite;
+  transition: all 1s ease infinite;
+
+  -moz-transform: rotate(30deg); 
+  -webkit-transform: rotate(30deg); 
+  -o-transform: rotate(30deg); 
+  transform: rotate(30deg);
+
+  position: absolute;
+  bottom: -80px;
+  right: -80px; 
+}
+
+.ocean {
+  width: 100%;
+  height: 300px;
+  display: table;
+  position: absolute;
+  bottom: 0px;
+
+  #left, #mid, #right {
+    display: table-cell;
+  }
+
+  #mid {
+    width: 700px;
+  }
+}

@@ -6,7 +6,7 @@ class Image < ActiveRecord::Base
         styles: { medium: "560x320", thumb: "160x120#" } }
 
   # attr_accessible :title, :body
-  attr_accessible :image
+  attr_accessible :image, :imageable_id, :imageable_type
 
   validates_attachment :image, presence: true,
     content_type: { 
@@ -20,6 +20,13 @@ class Image < ActiveRecord::Base
 
   def url
     return self.image.url(:medium)
+  end
+
+  def self.update_images_for_item(item, images)
+    return if images.nil?
+    images.each do |i|
+      Image.update(i, imageable_id: item.id, imageable_type: "Item")
+    end
   end
 
   def as_json(options)

@@ -12,18 +12,4 @@
       <h4><%= item.messages.count %></h4>
     <% end %>
   </span>
-
-  <span class="likes">
-    <%= content_tag :span, rel: "tooltip-bottom", title: "#{t('liked_this_ad', number_of_persons: item.up_votes)}" do %>
-      <%= icon_for("stats-like") %>
-      <h4><%= item.up_votes %></h4>
-    <% end %>
-  </span>
-
-  <span class="dislikes">
-    <%= content_tag :span, rel: "tooltip-bottom", title: "#{t('disliked_this_ad', number_of_persons: item.down_votes)}" do %>
-      <%= icon_for("stats-dislike") %>
-      <h4><%= item.down_votes %></h4>
-    <% end %>
-  </span>
 </div>

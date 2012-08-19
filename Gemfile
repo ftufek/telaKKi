@@ -9,7 +9,7 @@ gem 'sqlite3'
 gem 'devise'
 gem 'awesome_nested_set'
 gem 'foreigner'
-
+gem 'debugger'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -34,6 +34,7 @@ gem 'activeadmin'
 gem 'slim-rails'
 gem 'friendly_id'
 gem 'jquery-fileupload-rails'
+gem 'mailboxer'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

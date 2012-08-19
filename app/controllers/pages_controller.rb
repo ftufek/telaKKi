@@ -4,6 +4,10 @@ class PagesController < ApplicationController
     render layout: false
   end
 
+  def intro
+    render layout: false
+  end
+
   def prelauncher
     @prelaunch = Prelaunch.new(params[:prelauncher])
 

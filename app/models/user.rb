@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   has_many :items
   has_many :messages, foreign_key: :to_id
+  has_many :likes
   has_one :setting
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
@@ -8,7 +9,7 @@ class User < ActiveRecord::Base
 
   attr_accessible :username, :email, :password, :password_confirmation, :remember_me
   attr_accessor :login
-  attr_accessible :login
+  attr_accessible :login, :email
 
   validates :username, presence: true, uniqueness: true, length: { in: 5..14 }
 

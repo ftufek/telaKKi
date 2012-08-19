@@ -18,4 +18,6 @@
 //= require jquery-plugins/all
 //= require gmaps4rails/all
 //= require jquery-fileupload
-//= require_tree .
+//= require modernizr
+//= require item_new
+//= require telaKKi

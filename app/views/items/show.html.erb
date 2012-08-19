@@ -1,10 +1,15 @@
 <p id="notice"><%= notice %></p>
 
-<div class="row item_show">
+<div id="page_item_show" class="row item_show">
   <div class="kk_display span12">
 
     <div class="element title">
       <h3><%= @item.title %></h3>
+      <div class="btn-group">
+        <% if user_signed_in? %>
+          <%= link_to "#{icon_for('caution')} #{t 'report_this_item'}".html_safe, "#", remote:true, class: "btn", method: :post %>
+        <% end %>
+      </div>
     </div>
 
     <% if @item.images.size >= 1 %>
@@ -39,7 +44,7 @@
           <%= f.hidden_field :from_id, value: @message.from.id %>
           <%= f.hidden_field :to_id, value: @message.to.id %>
           <%= f.hidden_field :item_id, value: @message.item.id %>
-          <%= f.input :text, label: false, input_html: { rows: 10 } %>
+          <%= f.input :text, label: false, input_html: { rows: 3 } %>
           <%= f.button :submit, class: "btn-primary btn-bottom-right", value: "#{t('send_message')}" %>
         <% end %>
       <% else %>

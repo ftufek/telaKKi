@@ -27,7 +27,7 @@
 
     <%= f.input :address %>
     <% if user_signed_in? %>
-      <%= f.hidden_field :user_id, value: current_user.id %>
+      <% f.hidden_field :user_id, value: current_user.id %>
     <% else %>
       <%= f.input :email %>
     <% end %>
@@ -79,6 +79,7 @@
             <td class="size"><span>{%=o.formatFileSize(file.size)%}</span></td>
             <td class="error" colspan="2"><span class="label label-important">{%=locale.fileupload.error%}</span> {%=locale.fileupload.errors[file.error] || file.error%}</td>
         {% } else { %}
+            <input type="hidden" name="images[]" value="{%=file.id%}" />
             <td class="preview">{% if (file.thumbnail_url) { %}
                 <a href="{%=file.url%}" title="{%=file.name%}" rel="gallery" download="{%=file.name%}"><img src="{%=file.thumbnail_url%}"></a>
             {% } %}</td>

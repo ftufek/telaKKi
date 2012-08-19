@@ -25,12 +25,16 @@
 
         <%= render "searchs/navbar" %>
 
-      <ul class="nav pull-right">
-        <li class=""><%= render "items/new_item_navbar" %></li>
-        <li class="divider-vertical"></li>
-        <li class="messages"><%= render "messages/navbar" %></li>
-      </ul>
 
+        <ul class="nav pull-right">
+          <li class=""><%= render "items/new_item_navbar" %></li>
+          <li class="divider-vertical"></li>
+          <li class="messages"><%= render "messages/navbar" %></li>
+        </ul>
+
+        <div rel="tooltip-bottom" title="<%= t('options') %>" class="btn-group pull-right">
+          <%= render "shared/submenu_options" %>
+        </div>
       </div>
     </div>
   </div>
