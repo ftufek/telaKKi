@@ -1,6 +1,12 @@
-= link_to "#",  data: { toggle: "dropdown" }, id: "action-options", class: "btn dropdown-toggle" do
-  = icon_for("sliders")
-  span.caret
-ul.dropdown-menu
-  li
-    a est
+li.dropdown(rel="tooltip-bottom" title="#{t('options')}")
+  = link_to "#",  data: { toggle: "dropdown" }, id: "action-options", class: "dropdown-toggle less-padding" do
+    = icon_for("sliders")
+    b.caret
+  ul.dropdown-menu
+    li
+      div#language-selector.selector
+        div.btn-group(data-toggle="buttons-radio")
+          button.btn.btn-primary(type="button") EN
+          button.btn(type="button") FR
+      div#style-selector.selector
+        div.btn-group(data-toggle="buttons-radio")

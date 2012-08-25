@@ -24,7 +24,6 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
 gem 'simple_form'
 gem 'less'
 gem 'twitter-bootstrap-rails', git: 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
@@ -35,6 +34,7 @@ gem 'slim-rails'
 gem 'friendly_id'
 gem 'jquery-fileupload-rails'
 gem 'mailboxer'
+gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

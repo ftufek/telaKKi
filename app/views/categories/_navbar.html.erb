@@ -5,7 +5,7 @@
       <li>
         <%= link_to t.name do %>
           <%= icon_for(t.icon_name) %>
-          <%= "#{I18n.t(t.name)} (#{pluralize(t.items.count, t('ad'))})" %>
+          <%= "#{t_for(t.name)} (#{pluralize(t.items.count, t('ad'))})" %>
         <% end %>
       </li>
     <% end %>

@@ -23,10 +23,6 @@ class ItemsController < ApplicationController
     @item = Item.find(params[:id])
     Item.update(@item.id, views: @item.views+1)
     @json = @item.to_gmaps4rails
-    @message = Message.new
-    @message.item = @item
-    @message.to = @item.user
-    @message.from = current_user
 
     respond_to do |format|
       format.html # show.html.erb

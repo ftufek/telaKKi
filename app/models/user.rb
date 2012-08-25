@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  acts_as_messageable
+
   has_many :items
   has_many :messages, foreign_key: :to_id
   has_many :likes
@@ -12,6 +14,14 @@ class User < ActiveRecord::Base
   attr_accessible :login, :email
 
   validates :username, presence: true, uniqueness: true, length: { in: 5..14 }
+
+  def name
+    return self.username
+  end
+
+  def mailboxer_email(object)
+    return self.email
+  end
 
 protected
 

@@ -7,9 +7,9 @@
   </span>
 
   <span class="messages">
-    <%= content_tag :span, rel: "tooltip-bottom", title: "#{t('send_message_this_ad', number_of_persons: item.messages.count)}" do %>
+    <%= content_tag :span, rel: "tooltip-bottom", title: "#{t('send_message_this_ad', number_of_persons: 1)}" do %>
       <%= icon_for("stats-message") %>
-      <h4><%= item.messages.count %></h4>
+      <h4></h4>
     <% end %>
   </span>
 </div>

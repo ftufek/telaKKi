@@ -9,10 +9,10 @@ $icon-spacing: 2px;
   vertical-align: text-top;
 }
 
-
 .icon-new-message {
   opacity: 1 !important;
 }
+
 
 [class^="icon-ribbon-"], [class*=" icon-ribbon-"] {
   position: absolute;
@@ -21,15 +21,27 @@ $icon-spacing: 2px;
   pointer-events: none;
 }
 
-$svg-list: sliders categories search sale stats-view caution;
+$svg-list: sliders categories search sale stats-view caution all-categories;
 
 @each $svg in $svg-list {
   .svg {
     .icon-#{$svg} {
       background: inline-image('icon/#{$svg}.svg') no-repeat;
       background-size: 100%;
+      width: 20px;
+      height:20px;
     }
   }
+}
+
+.icon-sliders {
+  width:30px !important;
+  height:30px !important;
+}
+
+.icon-sale {
+  width: 30px !important;
+  height:30px !important;
 }
 
 .icon-stats-view {

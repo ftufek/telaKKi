@@ -1,4 +1,4 @@
-<%= link_to new_item_path, rel: "tooltip-bottom", title: "#{t('sell_something')}" do %>
+<%= link_to new_item_path, rel: "tooltip-bottom", title: "#{t('sell_something')}", class: "less-padding" do %>
   <%= icon_for("sale") %>
   <%= "<div class='visible-phone'>#{t('sell_something')}</div>".html_safe %>
 <% end %>

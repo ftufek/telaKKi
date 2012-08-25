@@ -40,12 +40,10 @@
 
     <div class="element element_padded message">
       <% if user_signed_in? %>
-        <%= simple_form_for @message, remote: true, html: { class: "form-vertical" } do |f| %>
-          <%= f.hidden_field :from_id, value: @message.from.id %>
-          <%= f.hidden_field :to_id, value: @message.to.id %>
-          <%= f.hidden_field :item_id, value: @message.item.id %>
-          <%= f.input :text, label: false, input_html: { rows: 3 } %>
-          <%= f.button :submit, class: "btn-primary btn-bottom-right", value: "#{t('send_message')}" %>
+        <%= form_tag messages_path, remote: true, class: "form-vertical row-fluid" do |f| %>
+          <%= hidden_field_tag :item_id, @item.id %>
+          <%= text_field_tag :text, '', label: false, class: "span12" %>
+          <%= submit_tag :submit, class: "btn btn-primary btn-bottom-right", value: "#{t('send_message')}" %>
         <% end %>
       <% else %>
         <h4><%= render "users/navbar" %><%= t 'sign_in_to_send_message' %>!</h4>

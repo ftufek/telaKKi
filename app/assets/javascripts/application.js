@@ -21,3 +21,4 @@
 //= require modernizr
 //= require item_new
 //= require telaKKi
+//= require toggle-switch-mobile

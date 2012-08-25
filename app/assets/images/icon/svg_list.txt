@@ -1,0 +1,7 @@
+3361 : sliders
+2222 : categories
+2506 : search
+3050 : sale
+3178 : caution
+421 : stats-view
+2835 : all-categories
