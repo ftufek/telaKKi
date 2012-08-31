@@ -5,3 +5,5 @@
 3178 : caution
 421 : stats-view
 2835 : all-categories
+3345 : stats-message
+994 : stats-message

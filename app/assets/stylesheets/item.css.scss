@@ -54,8 +54,13 @@
     margin-bottom: 9px;
     margin-top: 0;
     border-top:0;
+    text-align: center;
     @include border-radius(0px 0px 3px 3px);
     @include box-sizing(border-box);
+    span{
+      vertical-align: bottom;
+      font-weight: bold;
+    }
     input {
       right: -300px;
       border-width: 0 0 150px 1200px;

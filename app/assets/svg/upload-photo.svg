@@ -1,0 +1,12 @@
+<svg xmlns:x="http://ns.adobe.com/Extensibility/1.0/" xmlns:i="http://ns.adobe.com/AdobeIllustrator/10.0/" xmlns:graph="http://ns.adobe.com/Graphs/1.0/" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="100px" height="66.015625px" viewBox="0 0 256 169.968" enable-background="new 0 0 256 169.968" xml:space="preserve">
+<switch>
+	<foreignObject requiredExtensions="http://ns.adobe.com/AdobeIllustrator/10.0/" x="0" y="0" width="1" height="1">
+		</foreignObject>
+	<g i:extraneous="self" style="fill:white;">
+		<path fill-rule="evenodd" clip-rule="evenodd" d="M8.395,0h239.211C252.854,0,256,3.148,256,8.395v153.181    c0,5.244-3.146,8.392-8.395,8.392H8.395c-5.249,0-8.395-3.148-8.395-8.392V8.395C0,3.148,3.146,0,8.395,0z M16.787,12.59h222.427    c2.624,0,4.196,1.575,4.196,4.199v136.392c0,2.624-1.572,4.196-4.196,4.196H16.787c-2.624,0-4.196-1.573-4.196-4.196V16.789    C12.591,14.166,14.163,12.59,16.787,12.59z"/>
+		<path fill-rule="evenodd" clip-rule="evenodd" d="M88.132,159.477c0,0,66.265-73.444,77.64-73.444    c11.373,0,81.834,73.444,81.834,73.444s0,0.044,0,4.196c0,4.154-3.825,4.196-8.392,4.196H96.523c-4.567,0-8.392-0.042-8.392-4.196    C88.132,159.521,88.132,159.477,88.132,159.477z"/>
+		<path fill-rule="evenodd" clip-rule="evenodd" d="M73.444,165.772c0,0,0,0.499,0,2.097H16.787c-3.553,0-6.295-1.081-6.295-4.196    c0-1.306,0-1.865,0-2.097c0,0,52.007-48.263,60.854-48.263c3.925,0,16.769,9.508,29.837,20.083    C85.596,151.14,73.444,165.772,73.444,165.772z"/>
+		<path fill-rule="evenodd" clip-rule="evenodd" d="M97.586,42.571c11.807,0,21.379,9.568,21.379,21.373    c0,11.806-9.573,21.375-21.379,21.375S76.207,75.75,76.207,63.943C76.207,52.139,85.779,42.571,97.586,42.571z"/>
+	</g>
+</switch>
+</svg>

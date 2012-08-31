@@ -3,6 +3,7 @@ $icon-spacing: 2px;
 @import "icon/*.png";
 @include all-icon-sprites;
 
+
 [class^="icon-"],
 [class*=" icon-"] {
   display: inline-block;
@@ -13,7 +14,6 @@ $icon-spacing: 2px;
   opacity: 1 !important;
 }
 
-
 [class^="icon-ribbon-"], [class*=" icon-ribbon-"] {
   position: absolute;
   width: 112px;
@@ -21,35 +21,6 @@ $icon-spacing: 2px;
   pointer-events: none;
 }
 
-$svg-list: sliders categories search sale stats-view caution all-categories;
 
-@each $svg in $svg-list {
-  .svg {
-    .icon-#{$svg} {
-      background: inline-image('icon/#{$svg}.svg') no-repeat;
-      background-size: 100%;
-      width: 20px;
-      height:20px;
-    }
-  }
-}
-
-.icon-sliders {
-  width:30px !important;
-  height:30px !important;
-}
-
-.icon-sale {
-  width: 30px !important;
-  height:30px !important;
-}
-
-.icon-stats-view {
-  width: 34px;
-  height: 24px;
-}
-
-.icon-caution {
-  width: 16px;
-  height: 16px;
-}
+// don't ever remove what's after this line!
+// 76b5835d64b8a3870 

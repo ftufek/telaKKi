@@ -1,0 +1,11 @@
+.svg {
+  <% Dir.glob(File.join(File.dirname(__FILE__),'../','svg/*.svg')).each do |svg| %>
+    .icon-<%= icon_name = File.basename(svg, File.extname(svg)) %> {
+      background: inline-image('<%= File.join('../','svg/',File.basename(svg)) %>') no-repeat;
+      background-size: 100%;
+    }
+  <% end %>
+}
+
+// don't change what's after this line
+// ae785cdbeef095e52 

@@ -35,3 +35,4 @@ fr:
   send_message_this_ad: "%{number_of_persons} ont envoye une message pour cette annonce."
   share_with_friend: "Partagez avec votre ami"
   report_this_item: "Signaler cette annonce comme inapproprie"
+  upload-photo: "Upload photos"

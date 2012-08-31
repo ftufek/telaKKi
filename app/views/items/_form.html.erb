@@ -17,9 +17,9 @@
       <div class="fileupload-loading"></div>
       <table role="presentation" class="table table-striped"><tbody class="files" data-toggle="modal-gallery" data-target="#modal-gallery"></tbody></table>
 
-      <span class="btn thumbnail fileinput-button">
-          <i class="icon-plus icon-white"></i>
-          <span>Add files...</span>
+      <span class="btn btn-success thumbnail fileinput-button">
+          <%= icon_for("upload-photo") %>
+          <span><%= t('upload-photo') %></span>
           <input type="file" name="files[]" multiple>
       </span>
     </div>
@@ -94,8 +94,7 @@
                 <i class="icon-trash icon-white"></i>
                 <span>{%=locale.fileupload.destroy%}</span>
             </button>
-            <input type="checkbox" name="delete" value="1">
-        </td>
+         </td>
     </tr>
 {% } %}
 </script>

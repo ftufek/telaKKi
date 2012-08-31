@@ -35,7 +35,9 @@
     </div>
 
     <div class="element">
-      <%= render partial: "stats", locals: { item: @item } %>
+      <div class="item_statistics element_padded">
+        <%= render partial: "messages/item-show", locals: { item: @item } %>
+      </div>
     </div>
 
     <div class="element element_padded message">
