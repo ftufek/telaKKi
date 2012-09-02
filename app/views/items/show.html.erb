@@ -53,7 +53,7 @@
   </div>
 
   <div class="element element_padded">
-    <% #gmaps(map_options: { provider: "openlayers", container_class: "map_container", id: "map", class: "gmaps4rails_map", detect_location: true, auto_zoom: false, zoom: 14}, markers: { data: @json } ) %>
+    <% #gmaps(map_options: { container_class: "map_container", id: "map", class: "gmaps4rails_map", detect_location: true, auto_zoom: false, zoom: 14}, markers: { data: @json } ) %>
     <%= gmaps(map_options: { provider: "openlayers", id: "map", class: "gmaps4rails_map", zoom: 14}, markers: { data: @json } ) %>
   </div>
 
