@@ -4,5 +4,6 @@ en:
       message:
         text: "Write a message to the seller..."
 
+  write_message: "Write a message to the seller..."
   send_message: "Send message"
-  sign_in_to_send_message: "Sign in to send a message"
+  sign_in_to_send_message: "to send a message"

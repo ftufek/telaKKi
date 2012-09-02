@@ -3,5 +3,6 @@ fr:
     message:
       text: "Ecrivez un message au vendeur..."
 
+  write_message: "Ecrivez un message au vendeur..."
   send_message: "Envoyez un message"
-  sign_in_to_send_message: "Connectez-vous pour envoyer une message"
+  sign_in_to_send_message: "pour envoyer une message"
