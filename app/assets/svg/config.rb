@@ -23,10 +23,10 @@ end
 
 
 SVG.add_array([
-  ['sliders',-1,30],
-  ['sale',-1,30],
+  ['sliders',-1,20],
+  ['sale',-1,20],
   ['stats-message', -1, 30],
-  ['message',35,30],
-  ['new-message',35,30],
+  ['message',-1,20],
+  ['new-message',-1,20],
   ['upload-photo', -1, 35]
 ])
