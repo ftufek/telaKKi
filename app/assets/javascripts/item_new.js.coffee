@@ -8,8 +8,6 @@ resizeTextarea = ->
   this.style.height = scrollHeight + magic + "px"
 
 $(document).ready ->
-  # $('input[type="file"]').first().slideDown()
-
   $('#fileupload').fileupload({
     autoUpload:true,
     url:'/images',
@@ -17,7 +15,6 @@ $(document).ready ->
     formData: {imageable_type:'Item'}
   })
   $('input, textarea').placeholder()
-
   $('textarea').keydown(resizeTextarea)
     .keyup(resizeTextarea)
     .change(resizeTextarea)

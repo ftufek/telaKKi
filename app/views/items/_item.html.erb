@@ -1,26 +1,26 @@
-<%= content_tag :div, class: "item_link" do %>
+<%= content_tag :div, class: "item-link", 
+  data: {
+    title:"#{item.title}",
+    link: "#{item_path(item)}"
+  } do %>
   <%= ribbon_for("new") if item.created_at > 1.hour.ago %>
 
     <div class="item row-fluid">
-      <%= link_to item do %>
-        <div class="img span3">
-          <%= item.images.first == nil ? image_tag("default_index_image.png") : render(item.images.first) %>
-        </div>
+      <div class="img span3">
+        <%= item.images.first == nil ? image_tag("default_index_image.png") : render(item.images.first) %>
+      </div>
 
-        <div class="title_below_image">
-          <h4><%= item.title %></h4>
-          <h4><%= number_to_currency item.price, { precision: 0 } %></h4>
-        </div>
-      <% end %>
+      <div class="title_below_image">
+        <h4><%= item.title %></h4>
+        <h4><%= number_to_currency item.price, { precision: 0 } %></h4>
+      </div>
 
       <div class="main_info span7">
-        <%= link_to item do %>
         <div class="title"><%= item.title %></div>
         <hr>
         <div class="description"><%= truncate item.description, length: 300, omission: '...' %></div>
         <div class="address"><hr> Address: <%= item.address %></div>
         <div class="seller"><%= item.user.email %></div>
-        <% end %>
       </div>
 
     <div class="extra_info span2">
@@ -29,11 +29,7 @@
           <div class="up_vs_down" style="width: <%= vote_percentage(item.up_votes, item.down_votes) %>%"></div>
         </div>
       </div>
-
-  <%= link_to item do %>
       <div class="price"><h1><%= number_to_currency item.price, { precision: 0 } %></h1></div>
-  <% end %>
-
       <div class="social_buttons">
         <span href="#" class="twitter" rel="tooltip" title="<%= t 'share_with_friend' %>"><%= icon_for("twitter") %></span>
         <span href="#" class="watch" rel="tooltip" title="<%= t 'watch_item' %>"><%= icon_for("watch") %></span>
