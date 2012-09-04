@@ -6,7 +6,11 @@ telaKKi.itemModal = (function(){
 
   function _showModalWithInfo(){
     for(key in _info){
-      $('#item-modal .'+key).text(_info[key]);
+      if(key == "link"){
+        $('#item-modal .'+key).attr("href",_info[key]);
+      }else{
+        $('#item-modal .'+key).text(_info[key]);
+      }
     }
 
     $('#item-modal').modal();
