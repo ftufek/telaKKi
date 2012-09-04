@@ -1,6 +1,7 @@
 <%= content_tag :div, class: "item-link", 
   data: {
     title:"#{item.title}",
+    description: "#{item.description}",
     link: "#{item_path(item)}"
   } do %>
   <%= ribbon_for("new") if item.created_at > 1.hour.ago %>

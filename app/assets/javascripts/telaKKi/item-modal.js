@@ -1,18 +1,12 @@
 telaKKi.itemModal = (function(){
   var _info = {
     title: "",
+    description: "",
     link: ""
   };
 
   function _showModalWithInfo(){
-    for(key in _info){
-      if(key == "link"){
-        $('#item-modal .'+key).attr("href",_info[key]);
-      }else{
-        $('#item-modal .'+key).text(_info[key]);
-      }
-    }
-
+    $('#item-modal').html(HandlebarsTemplates['item-modal'](_info));
     $('#item-modal').modal();
   }
 

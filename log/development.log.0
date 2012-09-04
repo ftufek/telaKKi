@@ -1,65 +1,301 @@
-# Logfile created on 2012-09-02 22:08:02 -0400 by logger.rb/31641
+# Logfile created on 2012-09-03 20:51:33 -0400 by logger.rb/31641
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (36ms)
 
 
-Started GET "/assets/jquery.fileupload-ui.css?body=1" for 127.0.0.1 at 2012-09-02 22:08:02 -0400
-Served asset /jquery.fileupload-ui.css - 304 Not Modified (7ms)
+Started GET "/assets/jquery-plugins/jquery.lettering.js?body=1" for 127.0.0.1 at 2012-09-03 20:51:33 -0400
+Served asset /jquery-plugins/jquery.lettering.js - 304 Not Modified (0ms)
 
 
-Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-09-02 22:08:02 -0400
-Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (0ms)
+Started GET "/assets/gmaps4rails/gmaps4rails.bing.js?body=1" for 127.0.0.1 at 2012-09-03 20:51:33 -0400
+Served asset /gmaps4rails/gmaps4rails.bing.js - 304 Not Modified (1ms)
 
 
-Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-09-02 22:08:02 -0400
-Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (5ms)
+Started GET "/assets/jquery-fileupload/vendor/jquery.ui.widget.js?body=1" for 127.0.0.1 at 2012-09-03 20:51:33 -0400
+Served asset /jquery-fileupload/vendor/jquery.ui.widget.js - 304 Not Modified (0ms)
 
 
-Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-09-02 22:08:02 -0400
-Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (9ms)
+Started GET "/assets/jquery-fileupload/jquery.fileupload-fp.js?body=1" for 127.0.0.1 at 2012-09-03 20:51:34 -0400
+Served asset /jquery-fileupload/jquery.fileupload-fp.js - 304 Not Modified (0ms)
 
 
-Started GET "/assets/jquery-plugins/jQuery.equalHeights.js?body=1" for 127.0.0.1 at 2012-09-02 22:08:02 -0400
-Served asset /jquery-plugins/jQuery.equalHeights.js - 304 Not Modified (7ms)
+Started GET "/assets/telaKKi/views.js?body=1" for 127.0.0.1 at 2012-09-03 20:51:34 -0400
+Served asset /telaKKi/views.js - 304 Not Modified (0ms)
 
 
-Started GET "/assets/jquery-fileupload/vendor/tmpl.js?body=1" for 127.0.0.1 at 2012-09-02 22:08:02 -0400
-Served asset /jquery-fileupload/vendor/tmpl.js - 304 Not Modified (7ms)
+Started GET "/assets/telaKKi/custom-components.js?body=1" for 127.0.0.1 at 2012-09-03 20:51:34 -0400
+Served asset /telaKKi/custom-components.js - 304 Not Modified (0ms)
 
 
-Started GET "/assets/telaKKi/views.js?body=1" for 127.0.0.1 at 2012-09-02 22:08:02 -0400
-Served asset /telaKKi/views.js - 304 Not Modified (2ms)
+Started GET "/assets/svg-icons.css?body=1" for 127.0.0.1 at 2012-09-03 20:55:16 -0400
+Served asset /svg-icons.css - 304 Not Modified (0ms)
 
 
-Started GET "/assets/gmaps4rails.css?body=1" for 127.0.0.1 at 2012-09-02 22:08:05 -0400
-Served asset /gmaps4rails.css - 304 Not Modified (6ms)
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-03 20:55:16 -0400
+Served asset /jquery.js - 304 Not Modified (3ms)
 
 
-Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-02 22:08:05 -0400
-Served asset /jquery.js - 304 Not Modified (0ms)
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-09-03 20:55:16 -0400
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (0ms)
 
 
-Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-09-02 22:08:05 -0400
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-09-03 20:55:16 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.base.js?body=1" for 127.0.0.1 at 2012-09-03 20:55:16 -0400
+Served asset /gmaps4rails/gmaps4rails.base.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.mapquest.js?body=1" for 127.0.0.1 at 2012-09-03 20:55:16 -0400
+Served asset /gmaps4rails/gmaps4rails.mapquest.js - 304 Not Modified (32ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/canvas-to-blob.js?body=1" for 127.0.0.1 at 2012-09-03 20:55:16 -0400
+Served asset /jquery-fileupload/vendor/canvas-to-blob.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload-fp.js?body=1" for 127.0.0.1 at 2012-09-03 20:55:16 -0400
+Served asset /jquery-fileupload/jquery.fileupload-fp.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modernizr.js?body=1" for 127.0.0.1 at 2012-09-03 20:55:16 -0400
+Served asset /modernizr.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/item_new.js?body=1" for 127.0.0.1 at 2012-09-03 20:55:16 -0400
+Served asset /item_new.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/toggle-switch.css?body=1" for 127.0.0.1 at 2012-09-03 20:55:38 -0400
+Served asset /toggle-switch.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-03 20:55:38 -0400
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-09-03 20:55:38 -0400
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-09-03 20:55:38 -0400
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-plugins/jquery.ThreeDots.js?body=1" for 127.0.0.1 at 2012-09-03 20:55:38 -0400
+Served asset /jquery-plugins/jquery.ThreeDots.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery-fileupload/vendor/jquery.ui.widget.js?body=1" for 127.0.0.1 at 2012-09-03 20:55:38 -0400
+Served asset /jquery-fileupload/vendor/jquery.ui.widget.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload-fp.js?body=1" for 127.0.0.1 at 2012-09-03 20:55:38 -0400
+Served asset /jquery-fileupload/jquery.fileupload-fp.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-fileupload/locale.js?body=1" for 127.0.0.1 at 2012-09-03 20:55:38 -0400
+Served asset /jquery-fileupload/locale.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/telaKKi/submenus.js?body=1" for 127.0.0.1 at 2012-09-03 20:55:38 -0400
+Served asset /telaKKi/submenus.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/toggle-switch-mobile.js?body=1" for 127.0.0.1 at 2012-09-03 20:55:39 -0400
+Served asset /toggle-switch-mobile.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/icons.css?body=1" for 127.0.0.1 at 2012-09-03 20:55:41 -0400
+Served asset /icons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-09-03 20:55:41 -0400
 Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (0ms)
 
 
-Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-09-02 22:08:05 -0400
-Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (15ms)
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-09-03 20:55:41 -0400
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (0ms)
 
 
-Started GET "/assets/jquery-plugins/jquery.placeholder.js?body=1" for 127.0.0.1 at 2012-09-02 22:08:05 -0400
-Served asset /jquery-plugins/jquery.placeholder.js - 304 Not Modified (7ms)
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-09-03 20:55:41 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
 
 
-Started GET "/assets/gmaps4rails/gmaps4rails.mapquest.js?body=1" for 127.0.0.1 at 2012-09-02 22:08:05 -0400
-Served asset /gmaps4rails/gmaps4rails.mapquest.js - 304 Not Modified (6ms)
+Started GET "/assets/gmaps4rails/gmaps4rails.bing.js?body=1" for 127.0.0.1 at 2012-09-03 20:55:41 -0400
+Served asset /gmaps4rails/gmaps4rails.bing.js - 304 Not Modified (0ms)
 
 
-Started GET "/assets/jquery-fileupload/jquery.iframe-transport.js?body=1" for 127.0.0.1 at 2012-09-02 22:08:05 -0400
-Served asset /jquery-fileupload/jquery.iframe-transport.js - 304 Not Modified (10ms)
+Started GET "/assets/jquery-fileupload/vendor/tmpl.js?body=1" for 127.0.0.1 at 2012-09-03 20:55:41 -0400
+Served asset /jquery-fileupload/vendor/tmpl.js - 304 Not Modified (3ms)
 
 
-Started GET "/assets/jquery-fileupload/index.js?body=1" for 127.0.0.1 at 2012-09-02 22:08:05 -0400
-Served asset /jquery-fileupload/index.js - 304 Not Modified (5ms)
+Started GET "/assets/jquery-fileupload/jquery.fileupload-ui.js?body=1" for 127.0.0.1 at 2012-09-03 20:55:41 -0400
+Served asset /jquery-fileupload/jquery.fileupload-ui.js - 304 Not Modified (5ms)
 
 
-Started GET "/assets/telaKKi/submenus.js?body=1" for 127.0.0.1 at 2012-09-02 22:08:05 -0400
-Served asset /telaKKi/submenus.js - 304 Not Modified (2ms)
+Started GET "/assets/telaKKi/telaKKi.js?body=1" for 127.0.0.1 at 2012-09-03 20:55:41 -0400
+Served asset /telaKKi/telaKKi.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/toggle-switch-mobile.js?body=1" for 127.0.0.1 at 2012-09-03 20:55:41 -0400
+Served asset /toggle-switch-mobile.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/toggle-switch.css?body=1" for 127.0.0.1 at 2012-09-03 20:55:53 -0400
+Served asset /toggle-switch.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.fileupload-ui.css?body=1" for 127.0.0.1 at 2012-09-03 20:55:53 -0400
+Served asset /jquery.fileupload-ui.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-03 20:55:53 -0400
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-09-03 20:55:54 -0400
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-09-03 20:55:54 -0400
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-09-03 20:55:54 -0400
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/override_confirm.js?body=1" for 127.0.0.1 at 2012-09-03 20:55:54 -0400
+Served asset /override_confirm.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-plugins/all.js?body=1" for 127.0.0.1 at 2012-09-03 20:55:54 -0400
+Served asset /jquery-plugins/all.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.openlayers.js?body=1" for 127.0.0.1 at 2012-09-03 20:55:54 -0400
+Served asset /gmaps4rails/gmaps4rails.openlayers.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload.js?body=1" for 127.0.0.1 at 2012-09-03 20:55:54 -0400
+Served asset /jquery-fileupload/jquery.fileupload.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/item_new.js?body=1" for 127.0.0.1 at 2012-09-03 20:55:54 -0400
+Served asset /item_new.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/telaKKi/views.js?body=1" for 127.0.0.1 at 2012-09-03 20:55:54 -0400
+Served asset /telaKKi/views.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-03 20:55:54 -0400
+Served asset /application.js - 304 Not Modified (353ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-09-03 20:57:02 -0400
+Processing by ItemsController#index as HTML
+  [1m[35mItem Load (1.0ms)[0m  SELECT "items".* FROM "items" ORDER BY created_at DESC
+  Rendered items/_modal.html.erb (1.3ms)
+  [1m[36mImage Load (0.7ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."imageable_id" = 4 AND "images"."imageable_type" = 'Item' LIMIT 1[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mImage Load (0.6ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."imageable_id" = 3 AND "images"."imageable_type" = 'Item' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "images".* FROM "images" WHERE "images"."imageable_id" = 3 AND "images"."imageable_type" = 'Item' LIMIT 1
+  Rendered images/_image.html.erb (6.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mImage Load (0.7ms)[0m  SELECT "images".* FROM "images" WHERE "images"."imageable_id" = 2 AND "images"."imageable_type" = 'Item' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."imageable_id" = 2 AND "images"."imageable_type" = 'Item' LIMIT 1[0m
+  Rendered images/_image.html.erb (7.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mImage Load (0.5ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."imageable_id" = 1 AND "images"."imageable_type" = 'Item' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  Rendered items/_item.html.erb (92.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."imageable_id" = 4 AND "images"."imageable_type" = 'Item' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "images".* FROM "images" WHERE "images"."imageable_id" = 3 AND "images"."imageable_type" = 'Item' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."imageable_id" = 3 AND "images"."imageable_type" = 'Item' LIMIT 1[0m
+  Rendered images/_image.html.erb (4.6ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "images".* FROM "images" WHERE "images"."imageable_id" = 2 AND "images"."imageable_type" = 'Item' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."imageable_id" = 2 AND "images"."imageable_type" = 'Item' LIMIT 1[0m
+  Rendered images/_image.html.erb (5.9ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "images".* FROM "images" WHERE "images"."imageable_id" = 1 AND "images"."imageable_type" = 'Item' LIMIT 1
+  Rendered items/_item.html.erb (53.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."imageable_id" = 4 AND "images"."imageable_type" = 'Item' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "images".* FROM "images" WHERE "images"."imageable_id" = 3 AND "images"."imageable_type" = 'Item' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."imageable_id" = 3 AND "images"."imageable_type" = 'Item' LIMIT 1[0m
+  Rendered images/_image.html.erb (5.5ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "images".* FROM "images" WHERE "images"."imageable_id" = 2 AND "images"."imageable_type" = 'Item' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."imageable_id" = 2 AND "images"."imageable_type" = 'Item' LIMIT 1[0m
+  Rendered images/_image.html.erb (5.8ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "images".* FROM "images" WHERE "images"."imageable_id" = 1 AND "images"."imageable_type" = 'Item' LIMIT 1
+  Rendered items/_item.html.erb (155.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."imageable_id" = 4 AND "images"."imageable_type" = 'Item' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "images".* FROM "images" WHERE "images"."imageable_id" = 3 AND "images"."imageable_type" = 'Item' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."imageable_id" = 3 AND "images"."imageable_type" = 'Item' LIMIT 1[0m
+  Rendered images/_image.html.erb (5.7ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "images".* FROM "images" WHERE "images"."imageable_id" = 2 AND "images"."imageable_type" = 'Item' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."imageable_id" = 2 AND "images"."imageable_type" = 'Item' LIMIT 1[0m
+  Rendered images/_image.html.erb (6.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "images".* FROM "images" WHERE "images"."imageable_id" = 1 AND "images"."imageable_type" = 'Item' LIMIT 1
+  Rendered items/_item.html.erb (50.3ms)
+  Rendered items/index.html.slim within layouts/application (373.1ms)
+Compiled telaKKi.css  (7680ms)  (pid 9225)
+Compiled application.css  (6ms)  (pid 9225)
+  Rendered users/_navbar.html.erb (1.4ms)
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."parent_id" IS NULL[0m
+  [1m[35mItem Load (0.5ms)[0m  SELECT "items".* FROM "items" 
+  Rendered categories/_navbar.html.erb (7.1ms)
+  Rendered searchs/_navbar.html.erb (0.3ms)
+  Rendered shared/_submenu_options.html.slim (0.6ms)
+  Rendered items/_new_item_navbar.html.erb (1.0ms)
+  Rendered messages/_navbar.html.erb (0.3ms)
+  Rendered shared/_menu.html.erb (20.4ms)
+  Rendered shared/_footer.html.erb (1.4ms)
+Compiled item_new.js  (8ms)  (pid 9225)
+Compiled telaKKi.js  (10ms)  (pid 9225)
+Compiled application.js  (21ms)  (pid 9225)
+Completed 200 OK in 8733ms (Views: 8724.7ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-03 20:57:11 -0400
+Served asset /application.css - 304 Not Modified (47ms)
+
+
+Started GET "/assets/default_index_image.png" for 127.0.0.1 at 2012-09-03 20:57:11 -0400
+Served asset /default_index_image.png - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-09-03 20:57:11 -0400
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-09-03 20:57:11 -0400
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-09-03 20:57:11 -0400
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (19ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-09-03 20:57:11 -0400
+Served asset /bootstrap.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery-plugins/jquery.lettering.js?body=1" for 127.0.0.1 at 2012-09-03 20:57:11 -0400
+Served asset /jquery-plugins/jquery.lettering.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/all.js?body=1" for 127.0.0.1 at 2012-09-03 20:57:11 -0400
+Served asset /gmaps4rails/all.js - 304 Not Modified (17ms)
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload.js?body=1" for 127.0.0.1 at 2012-09-03 20:57:11 -0400
+Served asset /jquery-fileupload/jquery.fileupload.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/item_new.js?body=1" for 127.0.0.1 at 2012-09-03 20:57:11 -0400
+Served asset /item_new.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/telaKKi/item-modal.js?body=1" for 127.0.0.1 at 2012-09-03 20:57:11 -0400
+Served asset /telaKKi/item-modal.js - 304 Not Modified (0ms)
