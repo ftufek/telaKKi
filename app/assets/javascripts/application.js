@@ -23,5 +23,4 @@
 //= require telaKKi
 //= require toggle-switch-mobile
 //= require handlebars.runtime
-//= require handlebars.helpers
 //= require templates/item-modal
