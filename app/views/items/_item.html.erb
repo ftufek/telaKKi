@@ -2,6 +2,8 @@
   data: {
     title:"#{item.title}",
     description: "#{item.description}",
+    images: "#{item.images.map{|i| i.image.url}}",
+    multiple_images: "#{item.images.length > 1 ? "1" : "0"}",
     link: "#{item_path(item)}"
   } do %>
   <%= ribbon_for("new") if item.created_at > 1.hour.ago %>

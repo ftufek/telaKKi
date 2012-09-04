@@ -3,10 +3,23 @@
   <h3 id="modalLabel" class="title">{{ title }}</h3>
 </div>
 <div class="modal-body">
+  {{#if images.length }}
+        <div id="images" class="carousel slide">
+          <div class="carousel-inner">
+            {{#each images }}
+              <div class="item">
+                <img src="{{this}}"></img>
+              </div>
+            {{/each}}
+          </div>
+
+          <a class="carousel-control left" href="#images" data-slide="prev">&lsaquo;</a>
+          <a class="carousel-control right" href="#images" data-slide="next">&rsaquo;</a>
+      </div>
+  {{/if }}
   <p>{{ description }}</p>
 </div>
 <div class="modal-footer">
   <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-
   <a class="btn btn-primary link" href="{{ link }}">Go to item</a>
 </div>
