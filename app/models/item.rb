@@ -27,6 +27,11 @@ class Item < ActiveRecord::Base
   extend FriendlyId
   friendly_id :title, use: :slugged
 
+  searchable do
+    text :title, :description, :address
+    integer :price
+  end
+
   def self.new_from(details)
     if details[:email].to_s.strip.length == 0
       details[:id] = current_user.id
