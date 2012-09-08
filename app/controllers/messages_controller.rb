@@ -37,7 +37,9 @@ class MessagesController < InheritedResources::Base
 
     @message = {test: "sad", das: "dsaddd"}
 
-    respond_to do |format|
+    render js: "alert('t');"
+
+#    respond_to do |format|
 #      if @message.save
 #        format.html { redirect_to @message, notice: 'Message was successfully created.' }
 #        format.json { render json: @message, status: :created, location: @message }
@@ -47,8 +49,8 @@ class MessagesController < InheritedResources::Base
 #      end
 #        format.html { redirect_to @message, notice: 'Message was successfully created.' }
  #       format.json { render json: @message, status: :created, location: @message }
-        format.js { render layout: false }
-    end
+ #       format.js { render layout: false }
+  #  end
   end
 
   def update
