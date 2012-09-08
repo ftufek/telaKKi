@@ -2,7 +2,13 @@ class ItemsController < ApplicationController
   before_filter :authenticate_user!, except: [ :index, :show, :new, :create ] 
 
   def index
-    @items = Item.order_by_latest_items.all
+    if params[:filters]
+      @items = Item.solr_search do
+        fulltext params[:filters]
+      end.results
+    else
+      @items = Item.order_by_latest_items.all
+    end
 
     respond_to do |format|
       format.html # index.html.erb
