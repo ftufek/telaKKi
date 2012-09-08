@@ -4,7 +4,7 @@ class ItemsController < ApplicationController
   def index
     if params[:filters]
       @items = Item.solr_search do
-        fulltext params[:filters]
+        fulltext params[:filters][:query]
       end.results
     else
       @items = Item.order_by_latest_items.all
