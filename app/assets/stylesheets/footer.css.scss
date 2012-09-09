@@ -1,0 +1,33 @@
+// Implemented from https://gist.github.com/1855032
+// Ryan Fait's Sticky Footer
+html, body {
+  height: 100%;
+}
+footer {
+  color: #666;
+  background: #222;
+  padding: 17px 0 18px 0;
+  border-top: 1px solid #000;
+  height: 64px;
+  background-image: url('/assets/txture.png');
+}
+footer a {
+  color: #ddd;
+  margin-right: 20px;
+}
+footer a:hover {
+  color: #fff;
+}
+.wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -100px;
+}
+.push {
+  height: 100px;
+}
+/* not required for sticky footer; just pushes hero down a bit */
+.wrapper > .container {
+  padding-top: 60px;
+}
