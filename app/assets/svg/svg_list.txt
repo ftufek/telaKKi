@@ -3,3 +3,4 @@
 994 : message
 3421 : upload-photo
 2324 : likeus
+2524 : sale
