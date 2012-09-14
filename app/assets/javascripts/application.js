@@ -21,6 +21,3 @@
 //= require modernizr
 //= require item_new
 //= require telaKKi
-//= require toggle-switch-mobile
-//= require handlebars.runtime
-//= require templates/item-modal
