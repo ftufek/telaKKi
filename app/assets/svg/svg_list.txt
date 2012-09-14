@@ -4,3 +4,5 @@
 3421 : upload-photo
 2324 : likeus
 2524 : sale
+946 : iteminfo
+910 : iteminfo

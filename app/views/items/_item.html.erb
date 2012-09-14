@@ -1,9 +1,5 @@
 <a href="<%= item_path(item) %>">
-  <%= content_tag :div, class: "item-link", 
-    data: {
-      title:"#{item.title}",
-      description: "#{item.description}",
-    } do %>
+  <%= content_tag :div, class: "item-link" do %>
     <%= ribbon_for("new") if item.created_at > 1.hour.ago %>
 
       <div class="item row-fluid">
@@ -14,6 +10,13 @@
         <div class="title_below_image">
           <h4><%= item.title %></h4>
           <h4><%= number_to_currency item.price, { precision: 0 } %></h4>
+          <%= content_tag :span, rel: "popover",
+            data: {
+              title: "#{item.title}",
+              content: truncate("#{item.description}", length: 100),
+            } do %> 
+              <%= icon_for("iteminfo") %>
+          <% end %>
         </div>
 
         <div class="main_info span7">
