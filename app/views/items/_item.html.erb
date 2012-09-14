@@ -10,7 +10,7 @@
         <div class="title_below_image">
           <h4><%= item.title %></h4>
           <h4><%= number_to_currency item.price, { precision: 0 } %></h4>
-          <%= content_tag :span, rel: "popover",
+          <% content_tag :span, rel: "popover",
             data: {
               title: "#{item.title}",
               content: truncate("#{item.description}", length: 100),
