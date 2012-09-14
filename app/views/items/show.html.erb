@@ -34,12 +34,6 @@
       <%= @item.description %>
     </div>
 
-    <div class="element">
-      <div class="item_statistics element_padded">
-        <%= render partial: "messages/item-show", locals: { item: @item } %>
-      </div>
-    </div>
-
     <div class="element element_padded message">
       <% if user_signed_in? %>
         <%= form_tag messages_path, remote: true, class: "form-vertical row-fluid" do |f| %>
