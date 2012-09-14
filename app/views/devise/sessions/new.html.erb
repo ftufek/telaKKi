@@ -1,19 +1,15 @@
-<div class="row">
-  <div class="sign_in_form span4 offset4">
-    <h2>Sign in</h2>
+<div class="sign_in_form">
+  <%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), defaults: { label: false, input_html: { class: "form_input" } }) do |f| %>
+    <div class="inputs">
+      <%= f.input :login, :required => false, :autofocus => true, placeholder: "#{t 'username'}" %>
+      <%= f.input :password, :required => false, placeholder: "#{t 'password'}" %>
+      <%= f.label :remember_me %>
+      <%= f.input :remember_me, :as => :boolean if devise_mapping.rememberable? %>
+    </div>
 
-    <%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), defaults: { label: false, input_html: { class: "form_input" } }) do |f| %>
-      <div class="inputs">
-        <%= f.input :login, :required => false, :autofocus => true %>
-        <%= f.input :password, :required => false %>
-        <%= f.label :remember_me %>
-        <%= f.input :remember_me, :as => :boolean if devise_mapping.rememberable? %>
-      </div>
-
-      <div class="actions">
-        <%= f.button :submit, "Sign in" %>
-      </div>
-    <% end %>
-  </div>
+    <div class="actions">
+      <%= f.button :submit, "Sign in" %>
+    </div>
+  <% end %>
 </div>
-<%= render :partial => "devise/shared/links" %>
+<% render :partial => "devise/shared/links" %>

@@ -7,3 +7,5 @@ fr:
   my_messages: "Mes Messages"
   settings: "Parametres"
   you_have_no_messages: "Presentement, vous n'avez aucune message."
+  username: "Nom d'utilisateur ou courriel"
+  password: "Mot de passe"
