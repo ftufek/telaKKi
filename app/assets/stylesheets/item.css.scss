@@ -78,6 +78,7 @@
     -webkit-transform: translateZ(0);
     position: relative;
     @include border-radius(5px);
+    border: 1px solid transparent;
 
     i {
       top: -3px;
@@ -88,13 +89,12 @@
 
   .item-link:hover {
     cursor: pointer;
-    top: -5px;
-    @include box-shadow(0px 8px 10px 0.5px rgba(1,1,1,0.4));
+    @include box-shadow(0px 0px 12px 0.3px rgba(1,1,1,0.2));
+    border: 1px solid #c3c3c3;
   }
 
   .item, .list_title {
     background-color: white;
-
     @include box-sizing(border-box);
     @include border-radius(0px 0px 0px 0px);
     @include box-shadow(rgba(255,255,255,0.1) 0 1px 0, rgba(0, 0, 0, 0.1) 1px 1px 9px 0px inset);
@@ -325,18 +325,3 @@
 
 #page_item_show { .description { min-height: 100px; } }
 #page_item_show { .title { position: relative; text-align: center; h3 { display: inline-block; } .btn-group { position: absolute; top: 10px; right: 12px; } } }
-
-
-//
-// For Modal
-//
-#item-modal {
-  #images {
-    border-bottom: 1px solid #EEE;
-
-    img {
-      padding: 9px 15px;
-      height: 150px;
-    }
-  }
-}

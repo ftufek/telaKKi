@@ -30,14 +30,7 @@
     <% end %>
 
     <div class="element element_padded description">
-      <h3><%= t 'item_description' %></h3>
       <%= @item.description %>
-    </div>
-
-    <div class="element">
-      <div class="item_statistics element_padded">
-        <%= render partial: "messages/item-show", locals: { item: @item } %>
-      </div>
     </div>
 
     <div class="element element_padded message">

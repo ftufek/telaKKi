@@ -1,4 +1,4 @@
-<form class="navbar-search" action="">
+<form action="<%= items_path %>" method="get" class="navbar-search">
   <%= icon_for("search") %>
-  <input class="search-query span3" placeholder="<%= t 'search_something' %>" type="text">
+  <input class="search-query span3" placeholder="<%= t 'search_something' %>" name="filters[query]" type="text">
 </form>

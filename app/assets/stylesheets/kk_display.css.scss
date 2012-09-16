@@ -1,4 +1,5 @@
 .kk_display {
+  background-color: white;
   .element {
     @include border-radius($kk-border-radius);
     border: $kk-border;
