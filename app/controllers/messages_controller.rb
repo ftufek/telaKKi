@@ -33,7 +33,7 @@ class MessagesController < InheritedResources::Base
   end
 
   def create
-    @message = Message.new({from: current_user, details: params[:message]})
+    @message = Message.new({from: current_user, item: params[:item_id], body: params[:text]})
 
     respond_to do |format|
       if @message.save

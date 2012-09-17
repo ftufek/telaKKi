@@ -36,7 +36,7 @@
     <div class="element element_padded message">
       <% if user_signed_in? %>
         <%= form_tag messages_path, remote: true, method: :post, class: "form-vertical row-fluid" do |f| %>
-          <%= hidden_field_tag :item_id, @item.id %>
+          <%= hidden_field_tag :item_id, @item.friendly_id %>
           <%= text_area_tag :text, '', label: false, class: "span12", placeholder: "#{t('write_message')}" %>
           <%= submit_tag :submit, class: "btn btn-primary btn-bottom-right", value: "#{t('send_message')}" %>
         <% end %>
