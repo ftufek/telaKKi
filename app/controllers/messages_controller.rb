@@ -33,24 +33,22 @@ class MessagesController < InheritedResources::Base
   end
 
   def create
-    @message = Message.new(current_user, params[:message])
+    @message = Message.new({from: current_user, details: params[:message]})
 
-    @message = {test: "sad", das: "dsaddd"}
-
-    render js: "alert('t');"
-
-#    respond_to do |format|
-#      if @message.save
-#        format.html { redirect_to @message, notice: 'Message was successfully created.' }
-#        format.json { render json: @message, status: :created, location: @message }
-#      else
-#        format.html { render action: "new" }
-#        format.json { render json: @message.errors, status: :unprocessable_entity }
-#      end
+    respond_to do |format|
+      if @message.save
+        format.html { redirect_to @message, notice: 'Message was successfully created.' }
+        format.json { render json: @message, status: :created, location: @message }
+        format.js
+      else
+        format.html { render action: "new" }
+        format.json { render json: @message.errors, status: :unprocessable_entity }
+        format.js
+      end
 #        format.html { redirect_to @message, notice: 'Message was successfully created.' }
  #       format.json { render json: @message, status: :created, location: @message }
  #       format.js { render layout: false }
-  #  end
+    end
   end
 
   def update
