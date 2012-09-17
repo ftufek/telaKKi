@@ -102,17 +102,6 @@ ActiveRecord::Schema.define(:version => 20120819230845) do
 
   add_index "items", ["slug"], :name => "index_items_on_slug", :unique => true
 
-  create_table "messages", :force => true do |t|
-    t.integer  "from_id"
-    t.integer  "to_id"
-    t.integer  "item_id"
-    t.text     "text"
-    t.boolean  "read",       :default => false
-    t.integer  "ad_id"
-    t.datetime "created_at",                    :null => false
-    t.datetime "updated_at",                    :null => false
-  end
-
   create_table "notifications", :force => true do |t|
     t.string   "type"
     t.text     "body"

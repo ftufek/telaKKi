@@ -2,7 +2,6 @@ class User < ActiveRecord::Base
   acts_as_messageable
 
   has_many :items
-  has_many :messages, foreign_key: :to_id
   has_many :likes
   has_one :setting
   devise :database_authenticatable, :registerable,

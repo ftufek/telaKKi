@@ -1,9 +1,0 @@
-<% if user_signed_in? %>
-  <% unread_messages = 1 %>
-  <% if unread_messages >= 1 %>
-    <a href="<%= my_items_path %>" rel="tooltip-bottom" title="<%= pluralize(unread_messages, t_for('new_message') ) %>"><%= icon_for("new-message") %></a>
-    <span class="message_number label label-important"><%= unread_messages >= 10 ? "9+" : unread_messages %></span>
-  <% else %>
-    <a href="<%= my_items_path %>" id="navbar-message" rel="tooltip-bottom" title="<%= "#{t('no')} #{t('new_message')}" %>"><%= icon_for("message") %></a>
-  <% end %>
-<% end %>
