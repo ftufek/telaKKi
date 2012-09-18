@@ -6,3 +6,4 @@ fr:
   write_message: "Ecrivez un message au vendeur..."
   send_message: "Envoyez un message"
   sign_in_to_send_message: "pour envoyer une message"
+  message_from_for: "Message de %{username} pour %{itemname}"
