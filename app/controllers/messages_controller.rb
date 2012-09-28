@@ -1,4 +1,12 @@
 class MessagesController < ApplicationController
+  def index
+    @messages = current_user.mailbox.inbox
+
+    respond_to do |format|
+      format.html
+    end
+  end
+
   def create
     from = current_user
     to = Item.find(params[:item_id]).user

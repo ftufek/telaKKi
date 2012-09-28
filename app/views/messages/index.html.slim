@@ -1,0 +1,13 @@
+- @messages.each do |m|
+  div = m.inspect
+  -receipts = m.receipts_for current_user
+  -receipts.each do |r|
+    div 
+      | --
+      = r.inspect
+      = r.message.body
+    br
+    br
+    br
+    br
+    br
