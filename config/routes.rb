@@ -1,6 +1,7 @@
 TelaKKi::Application.routes.draw do
   resources :cities
   resources :images
+  resources :categories
   ActiveAdmin.routes(self)
 
   devise_for :admin_users, ActiveAdmin::Devise.config
