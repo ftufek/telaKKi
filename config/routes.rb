@@ -80,7 +80,7 @@ TelaKKi::Application.routes.draw do
   match "/dislike", to: "items#dislike"
 
   if Rails.env.development?
-    root :to => 'items#index'
+    root :to => 'categories#index'
   else
     root :to => 'pages#intro'
   end

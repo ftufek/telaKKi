@@ -3,6 +3,7 @@ class CreateCategories < ActiveRecord::Migration
     create_table :categories do |t|
       t.string :name
       t.string :icon_name
+      t.string :image_name
 
       t.integer :parent_id
       t.integer :lft

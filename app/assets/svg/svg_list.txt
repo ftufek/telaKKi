@@ -6,3 +6,8 @@
 2524 : sale
 946 : iteminfo
 910 : iteminfo
+1009 : book
+1281 : automobile
+3146 : electronic
+4438 : electronic
+3966 : realestate

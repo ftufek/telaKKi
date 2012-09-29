@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(:version => 20120819230845) do
   create_table "categories", :force => true do |t|
     t.string   "name"
     t.string   "icon_name"
+    t.string   "image_name"
     t.integer  "parent_id"
     t.integer  "lft"
     t.integer  "rgt"
