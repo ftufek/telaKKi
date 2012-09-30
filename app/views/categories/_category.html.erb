@@ -1,7 +1,7 @@
 <a href="<%= category_path(category) %>">
   <div class="category">
     <div id="image">
-      <img src="<%= asset_path(category.image_name) %>.png"></img>
+      <img src="<%= asset_path("c_#{category.name}") %>.png"></img>
     </div>
 
     <div id="name">

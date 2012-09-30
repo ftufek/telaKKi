@@ -4,7 +4,7 @@
     <% Category.where(parent_id: nil).each do |t| %>
       <li>
         <%= link_to t.name do %>
-          <%= icon_for(t.icon_name) %>
+          <%= icon_for("#{t.name}") %>
           <%= "#{t_for(t.name)} (#{pluralize(t.items.count, t('ad'))})" %>
         <% end %>
       </li>
