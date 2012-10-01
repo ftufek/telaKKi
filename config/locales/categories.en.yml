@@ -2,3 +2,8 @@ en:
   auto: "Cars"
   electronic: "Electronics"
   show_all_categories: "Show all categories"
+  automobile: "Automobiles"
+  book: "Books"
+  realestate: "Real Estates"
+  electronic: "Electronics"
+  job: "Jobs"

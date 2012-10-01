@@ -1,0 +1,31 @@
+#categories_container {
+  margin: 0 auto;
+
+  .category {
+    @include transition-property(box-shadow);
+    @include transition-duration(0.3s);
+    @include transition-timing-function(linear);
+    -webkit-transform: translateZ(0);
+    @include box-shadow(0 1px 3px rgba(34, 25, 25, 0.4));
+    float: left;
+    width: 320px;
+    background-color: white;
+    margin-bottom: 20px;
+    overflow: hidden;
+
+    #image{
+      text-align: center;
+      padding: 5px 10px;
+      max-width: 320px;
+    }
+
+    #name {
+      background-color: #F2F0F0;
+      padding: 10px 15px;
+    }
+  }
+
+  .category:hover {
+    @include box-shadow(0 1px 3px rgba(34, 25, 25, 0.4),0 0 7px rgba(34,25,25,0.8));
+  }
+}

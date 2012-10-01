@@ -1,19 +1,16 @@
 class CreateCategories < ActiveRecord::Migration
-  def self.up
+  def change 
     create_table :categories do |t|
       t.string :name
-      t.string :icon_name
 
       t.integer :parent_id
       t.integer :lft
       t.integer :rgt
       t.integer :depth
+      t.string :slug
 
       t.timestamps
     end
-  end
-
-  def self.down
-    drop_table :categories
+    add_index :categories, :slug, unique: true
   end
 end

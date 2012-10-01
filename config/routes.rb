@@ -1,6 +1,7 @@
 TelaKKi::Application.routes.draw do
   resources :cities
   resources :images
+  resources :categories
   ActiveAdmin.routes(self)
 
   devise_for :admin_users, ActiveAdmin::Devise.config
@@ -79,7 +80,7 @@ TelaKKi::Application.routes.draw do
   match "/dislike", to: "items#dislike"
 
   if Rails.env.development?
-    root :to => 'items#index'
+    root :to => 'categories#index'
   else
     root :to => 'pages#intro'
   end
