@@ -3,7 +3,6 @@ $icon-spacing: 2px;
 @import "icon/*.png";
 @include all-icon-sprites;
 
-
 [class^="icon-"],
 [class*=" icon-"] {
   display: inline-block;
