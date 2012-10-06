@@ -30,5 +30,6 @@ SVG.add_array([
   ['new-message',-1,20],
   ['upload-photo', -1, 35],
   ['likeus',-1,30],
-  ['iteminfo',-1,20]
+  ['iteminfo',-1,20],
+  ['unreadmessage',-1,19]
 ])

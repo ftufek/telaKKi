@@ -9,6 +9,7 @@ class MessagesController < ApplicationController
 
   def show
     conversation = current_user.mailbox.conversations.find(params[:id])
+    conversation.mark_as_read(current_user)
     @messages = conversation.receipts_for current_user
 
     respond_to do |format|
