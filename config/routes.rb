@@ -7,7 +7,7 @@ TelaKKi::Application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
 
   if Rails.env.development?
-    resources :messages, only: [:create]
+    resources :messages, only: [:create, :index, :show]
 
     devise_for :users do
     #  get '/profile' => 'users/registrations#edit', as: :edit_user_registration

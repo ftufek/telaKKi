@@ -1,6 +1,15 @@
 class MessagesController < ApplicationController
   def index
-    @messages = current_user.mailbox.inbox
+    @conversations = current_user.mailbox.conversations
+
+    respond_to do |format|
+      format.html
+    end
+  end
+
+  def show
+    conversation = current_user.mailbox.conversations.find(params[:id])
+    @messages = conversation.receipts_for current_user
 
     respond_to do |format|
       format.html
