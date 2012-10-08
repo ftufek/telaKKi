@@ -8,3 +8,4 @@ en:
   send_message: "Send message"
   sign_in_to_send_message: "to send a message"
   message_from_for: "Message from %{username} for %{itemname}"
+  me: "me"

@@ -5,7 +5,7 @@
   pointer-events: none;
 }
 
-.incoming_message, .outgoing_message {
+.sent, .received {
   position: relative;
   padding: 5px;
   margin: 0.1em 0 0.5em;
@@ -16,11 +16,11 @@
   border-radius: 10px;
 }
 
-.incoming_message {
+.received {
   margin-right: 50px;
 }
 
-.outgoing_message {
+.sent {
   margin-left: 50px;
   background: #D76234;
 }
