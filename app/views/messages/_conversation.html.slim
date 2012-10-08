@@ -1,0 +1,3 @@
+a.conversation(href="#{message_path(conversation.id)}")
+  = conversation.subject
+  = icon_for("unreadmessage") if is_unread_messages_for(conversation)

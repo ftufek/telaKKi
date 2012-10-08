@@ -1,0 +1,6 @@
+div(class="#{message.message.sender_id == current_user.id ? "sent" : "received"}")
+  - if message.message.sender_id == current_user.id
+    b = "#{t('me')}: "
+  -else
+    b = "#{User.find(message.message.sender_id).username}: "
+  = message.message.body

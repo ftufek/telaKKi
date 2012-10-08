@@ -1,6 +1,7 @@
 $icon-sprite-dimensions: true;
 $icon-spacing: 2px;
 @import "icon/*.png";
+/**/
 @include all-icon-sprites;
 
 [class^="icon-"],
@@ -20,6 +21,10 @@ $icon-spacing: 2px;
   pointer-events: none;
 }
 
+.icon-unreadmessage {
+  float: right;
+}
+
 
 // don't ever remove what's after this line!
-// 0149ee6e776e2f86c 
+// 0398750375f254b6f 

@@ -1,72 +1,31 @@
-class MessagesController < InheritedResources::Base
-  before_filter :authenticate_user!
+class MessagesController < ApplicationController
   def index
-    id = current_user.id
-    @messages = Message.where("to_id = ? OR from_id = ?", id, id)#.group("item_id")
+    @conversations = current_user.mailbox.conversations
 
     respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @messages }
+      format.html
     end
   end
 
   def show
-    @message = Message.find(params[:id])
+    conversation = current_user.mailbox.conversations.find(params[:id])
+    conversation.mark_as_read(current_user)
+    @messages = conversation.receipts_for current_user
 
     respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @message }
+      format.html
     end
-  end
-
-  def new
-    @message = Message.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @message }
-    end
-  end
-
-  def edit
-    @message = Message.find(params[:id])
   end
 
   def create
-    @message = Message.new(params[:message])
+    from = current_user
+    to = Item.find(params[:item_id]).user
+    subject = I18n.t :message_from_for, username: from.username, itemname: Item.find(params[:item_id]).title
+    body = params[:text]
+    from.send_message(to, body, subject)
 
     respond_to do |format|
-      if @message.save
-        format.html { redirect_to @message, notice: 'Message was successfully created.' }
-        format.json { render json: @message, status: :created, location: @message }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @message.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  def update
-    @message = Message.find(params[:id])
-
-    respond_to do |format|
-      if @message.update_attributes(params[:message])
-        format.html { redirect_to @message, notice: 'Message was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: "edit" }
-        format.json { render json: @message.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  def destroy
-    @message = Message.find(params[:id])
-    @message.destroy
-
-    respond_to do |format|
-      format.html { redirect_to messages_url }
-      format.json { head :no_content }
+      format.js
     end
   end
 end
