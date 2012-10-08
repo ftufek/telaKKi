@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
 
   attr_accessible :username, :email, :password, :password_confirmation, :remember_me
   attr_accessor :login
-  attr_accessible :login, :email
+  attr_accessible :login, :email, :provider, :uid
 
   validates :username, presence: true, uniqueness: true, length: { in: 5..14 }
 
