@@ -9,7 +9,7 @@ TelaKKi::Application.routes.draw do
   if Rails.env.development?
     resources :messages, only: [:create, :index, :show]
 
-    devise_for :users do
+    devise_for :users, controllers: { omniauth_callbacks: "users/omniauth_callbacks" } do
     #  get '/profile' => 'users/registrations#edit', as: :edit_user_registration
       get "/profile", :to => "devise/registrations#edit", :as => :user_profile
       get "/my_items" => "items#for_user"

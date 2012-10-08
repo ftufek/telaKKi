@@ -12,6 +12,8 @@
         <%= f.button :submit, "Sign in" %>
       </div>
     <% end %>
+    <hr>
+    <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook), class: "zocial facebook" %>
   </div>
   <% render :partial => "devise/shared/links" %>
 </div>

@@ -6,6 +6,7 @@
   border: 1px solid #D4D4D4;
   background-color: white;
   display: inline-block;
+  text-align: center;
 
   -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
@@ -17,6 +18,10 @@
   h2 {
     text-align: center; 
     margin-bottom: 20px;
+  }
+
+  hr {
+    margin-bottom: 10px;
   }
 
   .form_input {
