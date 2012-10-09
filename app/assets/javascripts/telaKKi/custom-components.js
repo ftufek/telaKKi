@@ -34,3 +34,7 @@ telaKKi.views.custom_components.dropdown = (function(){
     }
   }
 })();
+
+$(document).ready(function(){
+        $('#social-like').popover({placement:'top'});
+});
