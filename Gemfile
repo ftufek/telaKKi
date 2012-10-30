@@ -26,7 +26,7 @@ group :assets do
 end
 
 group :development do
-  gem 'minitest-rails'
+  gem 'rspec-rails'
 end
 
 gem 'simple_form'
