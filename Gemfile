@@ -25,11 +25,15 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+group :development do
+  gem 'minitest-rails'
+end
+
 gem 'simple_form'
 gem 'less'
 gem 'twitter-bootstrap-rails', git: 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 gem 'paperclip', git: "git://github.com/thoughtbot/paperclip.git"
-gem 'gmaps4rails', git: "https://github.com/apneadiving/Google-Maps-for-Rails.git", branch: "objectify_js"
+gem 'gmaps4rails', git: "https://github.com/apneadiving/Google-Maps-for-Rails.git"
 gem 'activeadmin'
 gem 'slim-rails'
 gem 'friendly_id'
