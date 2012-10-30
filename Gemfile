@@ -34,7 +34,6 @@ gem 'less'
 gem 'twitter-bootstrap-rails', git: 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 gem 'paperclip', git: "git://github.com/thoughtbot/paperclip.git"
 gem 'gmaps4rails', git: "https://github.com/apneadiving/Google-Maps-for-Rails.git"
-gem 'activeadmin'
 gem 'slim-rails'
 gem 'friendly_id'
 gem 'jquery-fileupload-rails'
