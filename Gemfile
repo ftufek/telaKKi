@@ -28,6 +28,7 @@ end
 group :development do
   gem 'rspec-rails'
   gem 'capybara'
+  gem 'factory_girl'
 end
 
 gem 'simple_form'
