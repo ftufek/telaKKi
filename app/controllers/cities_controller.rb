@@ -1,2 +1,2 @@
-class CitiesController < InheritedResources::Base
+class CitiesController < ApplicationController
 end
