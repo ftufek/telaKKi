@@ -1,8 +1,7 @@
 == telaKKi online classifieds
 
 To run:
-
-bundle install
-rake db:seed
-rake sunspot:solr:start
-rails s
+-bundle install
+-rake db:seed
+-rake sunspot:solr:start
+-rails s
