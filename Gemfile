@@ -30,6 +30,7 @@ group :development, :test do
   gem 'factory_girl'
   gem 'sqlite3'
   gem 'database_cleaner'
+  gem 'spork', '~> 1.0rc'
 end
 
 gem 'simple_form'
