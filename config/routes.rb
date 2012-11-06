@@ -3,7 +3,7 @@ TelaKKi::Application.routes.draw do
   resources :images
   resources :categories
 
-  if Rails.env.development?
+  if Rails.env.development? or Rails.env.test?
     resources :messages, only: [:create, :index, :show]
 
     devise_for :users, controllers: { omniauth_callbacks: "users/omniauth_callbacks" } do
