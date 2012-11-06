@@ -24,11 +24,12 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-group :development do
+group :development, :test do
   gem 'rspec-rails'
   gem 'capybara'
   gem 'factory_girl'
   gem 'sqlite3'
+  gem 'database_cleaner'
 end
 
 gem 'simple_form'

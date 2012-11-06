@@ -90,6 +90,7 @@ GEM
       sass (~> 3.1)
     compass-rails (1.0.3)
       compass (>= 0.12.2, < 0.14)
+    database_cleaner (0.9.1)
     debugger (1.2.1)
       columnize (>= 0.3.1)
       debugger-linecache (~> 1.1.1)
@@ -269,6 +270,7 @@ DEPENDENCIES
   capybara
   coffee-rails (~> 3.2.1)
   compass-rails
+  database_cleaner
   debugger
   devise
   factory_girl
