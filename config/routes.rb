@@ -3,7 +3,6 @@ TelaKKi::Application.routes.draw do
   resources :images
   resources :categories
 
-  if Rails.env.development? or Rails.env.test?
     resources :messages, only: [:create, :index, :show]
 
     devise_for :users, controllers: { omniauth_callbacks: "users/omniauth_callbacks" } do
@@ -20,7 +19,6 @@ TelaKKi::Application.routes.draw do
     match "/faq" => "pages#faq"
     match "/help" => "pages#help"
     match "/about_us" => "pages#about_us"
-  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -72,15 +70,11 @@ TelaKKi::Application.routes.draw do
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
   match "/prelauncher", to: "pages#prelauncher", via: "post"
-  match "/intro", to: "pages#intro"
+#  match "/intro", to: "pages#intro"
   match "/like", to: "items#like"
   match "/dislike", to: "items#dislike"
 
-  if Rails.env.development? or Rails.env.test?
-    root :to => 'categories#index'
-  else
-    root :to => 'pages#intro'
-  end
+  root :to => 'categories#index'
 
   match "/difftime", to: "difftime#index"
 
