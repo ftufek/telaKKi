@@ -3,8 +3,11 @@ class DifftimeController < ApplicationController
     from = params[:from]
     message = params[:body]
 
+    res = Geokit::Geocoders::GoogleGeocoder.geocode(message)
+    timezone = Timezone::Zone.new(:latlon => [res.lat, res.lng])
+
     response = Twilio::TwiML::Response.new do |r|
-      r.Sms "test!" 
+      r.Sms "#{timezone.time Time.now}" 
     end
 
     render text: response.text
