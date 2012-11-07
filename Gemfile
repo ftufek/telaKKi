@@ -28,13 +28,13 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'capybara'
   gem 'factory_girl'
-  gem 'sqlite3'
   gem 'database_cleaner'
   gem 'spork', '~> 1.0rc'
 end
 
 gem 'simple_form'
 gem 'less'
+gem 'sqlite3'
 gem 'twitter-bootstrap-rails', git: 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 gem 'paperclip', git: "git://github.com/thoughtbot/paperclip.git"
 gem 'gmaps4rails', git: "https://github.com/apneadiving/Google-Maps-for-Rails.git"
@@ -48,6 +48,7 @@ gem 'sunspot_solr'
 gem 'omniauth'
 gem 'oauth2'
 gem 'omniauth-facebook'
+gem 'twilio-ruby'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

@@ -254,6 +254,10 @@ GEM
     treetop (1.4.12)
       polyglot
       polyglot (>= 0.3.1)
+    twilio-ruby (3.9.0)
+      builder (>= 2.1.2)
+      jwt (>= 0.1.2)
+      multi_json (>= 1.3.0)
     tzinfo (0.3.34)
     uglifier (1.3.0)
       execjs (>= 0.3.0)
@@ -297,5 +301,6 @@ DEPENDENCIES
   sunspot_rails
   sunspot_solr
   therubyracer
+  twilio-ruby
   twitter-bootstrap-rails!
   uglifier (>= 1.0.3)
