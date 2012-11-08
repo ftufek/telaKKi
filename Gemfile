@@ -49,8 +49,7 @@ gem 'omniauth'
 gem 'oauth2'
 gem 'omniauth-facebook'
 gem 'twilio-ruby'
-gem 'geokit'
-gem 'timezone'
+gem 'artii'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

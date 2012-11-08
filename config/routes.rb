@@ -76,7 +76,7 @@ TelaKKi::Application.routes.draw do
 
   root :to => 'categories#index'
 
-  match "/difftime", to: "difftime#index"
+  match "/coolascii", to: "coolascii#index"
 
   # See how all your routes lay out with "rake routes"
 

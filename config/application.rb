@@ -66,8 +66,5 @@ module TelaKKi
       g.template_engine :slim
     end
 
-    Timezone::Configure.begin do |c|
-      c.username = 'ftlinux'
-    end    
   end
 end
