@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<!-- saved from url=(0029)http://localhost:3000/profile -->
+<html lang="en" class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms no-csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths js csstransitions"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>telaKKi</title>
+    <meta content="authenticity_token" name="csrf-param">
+<meta content="EIymZPe3uq5uYKhzEUyjuzZZbO4hkq7JJhnz9Tt4y+w=" name="csrf-token">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+    <![endif]-->
+
+    <!--[if !IE 7]>
+      <style type="text/css">
+        #wrap { display: table; height: 100%;}
+      </style>
+    <![endif]-->
+
+    <link href="./profile_files/application.css" media="all" rel="stylesheet" type="text/css">
+<link href="./profile_files/gmaps4rails.css" media="all" rel="stylesheet" type="text/css">
+<link href="./profile_files/telaKKi.css" media="all" rel="stylesheet" type="text/css">
+<link href="./profile_files/jquery.fileupload-ui.css" media="all" rel="stylesheet" type="text/css">
+<link href="./profile_files/icons.css" media="all" rel="stylesheet" type="text/css">
+<link href="./profile_files/svg-icons.css" media="all" rel="stylesheet" type="text/css">
+<link href="./profile_files/toggle-switch.css" media="all" rel="stylesheet" type="text/css">
+<link href="./profile_files/zocial.css" media="all" rel="stylesheet" type="text/css">
+
+    <!--<link href="images/favicon.ico" rel="shortcut icon">
+    <link href="images/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="images/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+    <link href="images/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+
+      <a href="http://localhost:3000/" class="brand">
+        <b>telaKKi</b>
+</a>      <div class="btn-group pull-right">
+          <a href="http://localhost:3000/profile#" data-toggle="dropdown" class="btn dropdown-toggle">
+    <i class="icon-user"></i> Account
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu">
+    <li>
+      <a href="./profile_files/profile.html">
+        <i class="icon-profile"></i>
+        Profile
+</a>    </li>
+
+    <li>
+      <a href="http://localhost:3000/my_items">
+        <i class="icon-items"></i>
+        Items
+</a>    </li>
+
+    <li>
+      <a href="http://localhost:3000/messages">
+        <i class="icon-messages"></i>
+        Messages
+</a>    </li>
+
+    <li class="divider"></li>
+    <li>
+      <a href="http://localhost:3000/users/sign_out" data-method="delete" rel="nofollow">
+        <i class="icon-sign-out"></i>
+        Sign Out
+</a>    </li>
+  </ul>
+
+
+      </div>
+
+      <div class="nav-collapse">
+        <ul class="nav">
+          <li class=""><a href="http://localhost:3000/profile#">(The Social Marketplace)</a></li>
+          
+          <li class="divider-vertical"></li>
+
+          <li class="dropdown">
+  <a data-toggle="dropdown" class="dropdown-toggle" href="http://localhost:3000/profile#"><i class="icon-categories"></i> Categories <b class="caret"></b></a>
+  <ul class="dropdown-menu">
+      <li>
+        <a href="http://localhost:3000/automobile">
+          <i class="icon-automobile"></i>
+          Automobiles (0 ads)
+</a>      </li>
+      <li>
+        <a href="http://localhost:3000/book">
+          <i class="icon-book"></i>
+          Books (0 ads)
+</a>      </li>
+      <li>
+        <a href="http://localhost:3000/realestate">
+          <i class="icon-realestate"></i>
+          Real Estates (0 ads)
+</a>      </li>
+      <li>
+        <a href="http://localhost:3000/electronic">
+          <i class="icon-electronic"></i>
+          Electronics (0 ads)
+</a>      </li>
+      <li>
+        <a href="http://localhost:3000/job">
+          <i class="icon-job"></i>
+          Jobs (0 ads)
+</a>      </li>
+
+    <li class="divider"></li>
+
+    <li>
+      <a href="http://localhost:3000/profile#">
+        <i class="icon-all-categories"></i>
+        Show all categories (0 ads)
+</a>    </li>
+  </ul>
+</li>
+
+
+        </ul>
+
+        <form action="http://localhost:3000/items" method="get" class="navbar-search">
+  <i class="icon-search"></i>
+  <input class="search-query span3" placeholder="Search something..." name="filters[query]" type="text">
+</form>
+
+
+
+        <ul class="nav pull-right">
+          <li class=""><a href="http://localhost:3000/items/new" class="less-padding" rel="tooltip-bottom" data-original-title="Sell something">
+  <i class="icon-sale"></i>
+  <div class="visible-phone">Sell something</div>
+</a></li>
+          <li class="divider-vertical"></li>
+          <li class="messages">    <a href="http://localhost:3000/messages" id="navbar-message" rel="tooltip-bottom" data-original-title="&lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: en.no&quot;&gt;No&lt;/span&gt; new message"><i class="icon-message"></i></a>
+</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <div class="container">
+        <div class="row">
+  <div class="kk_display span8 offset2">
+    <div class="element title">
+      <h3>Profile</h3>
+    </div>
+
+    <div class="element element_padded small-form">
+      <form accept-charset="UTF-8" action="http://localhost:3000/users" class="simple_form form-horizontal" id="edit_user" method="post" novalidate="novalidate"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="_method" type="hidden" value="put"><input name="authenticity_token" type="hidden" value="EIymZPe3uq5uYKhzEUyjuzZZbO4hkq7JJhnz9Tt4y+w="></div>
+        
+
+        <div class="inputs">
+          <div class="control-group string required"><label class="string required control-label" for="user_username"><abbr title="required">*</abbr> Username</label><div class="controls"><input autofocus="autofocus" class="string required span4" id="user_username" name="user[username]" size="50" type="text" value="testing"></div></div>
+          <div class="control-group email required"><label class="email required control-label" for="user_email"><abbr title="required">*</abbr> Email</label><div class="controls"><input class="string email required span4" id="user_email" name="user[email]" size="50" type="email" value="a@a.com"></div></div>
+          <div class="control-group password optional"><label class="password optional control-label" for="user_password">Password</label><div class="controls"><input class="password optional span4" id="user_password" name="user[password]" size="50" type="password"><p class="help-block">leave it blank if you don't want to change it</p></div></div>
+          <div class="control-group password optional"><label class="password optional control-label" for="user_password_confirmation">Password confirmation</label><div class="controls"><input class="password optional span4" id="user_password_confirmation" name="user[password_confirmation]" size="50" type="password"></div></div>
+          <div class="control-group password required"><label class="password required control-label" for="user_current_password"><abbr title="required">*</abbr> Current password</label><div class="controls"><input class="password required span4" id="user_current_password" name="user[current_password]" size="50" type="password"><p class="help-block">we need your current password to confirm your changes</p></div></div>
+        </div>
+
+        <div class="actions">
+          <input class="btn" name="commit" type="submit" value="Update">
+        </div>
+</form>    </div>
+
+  </div>
+</div>
+
+        <br>
+        <br>
+      </div> <!-- container -->
+      <div class="push"><!--//--></div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <a href="http://localhost:3000/faq">FAQ</a>
+<a href="http://localhost:3000/help">Help</a>
+<a href="http://localhost:3000/about_us">About Us</a>
+<i id="social-like" class="icon-likeus" data-content="FB Like Button + Tweet Button" data-original-title=""></i>
+
+      </div>
+    </footer>
+
+    <!-- Javascripts
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="./profile_files/jquery.js" type="text/javascript"></script>
+<script src="./profile_files/jquery_ujs.js" type="text/javascript"></script>
+<script src="./profile_files/bootstrap-transition.js" type="text/javascript"></script>
+<script src="./profile_files/bootstrap-alert.js" type="text/javascript"></script>
+<script src="./profile_files/bootstrap-modal.js" type="text/javascript"></script>
+<script src="./profile_files/bootstrap-dropdown.js" type="text/javascript"></script>
+<script src="./profile_files/bootstrap-scrollspy.js" type="text/javascript"></script>
+<script src="./profile_files/bootstrap-tab.js" type="text/javascript"></script>
+<script src="./profile_files/bootstrap-tooltip.js" type="text/javascript"></script>
+<script src="./profile_files/bootstrap-popover.js" type="text/javascript"></script>
+<script src="./profile_files/bootstrap-button.js" type="text/javascript"></script>
+<script src="./profile_files/bootstrap-collapse.js" type="text/javascript"></script>
+<script src="./profile_files/bootstrap-carousel.js" type="text/javascript"></script>
+<script src="./profile_files/bootstrap-typeahead.js" type="text/javascript"></script>
+<script src="./profile_files/bootstrap-affix.js" type="text/javascript"></script>
+<script src="./profile_files/bootstrap.js" type="text/javascript"></script>
+<script src="./profile_files/bootstrap(1).js" type="text/javascript"></script>
+<script src="./profile_files/override_confirm.js" type="text/javascript"></script>
+<script src="./profile_files/jQuery.equalHeights.js" type="text/javascript"></script>
+<script src="./profile_files/jquery.ThreeDots.js" type="text/javascript"></script>
+<script src="./profile_files/jquery.lettering.js" type="text/javascript"></script>
+<script src="./profile_files/jquery.placeholder.js" type="text/javascript"></script>
+<script src="./profile_files/all.js" type="text/javascript"></script>
+<script src="./profile_files/gmaps4rails.base.js" type="text/javascript"></script>
+<script src="./profile_files/gmaps4rails.bing.js" type="text/javascript"></script>
+<script src="./profile_files/gmaps4rails.googlemaps.js" type="text/javascript"></script>
+<script src="./profile_files/gmaps4rails.mapquest.js" type="text/javascript"></script>
+<script src="./profile_files/gmaps4rails.openlayers.js" type="text/javascript"></script>
+<script src="./profile_files/all(1).js" type="text/javascript"></script>
+<script src="./profile_files/jquery.ui.widget.js" type="text/javascript"></script>
+<script src="./profile_files/load-image.js" type="text/javascript"></script>
+<script src="./profile_files/canvas-to-blob.js" type="text/javascript"></script>
+<script src="./profile_files/tmpl.js" type="text/javascript"></script>
+<script src="./profile_files/jquery.iframe-transport.js" type="text/javascript"></script>
+<script src="./profile_files/jquery.fileupload.js" type="text/javascript"></script>
+<script src="./profile_files/jquery.fileupload-fp.js" type="text/javascript"></script>
+<script src="./profile_files/jquery.fileupload-ui.js" type="text/javascript"></script>
+<script src="./profile_files/locale.js" type="text/javascript"></script>
+<script src="./profile_files/index.js" type="text/javascript"></script>
+<script src="./profile_files/modernizr.js" type="text/javascript"></script>
+<script src="./profile_files/item_new.js" type="text/javascript"></script>
+<script src="./profile_files/telaKKi.js" type="text/javascript"></script>
+<script src="./profile_files/views.js" type="text/javascript"></script>
+<script src="./profile_files/submenus.js" type="text/javascript"></script>
+<script src="./profile_files/custom-components.js" type="text/javascript"></script>
+<script src="./profile_files/categories.js" type="text/javascript"></script>
+<script src="./profile_files/telaKKi(1).js" type="text/javascript"></script>
+<script src="./profile_files/box-maker.js" type="text/javascript"></script>
+<script src="./profile_files/jquery.infinitescroll.min.js" type="text/javascript"></script>
+<script src="./profile_files/jquery.masonry.js" type="text/javascript"></script>
+<script src="./profile_files/modernizr-transitions.js" type="text/javascript"></script>
+<script src="./profile_files/all(2).js" type="text/javascript"></script>
+<script src="./profile_files/application.js" type="text/javascript"></script>
+    
+
+  
+
+</body></html>

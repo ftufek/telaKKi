@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<!-- saved from url=(0031)http://localhost:3000/items/new -->
+<html lang="en" class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms no-csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths js csstransitions"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>telaKKi</title>
+    <meta content="authenticity_token" name="csrf-param">
+<meta content="EIymZPe3uq5uYKhzEUyjuzZZbO4hkq7JJhnz9Tt4y+w=" name="csrf-token">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+    <![endif]-->
+
+    <!--[if !IE 7]>
+      <style type="text/css">
+        #wrap { display: table; height: 100%;}
+      </style>
+    <![endif]-->
+
+    <link href="./post_files/application.css" media="all" rel="stylesheet" type="text/css">
+<link href="./post_files/gmaps4rails.css" media="all" rel="stylesheet" type="text/css">
+<link href="./post_files/telaKKi.css" media="all" rel="stylesheet" type="text/css">
+<link href="./post_files/jquery.fileupload-ui.css" media="all" rel="stylesheet" type="text/css">
+<link href="./post_files/icons.css" media="all" rel="stylesheet" type="text/css">
+<link href="./post_files/svg-icons.css" media="all" rel="stylesheet" type="text/css">
+<link href="./post_files/toggle-switch.css" media="all" rel="stylesheet" type="text/css">
+<link href="./post_files/zocial.css" media="all" rel="stylesheet" type="text/css">
+
+    <!--<link href="images/favicon.ico" rel="shortcut icon">
+    <link href="images/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="images/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+    <link href="images/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+
+      <a href="http://localhost:3000/" class="brand">
+        <b>telaKKi</b>
+</a>      <div class="btn-group pull-right">
+          <a href="http://localhost:3000/users/sign_in" class="btn">
+    <i class="icon-user"></i>
+    Sign In
+</a>
+
+      </div>
+
+      <div class="nav-collapse">
+        <ul class="nav">
+          <li class=""><a href="http://localhost:3000/items/new#">(The Social Marketplace)</a></li>
+          
+          <li class="divider-vertical"></li>
+
+          <li class="dropdown">
+  <a data-toggle="dropdown" class="dropdown-toggle" href="http://localhost:3000/items/new#"><i class="icon-categories"></i> Categories <b class="caret"></b></a>
+  <ul class="dropdown-menu">
+      <li>
+        <a href="http://localhost:3000/items/automobile">
+          <i class="icon-automobile"></i>
+          Automobiles (0 ads)
+</a>      </li>
+      <li>
+        <a href="http://localhost:3000/items/book">
+          <i class="icon-book"></i>
+          Books (0 ads)
+</a>      </li>
+      <li>
+        <a href="http://localhost:3000/items/realestate">
+          <i class="icon-realestate"></i>
+          Real Estates (0 ads)
+</a>      </li>
+      <li>
+        <a href="http://localhost:3000/items/electronic">
+          <i class="icon-electronic"></i>
+          Electronics (0 ads)
+</a>      </li>
+      <li>
+        <a href="http://localhost:3000/items/job">
+          <i class="icon-job"></i>
+          Jobs (0 ads)
+</a>      </li>
+
+    <li class="divider"></li>
+
+    <li>
+      <a href="http://localhost:3000/items/new#">
+        <i class="icon-all-categories"></i>
+        Show all categories (0 ads)
+</a>    </li>
+  </ul>
+</li>
+
+
+        </ul>
+
+        <form action="http://localhost:3000/items" method="get" class="navbar-search">
+  <i class="icon-search"></i>
+  <input class="search-query span3" placeholder="Search something..." name="filters[query]" type="text">
+</form>
+
+
+
+        <ul class="nav pull-right">
+          <li class=""><a href="./post_files/post.html" class="less-padding" rel="tooltip-bottom" data-original-title="Sell something">
+  <i class="icon-sale"></i>
+  <div class="visible-phone">Sell something</div>
+</a></li>
+          <li class="divider-vertical"></li>
+          <li class="messages"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <div class="container">
+        <div class="row">
+  <div class="kk_display span8 offset2">
+    <div class="element title">
+      <h3>Enter your item details</h3>
+    </div>
+
+    <div class="element element_padded form">
+      <form accept-charset="UTF-8" action="http://localhost:3000/items" class="simple_form form-vertical item-form" enctype="multipart/form-data" id="new_item" method="post" novalidate="novalidate"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="EIymZPe3uq5uYKhzEUyjuzZZbO4hkq7JJhnz9Tt4y+w="></div>
+  
+
+  <div class="form-inputs">
+    <div class="control-group string required row-fluid"><div class="controls"><input class="string required span12" id="item_title" name="item[title]" placeholder="Title" size="50" type="text"></div></div>
+    <div class="control-group select optional row-fluid" id="category"><div class="controls"><select class="select optional span12" id="item_category_id" name="item[category_id]"><option value="">Select a category</option>
+<option value="1">automobile</option>
+<option value="2">book</option>
+<option value="3">realestate</option>
+<option value="4">electronic</option>
+<option value="5">job</option></select></div></div>
+    <div class="control-group integer required row-fluid" id="price"><div class="controls"><input class="numeric integer required span12" id="item_price" name="item[price]" placeholder="Price ($)" step="1" type="number"></div></div>
+    <div class="control-group text required row-fluid" id="description"><div class="controls"><textarea class="text required span12" cols="40" id="item_description" name="item[description]" placeholder="Description" rows="10"></textarea></div></div>
+    <!--<span class="thumbnail fileinput-button">
+      <span>Add photo</span>
+      <input type="file" name="image" id="fileuploaddd" data-url="/images" multiple>
+    </span>-->
+    <div id="fileupload" action="/images" method="POST" enctype="multipart/form-data">
+      <div class="fileupload-loading"></div>
+      <table role="presentation" class="table table-striped"><tbody class="files" data-toggle="modal-gallery" data-target="#modal-gallery"></tbody></table>
+
+      <span class="btn btn-success thumbnail fileinput-button">
+          <i class="icon-upload-photo"></i>
+          <span>Upload photos</span>
+          <input type="file" name="files[]" multiple="">
+      </span>
+    </div>
+
+
+    <div class="control-group string required row-fluid"><div class="controls"><input class="string required span12" id="item_address" name="item[address]" placeholder="Address" size="50" type="text"></div></div>
+      <div class="control-group email optional row-fluid"><div class="controls"><input class="string email optional span12" id="item_email" name="item[email]" placeholder="Email" size="50" type="email"></div></div>
+  </div>
+
+  <div class="form-actions">
+    <div class="btn-group">
+      <input class="btn btn-primary" name="commit" type="submit" value="Create Item">
+    </div>
+  </div>
+</form>
+<script id="template-upload" type="text/x-tmpl">
+{% for (var i=0, file; file=o.files[i]; i++) { %}
+    <tr class="template-upload fade">
+        <td class="preview"><span class="fade"></span></td>
+        <td class="name"><span>{%=file.name%}</span></td>
+        <td class="size"><span>{%=o.formatFileSize(file.size)%}</span></td>
+        {% if (file.error) { %}
+            <td class="error" colspan="2"><span class="label label-important">{%=locale.fileupload.error%}</span> {%=locale.fileupload.errors[file.error] || file.error%}</td>
+        {% } else if (o.files.valid && !i) { %}
+            <td>
+                <div class="progress progress-success progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="bar" style="width:0%;"></div></div>
+            </td>
+            <td class="start">{% if (!o.options.autoUpload) { %}
+                <button class="btn btn-primary">
+                    <i class="icon-upload icon-white"></i>
+                    <span>{%=locale.fileupload.start%}</span>
+                </button>
+            {% } %}</td>
+        {% } else { %}
+            <td colspan="2"></td>
+        {% } %}
+        <td class="cancel">{% if (!i) { %}
+            <button class="btn btn-warning">
+                <i class="icon-ban-circle icon-white"></i>
+                <span>{%=locale.fileupload.cancel%}</span>
+            </button>
+        {% } %}</td>
+    </tr>
+{% } %}
+</script>
+<script id="template-download" type="text/x-tmpl">
+{% for (var i=0, file; file=o.files[i]; i++) { %}
+    <tr class="template-download fade">
+        {% if (file.error) { %}
+            <td></td>
+            <td class="name"><span>{%=file.name%}</span></td>
+            <td class="size"><span>{%=o.formatFileSize(file.size)%}</span></td>
+            <td class="error" colspan="2"><span class="label label-important">{%=locale.fileupload.error%}</span> {%=locale.fileupload.errors[file.error] || file.error%}</td>
+        {% } else { %}
+            <input type="hidden" name="images[]" value="{%=file.id%}" />
+            <td class="preview">{% if (file.thumbnail_url) { %}
+                <a href="{%=file.url%}" title="{%=file.name%}" rel="gallery" download="{%=file.name%}"><img src="{%=file.thumbnail_url%}"></a>
+            {% } %}</td>
+            <td class="name">
+                <a href="{%=file.url%}" title="{%=file.name%}" rel="{%=file.thumbnail_url&&'gallery'%}" download="{%=file.name%}">{%=file.name%}</a>
+            </td>
+            <td class="size"><span>{%=o.formatFileSize(file.size)%}</span></td>
+            <td colspan="2"></td>
+        {% } %}
+        <td class="delete">
+            <button class="btn btn-danger" data-type="{%=file.delete_type%}" data-url="{%=file.delete_url%}">
+                <i class="icon-trash icon-white"></i>
+                <span>{%=locale.fileupload.destroy%}</span>
+            </button>
+         </td>
+    </tr>
+{% } %}
+</script>
+
+    </div>
+  </div>
+</div>
+
+        <br>
+        <br>
+      </div> <!-- container -->
+      <div class="push"><!--//--></div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <a href="http://localhost:3000/faq">FAQ</a>
+<a href="http://localhost:3000/help">Help</a>
+<a href="http://localhost:3000/about_us">About Us</a>
+<i id="social-like" class="icon-likeus" data-content="FB Like Button + Tweet Button" data-original-title=""></i>
+
+      </div>
+    </footer>
+
+    <!-- Javascripts
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="./post_files/jquery.js" type="text/javascript"></script>
+<script src="./post_files/jquery_ujs.js" type="text/javascript"></script>
+<script src="./post_files/bootstrap-transition.js" type="text/javascript"></script>
+<script src="./post_files/bootstrap-alert.js" type="text/javascript"></script>
+<script src="./post_files/bootstrap-modal.js" type="text/javascript"></script>
+<script src="./post_files/bootstrap-dropdown.js" type="text/javascript"></script>
+<script src="./post_files/bootstrap-scrollspy.js" type="text/javascript"></script>
+<script src="./post_files/bootstrap-tab.js" type="text/javascript"></script>
+<script src="./post_files/bootstrap-tooltip.js" type="text/javascript"></script>
+<script src="./post_files/bootstrap-popover.js" type="text/javascript"></script>
+<script src="./post_files/bootstrap-button.js" type="text/javascript"></script>
+<script src="./post_files/bootstrap-collapse.js" type="text/javascript"></script>
+<script src="./post_files/bootstrap-carousel.js" type="text/javascript"></script>
+<script src="./post_files/bootstrap-typeahead.js" type="text/javascript"></script>
+<script src="./post_files/bootstrap-affix.js" type="text/javascript"></script>
+<script src="./post_files/bootstrap.js" type="text/javascript"></script>
+<script src="./post_files/bootstrap(1).js" type="text/javascript"></script>
+<script src="./post_files/override_confirm.js" type="text/javascript"></script>
+<script src="./post_files/jQuery.equalHeights.js" type="text/javascript"></script>
+<script src="./post_files/jquery.ThreeDots.js" type="text/javascript"></script>
+<script src="./post_files/jquery.lettering.js" type="text/javascript"></script>
+<script src="./post_files/jquery.placeholder.js" type="text/javascript"></script>
+<script src="./post_files/all.js" type="text/javascript"></script>
+<script src="./post_files/gmaps4rails.base.js" type="text/javascript"></script>
+<script src="./post_files/gmaps4rails.bing.js" type="text/javascript"></script>
+<script src="./post_files/gmaps4rails.googlemaps.js" type="text/javascript"></script>
+<script src="./post_files/gmaps4rails.mapquest.js" type="text/javascript"></script>
+<script src="./post_files/gmaps4rails.openlayers.js" type="text/javascript"></script>
+<script src="./post_files/all(1).js" type="text/javascript"></script>
+<script src="./post_files/jquery.ui.widget.js" type="text/javascript"></script>
+<script src="./post_files/load-image.js" type="text/javascript"></script>
+<script src="./post_files/canvas-to-blob.js" type="text/javascript"></script>
+<script src="./post_files/tmpl.js" type="text/javascript"></script>
+<script src="./post_files/jquery.iframe-transport.js" type="text/javascript"></script>
+<script src="./post_files/jquery.fileupload.js" type="text/javascript"></script>
+<script src="./post_files/jquery.fileupload-fp.js" type="text/javascript"></script>
+<script src="./post_files/jquery.fileupload-ui.js" type="text/javascript"></script>
+<script src="./post_files/locale.js" type="text/javascript"></script>
+<script src="./post_files/index.js" type="text/javascript"></script>
+<script src="./post_files/modernizr.js" type="text/javascript"></script>
+<script src="./post_files/item_new.js" type="text/javascript"></script>
+<script src="./post_files/telaKKi.js" type="text/javascript"></script>
+<script src="./post_files/views.js" type="text/javascript"></script>
+<script src="./post_files/submenus.js" type="text/javascript"></script>
+<script src="./post_files/custom-components.js" type="text/javascript"></script>
+<script src="./post_files/categories.js" type="text/javascript"></script>
+<script src="./post_files/telaKKi(1).js" type="text/javascript"></script>
+<script src="./post_files/box-maker.js" type="text/javascript"></script>
+<script src="./post_files/jquery.infinitescroll.min.js" type="text/javascript"></script>
+<script src="./post_files/jquery.masonry.js" type="text/javascript"></script>
+<script src="./post_files/modernizr-transitions.js" type="text/javascript"></script>
+<script src="./post_files/all(2).js" type="text/javascript"></script>
+<script src="./post_files/application.js" type="text/javascript"></script>
+    
+
+  
+
+</body></html>

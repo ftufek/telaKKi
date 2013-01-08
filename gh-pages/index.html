@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:3000/ -->
+<html lang="en" class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms no-csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths js csstransitions"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>telaKKi</title>
+    <meta content="authenticity_token" name="csrf-param">
+<meta content="EIymZPe3uq5uYKhzEUyjuzZZbO4hkq7JJhnz9Tt4y+w=" name="csrf-token">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+    <![endif]-->
+
+    <!--[if !IE 7]>
+      <style type="text/css">
+        #wrap { display: table; height: 100%;}
+      </style>
+    <![endif]-->
+
+    <link href="./index_files/application.css" media="all" rel="stylesheet" type="text/css">
+<link href="./index_files/gmaps4rails.css" media="all" rel="stylesheet" type="text/css">
+<link href="./index_files/telaKKi.css" media="all" rel="stylesheet" type="text/css">
+<link href="./index_files/jquery.fileupload-ui.css" media="all" rel="stylesheet" type="text/css">
+<link href="./index_files/icons.css" media="all" rel="stylesheet" type="text/css">
+<link href="./index_files/svg-icons.css" media="all" rel="stylesheet" type="text/css">
+<link href="./index_files/toggle-switch.css" media="all" rel="stylesheet" type="text/css">
+<link href="./index_files/zocial.css" media="all" rel="stylesheet" type="text/css">
+
+    <!--<link href="images/favicon.ico" rel="shortcut icon">
+    <link href="images/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="images/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+    <link href="images/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+
+      <a href="./index_files/index.html" class="brand">
+        <b>telaKKi</b>
+</a>      <div class="btn-group pull-right">
+          <a href="http://localhost:3000/users/sign_in" class="btn">
+    <i class="icon-user"></i>
+    Sign In
+</a>
+
+      </div>
+
+      <div class="nav-collapse">
+        <ul class="nav">
+          <li class=""><a href="http://localhost:3000/#">(The Social Marketplace)</a></li>
+          
+          <li class="divider-vertical"></li>
+
+          <li class="dropdown">
+  <a data-toggle="dropdown" class="dropdown-toggle" href="http://localhost:3000/#"><i class="icon-categories"></i> Categories <b class="caret"></b></a>
+  <ul class="dropdown-menu">
+      <li>
+        <a href="http://localhost:3000/automobile">
+          <i class="icon-automobile"></i>
+          Automobiles (0 ads)
+</a>      </li>
+      <li>
+        <a href="http://localhost:3000/book">
+          <i class="icon-book"></i>
+          Books (0 ads)
+</a>      </li>
+      <li>
+        <a href="http://localhost:3000/realestate">
+          <i class="icon-realestate"></i>
+          Real Estates (0 ads)
+</a>      </li>
+      <li>
+        <a href="http://localhost:3000/electronic">
+          <i class="icon-electronic"></i>
+          Electronics (0 ads)
+</a>      </li>
+      <li>
+        <a href="http://localhost:3000/job">
+          <i class="icon-job"></i>
+          Jobs (0 ads)
+</a>      </li>
+
+    <li class="divider"></li>
+
+    <li>
+      <a href="http://localhost:3000/#">
+        <i class="icon-all-categories"></i>
+        Show all categories (0 ads)
+</a>    </li>
+  </ul>
+</li>
+
+
+        </ul>
+
+        <form action="http://localhost:3000/items" method="get" class="navbar-search">
+  <i class="icon-search"></i>
+  <input class="search-query span3" placeholder="Search something..." name="filters[query]" type="text">
+</form>
+
+
+
+        <ul class="nav pull-right">
+          <li class=""><a href="http://localhost:3000/items/new" class="less-padding" rel="tooltip-bottom" data-original-title="Sell something">
+  <i class="icon-sale"></i>
+  <div class="visible-phone">Sell something</div>
+</a></li>
+          <li class="divider-vertical"></li>
+          <li class="messages"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <div class="container">
+        <div id="categories_container" style="position: relative; height: 599px; width: 1020px;" class="masonry">
+  <a href="http://localhost:3000/categories/automobile">
+  <div class="category masonry-brick" style="position: absolute; top: 0px; left: 0px;">
+    <div id="image">
+      <img src="./index_files/c_automobile.png">
+    </div>
+
+    <div id="name">
+      <p>Automobiles</p>
+    </div>
+  </div>
+</a>
+<a href="http://localhost:3000/categories/book">
+  <div class="category masonry-brick" style="position: absolute; top: 0px; left: 340px;">
+    <div id="image">
+      <img src="./index_files/c_book.png">
+    </div>
+
+    <div id="name">
+      <p>Books</p>
+    </div>
+  </div>
+</a>
+<a href="http://localhost:3000/categories/realestate">
+  <div class="category masonry-brick" style="position: absolute; top: 0px; left: 680px;">
+    <div id="image">
+      <img src="./index_files/c_realestate.png">
+    </div>
+
+    <div id="name">
+      <p>Real Estates</p>
+    </div>
+  </div>
+</a>
+<a href="http://localhost:3000/categories/electronic">
+  <div class="category masonry-brick" style="position: absolute; top: 219px; left: 0px;">
+    <div id="image">
+      <img src="./index_files/c_electronic.png">
+    </div>
+
+    <div id="name">
+      <p>Electronics</p>
+    </div>
+  </div>
+</a>
+<a href="http://localhost:3000/categories/job">
+  <div class="category masonry-brick" style="position: absolute; top: 219px; left: 340px;">
+    <div id="image">
+      <img src="./index_files/c_job.png">
+    </div>
+
+    <div id="name">
+      <p>Jobs</p>
+    </div>
+  </div>
+</a>
+
+</div>
+
+        <br>
+        <br>
+      </div> <!-- container -->
+      <div class="push"><!--//--></div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <a href="http://localhost:3000/faq">FAQ</a>
+<a href="http://localhost:3000/help">Help</a>
+<a href="http://localhost:3000/about_us">About Us</a>
+<i id="social-like" class="icon-likeus" data-content="FB Like Button + Tweet Button" data-original-title=""></i>
+
+      </div>
+    </footer>
+
+    <!-- Javascripts
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="./index_files/jquery.js" type="text/javascript"></script>
+<script src="./index_files/jquery_ujs.js" type="text/javascript"></script>
+<script src="./index_files/bootstrap-transition.js" type="text/javascript"></script>
+<script src="./index_files/bootstrap-alert.js" type="text/javascript"></script>
+<script src="./index_files/bootstrap-modal.js" type="text/javascript"></script>
+<script src="./index_files/bootstrap-dropdown.js" type="text/javascript"></script>
+<script src="./index_files/bootstrap-scrollspy.js" type="text/javascript"></script>
+<script src="./index_files/bootstrap-tab.js" type="text/javascript"></script>
+<script src="./index_files/bootstrap-tooltip.js" type="text/javascript"></script>
+<script src="./index_files/bootstrap-popover.js" type="text/javascript"></script>
+<script src="./index_files/bootstrap-button.js" type="text/javascript"></script>
+<script src="./index_files/bootstrap-collapse.js" type="text/javascript"></script>
+<script src="./index_files/bootstrap-carousel.js" type="text/javascript"></script>
+<script src="./index_files/bootstrap-typeahead.js" type="text/javascript"></script>
+<script src="./index_files/bootstrap-affix.js" type="text/javascript"></script>
+<script src="./index_files/bootstrap.js" type="text/javascript"></script>
+<script src="./index_files/bootstrap(1).js" type="text/javascript"></script>
+<script src="./index_files/override_confirm.js" type="text/javascript"></script>
+<script src="./index_files/jQuery.equalHeights.js" type="text/javascript"></script>
+<script src="./index_files/jquery.ThreeDots.js" type="text/javascript"></script>
+<script src="./index_files/jquery.lettering.js" type="text/javascript"></script>
+<script src="./index_files/jquery.placeholder.js" type="text/javascript"></script>
+<script src="./index_files/all.js" type="text/javascript"></script>
+<script src="./index_files/gmaps4rails.base.js" type="text/javascript"></script>
+<script src="./index_files/gmaps4rails.bing.js" type="text/javascript"></script>
+<script src="./index_files/gmaps4rails.googlemaps.js" type="text/javascript"></script>
+<script src="./index_files/gmaps4rails.mapquest.js" type="text/javascript"></script>
+<script src="./index_files/gmaps4rails.openlayers.js" type="text/javascript"></script>
+<script src="./index_files/all(1).js" type="text/javascript"></script>
+<script src="./index_files/jquery.ui.widget.js" type="text/javascript"></script>
+<script src="./index_files/load-image.js" type="text/javascript"></script>
+<script src="./index_files/canvas-to-blob.js" type="text/javascript"></script>
+<script src="./index_files/tmpl.js" type="text/javascript"></script>
+<script src="./index_files/jquery.iframe-transport.js" type="text/javascript"></script>
+<script src="./index_files/jquery.fileupload.js" type="text/javascript"></script>
+<script src="./index_files/jquery.fileupload-fp.js" type="text/javascript"></script>
+<script src="./index_files/jquery.fileupload-ui.js" type="text/javascript"></script>
+<script src="./index_files/locale.js" type="text/javascript"></script>
+<script src="./index_files/index.js" type="text/javascript"></script>
+<script src="./index_files/modernizr.js" type="text/javascript"></script>
+<script src="./index_files/item_new.js" type="text/javascript"></script>
+<script src="./index_files/telaKKi.js" type="text/javascript"></script>
+<script src="./index_files/views.js" type="text/javascript"></script>
+<script src="./index_files/submenus.js" type="text/javascript"></script>
+<script src="./index_files/custom-components.js" type="text/javascript"></script>
+<script src="./index_files/categories.js" type="text/javascript"></script>
+<script src="./index_files/telaKKi(1).js" type="text/javascript"></script>
+<script src="./index_files/box-maker.js" type="text/javascript"></script>
+<script src="./index_files/jquery.infinitescroll.min.js" type="text/javascript"></script>
+<script src="./index_files/jquery.masonry.js" type="text/javascript"></script>
+<script src="./index_files/modernizr-transitions.js" type="text/javascript"></script>
+<script src="./index_files/all(2).js" type="text/javascript"></script>
+<script src="./index_files/application.js" type="text/javascript"></script>
+    
+
+  
+
+</body></html>
