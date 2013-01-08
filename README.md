@@ -9,7 +9,7 @@ To run:
 - rails s
 
 
-You can see some demos at:
+You can see some demos at (the links inside the pages don't work):
 - [Categories Page] (http://ft-l.github.com/telaKKi/)
 - [Post Page] (http://ft-l.github.com/telaKKi/post.html)
 - [Profile Page] (http://ft-l.github.com/telaKKi/profile.html)
