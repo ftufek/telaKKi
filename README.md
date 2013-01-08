@@ -9,4 +9,7 @@ To run:
 - rails s
 
 
-You can see the demo application at [citysellit] (http://www.citysellit.com)
+You can see some demos at:
+- [Categories Page] (http://ft-l.github.com/telaKKi/)
+- [Post Page] (http://ft-l.github.com/telaKKi/post.html)
+- [Profile Page] (http://ft-l.github.com/telaKKi/profile.html)
